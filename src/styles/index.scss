@@ -1,0 +1,498 @@
+/* Import de polices */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+/* Variables */
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$fourth-color: #474141;
+$silver-color: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
+$font-family-primary: "Noto Serif JP";
+$font-family-default: sans-serif;
+
+/* Mixins */
+
+@mixin display-flex($flex-direction) {
+    display: flex;
+    flex-direction: $flex-direction;
+}
+
+/* Body */
+
+body {
+	font-family: $font-family-primary, $font-family-default;    
+	font-size: 1.5em;
+	font-weight: 500;
+	margin: 0px;
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h3 {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+/* Header */
+
+.header {  
+    height: 800px;
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    & a {
+        text-decoration: none;
+        text-shadow: 0 0 10px white;
+        font-size: 1em;
+        font-weight: bolder;
+    }
+
+    & video {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        position: relative;
+        object-fit: cover;
+    }
+
+    &_gauche {
+        @include display-flex(row);
+        height: 100px;
+        width: 40%;
+        gap: 50px;
+        justify-content: right;
+        text-align: center;
+        align-items: center;
+        padding: 10px 40px 0px 0px;
+    }
+
+    &_nav {
+        height: 100%;
+        width: 100%;
+        @include display-flex(row);
+        position: absolute;
+        justify-content: space-between;
+    }
+
+    &_logo img {
+        height: 15%;
+        width: auto;
+        padding-top: 30px;  
+    }
+}
+
+/* Megamenu */
+
+.megamenu {
+    & h3 {
+        font-size: 1.2em;
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    & a:hover {
+        color: green;
+    }
+
+    &_button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        text-shadow: 0 0 10px white;
+        font-size: 1em;
+        font-weight: bolder;
+        font-family: $font-family-primary;
+
+        & i {
+            padding-left: 10px;
+        }
+
+        &:focus ~ .categories {
+            @include display-flex(row);
+        }
+    }
+}
+
+.categories {
+    display: none;
+    position: absolute;
+    margin-top: 60px;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.8), rgba(178, 182, 186, 0.8), rgba(167, 171, 174, 0.8), rgba(222, 224, 225, 0.8), rgba(235, 235, 235, 0.8), rgba(255, 255, 255, 0.8));
+
+    &_parquet, &_carrelage, &_sanitaire {
+        @include display-flex(column);
+        width: 33.33%;
+        gap: 10px;
+        padding: 20px;
+        text-align: left;
+    }
+}
+
+/* Header Droite */
+
+.header_droite {
+    width: 40%;
+    height: 100px;
+    @include display-flex(row);
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 10px 40px 0px 40px;
+
+    &_onglets {
+        width: 65%;
+        gap: 50px;
+        @include display-flex(row);
+    }
+
+    &_icones {
+        gap: 20px;
+        @include display-flex(row);
+        justify-content: space-between;
+    }
+}
+
+/* Main */
+
+main {
+    background: $silver-color;
+}
+
+/* Gallery - Gammes de Produits */
+
+.gammes {
+    @include display-flex(column);
+    padding: 0px 25px;
+
+    &_titre {
+        text-align: center;
+        padding: 40px 0px;
+    }
+}
+
+.gallery {
+    height: 500px;
+    width: 100%;
+    gap: 1%;
+    @include display-flex(column);
+    justify-content: space-between;
+
+    &_un {
+        height: 50%;
+        width: 100%;
+        gap: 1.5%;
+        @include display-flex(row);
+    }
+
+    &_deux {
+        height: 50%;
+        width: 100%;
+        gap: 1.5%;
+        @include display-flex(row);
+    }
+
+    &_trois {
+        height: 100%;
+        width: 50%;
+        display: flex;
+    }
+
+    &_quatre {
+        height: 100%;
+        width: 25%;
+        gap: 8%;
+        @include display-flex(column);
+    }
+
+    &_cinq {
+        height: 50%;
+        width: 100%;
+        display: flex;
+    }
+
+    &_six {
+        height: 100%;
+        width: 51.6%;
+        display: flex;
+    }
+
+    &_sept {
+        height: 50%;
+        width: 100%;
+        gap: 20%;
+        @include display-flex(column);
+    }
+
+    & img {
+        height: 100%;
+        width: 100%;
+        @include display-flex(row);
+        object-fit: cover;
+    }
+
+    & p {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    & a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        color: black;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform : scale(1.2);
+        }
+    }
+    
+    & h3 {
+        display: flex;
+        position: absolute;
+        color: white;
+        text-shadow: 0 0 10px black;
+        font-size: 30px;
+    }
+}
+
+.gallery, .gallery_un, .gallery_deux, .gallery_trois, .gallery_quatre, .gallery_cinq, .gallery_six, .gallery_sept {
+    overflow: hidden;
+}
+
+.gallery_trois, .gallery_cinq, .gallery_six {
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+} 
+
+/* Qui sommes-nous / Accompagnement professionnels */
+
+.pro, .presentation {
+    height: 800px;
+    gap: 20px;
+    @include display-flex(row);
+
+    &_texte {
+        width: 40%;
+        @include display-flex(column);
+        justify-content: center;
+        text-align: center;
+        padding: 0px 30px;
+
+        & h2 {
+            font-family: 'Assistant', sans-serif;
+            font-weight: bold;
+            letter-spacing : 3px;
+            padding-bottom: 30px;
+        }
+
+        &_ligne {
+            width: 150px;
+            align-self: center;
+        }
+
+        &_top {
+            padding-top: 40px;
+        }
+    }
+
+    &_photo {
+        width: 60%;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.pro {
+    padding: 80px 0px;
+
+    &_texte {
+        background-color: #28292A;
+        color: #CBD8CB;
+
+        &_ligne {
+            border-bottom: 3px solid #CBD8CB;
+        }
+    }
+}
+
+.presentation {
+    padding-top: 80px;
+
+    &_texte {
+        background-color: #CBD8CB;
+        color: #28292A;
+
+        & p {
+            font-size: 0.8em;
+        }
+
+        &_ligne {
+            border-bottom: 3px solid #28292A;    
+        }
+    }
+}
+
+.boutton_espacePro {
+    align-self: center;
+    padding: 5px 10px;
+    border: 2px solid #CBD8CB;
+}
+
+/* Showroom - Image fixe parallax */
+
+.showroom {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(5px);*/
+    /*background: $silver-color;*/
+    background-image: url("../assets/showroom1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_div {
+        height: 70%;
+        width: 60%;
+        @include display-flex(row);
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        background: linear-gradient(100deg, rgba(255, 255, 255, 0.8), rgba(178, 182, 186, 0.8), rgba(167, 171, 174, 0.8), rgba(222, 224, 225, 0.8), rgba(235, 235, 235, 0.8), rgba(255, 255, 255, 0.8));
+
+        & img {
+            height: 300px;
+            width: 600px;
+            padding-right: 40px;
+        }
+        
+        &_texte {
+            @include display-flex(column);
+            gap: 30px;
+
+            & p {
+                margin: 0px;
+                padding: 0px 40px;
+            }
+        }
+    }
+}
+
+.adresse {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Footer  */
+
+.footer {
+    @include display-flex(column);
+
+    & a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: green;
+        }
+    }
+
+    &_list {
+        @include display-flex(row);
+        justify-content: space-between;
+        list-style: none;
+        background: linear-gradient(145deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
+    
+        & ul {
+            width: 33%;
+            gap: 10px;
+            @include display-flex(column);
+            align-items: center;
+            font-size: 0.8em;
+            padding: 40px;
+            margin: 0px;
+        }
+
+        & li {
+            list-style: none;
+            font-size: 0.8em;
+        }
+
+        & h4 {
+            margin: 0px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &_end {
+        gap: 50px;
+        @include display-flex(row);
+        justify-content: center;
+        align-items: center;
+        background: grey;
+        font-size: 14px;
+
+        & div {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+        }
+
+        & img {
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    &_contact {
+        &_showroom {
+            text-align: center;
+
+            & p {
+                text-decoration: underline;
+                margin: 0px;
+            }
+        }
+    }
+}

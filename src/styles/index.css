@@ -1,0 +1,442 @@
+/* Import de polices */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+/* Variables */
+/* Mixins */
+/* Body */
+body {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0px;
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 0.8em;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  height: 800px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.header a {
+  text-decoration: none;
+  text-shadow: 0 0 10px white;
+  font-size: 1em;
+  font-weight: bolder;
+}
+.header video {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header_gauche {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 40%;
+  gap: 50px;
+  justify-content: right;
+  text-align: center;
+  align-items: center;
+  padding: 10px 40px 0px 0px;
+}
+.header_nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-between;
+}
+.header_logo img {
+  height: 15%;
+  width: auto;
+  padding-top: 30px;
+}
+
+/* Megamenu */
+.megamenu h3 {
+  font-size: 1.2em;
+  font-style: italic;
+  text-decoration: underline;
+}
+.megamenu a:hover {
+  color: green;
+}
+.megamenu_button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-shadow: 0 0 10px white;
+  font-size: 1em;
+  font-weight: bolder;
+  font-family: "Noto Serif JP";
+}
+.megamenu_button i {
+  padding-left: 10px;
+}
+.megamenu_button:focus ~ .categories {
+  display: flex;
+  flex-direction: row;
+}
+
+.categories {
+  display: none;
+  position: absolute;
+  margin-top: 60px;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.8), rgba(178, 182, 186, 0.8), rgba(167, 171, 174, 0.8), rgba(222, 224, 225, 0.8), rgba(235, 235, 235, 0.8), rgba(255, 255, 255, 0.8));
+}
+.categories_parquet, .categories_carrelage, .categories_sanitaire {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  gap: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Header Droite */
+.header_droite {
+  width: 40%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 10px 40px 0px 40px;
+}
+.header_droite_onglets {
+  width: 65%;
+  gap: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.header_droite_icones {
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Main */
+main {
+  background: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
+}
+
+/* Gallery - Gammes de Produits */
+.gammes {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25px;
+}
+.gammes_titre {
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.gallery {
+  height: 500px;
+  width: 100%;
+  gap: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gallery_un {
+  height: 50%;
+  width: 100%;
+  gap: 1.5%;
+  display: flex;
+  flex-direction: row;
+}
+.gallery_deux {
+  height: 50%;
+  width: 100%;
+  gap: 1.5%;
+  display: flex;
+  flex-direction: row;
+}
+.gallery_trois {
+  height: 100%;
+  width: 50%;
+  display: flex;
+}
+.gallery_quatre {
+  height: 100%;
+  width: 25%;
+  gap: 8%;
+  display: flex;
+  flex-direction: column;
+}
+.gallery_cinq {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+.gallery_six {
+  height: 100%;
+  width: 51.6%;
+  display: flex;
+}
+.gallery_sept {
+  height: 50%;
+  width: 100%;
+  gap: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.gallery img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.gallery a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: black;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+.gallery a:hover {
+  transform: scale(1.2);
+}
+.gallery h3 {
+  display: flex;
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-size: 30px;
+}
+
+.gallery, .gallery_un, .gallery_deux, .gallery_trois, .gallery_quatre, .gallery_cinq, .gallery_six, .gallery_sept {
+  overflow: hidden;
+}
+
+.gallery_trois, .gallery_cinq, .gallery_six {
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Qui sommes-nous / Accompagnement professionnels */
+.pro, .presentation {
+  height: 800px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.pro_texte, .presentation_texte {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 30px;
+}
+.pro_texte h2, .presentation_texte h2 {
+  font-family: "Assistant", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding-bottom: 30px;
+}
+.pro_texte_ligne, .presentation_texte_ligne {
+  width: 150px;
+  align-self: center;
+}
+.pro_texte_top, .presentation_texte_top {
+  padding-top: 40px;
+}
+.pro_photo, .presentation_photo {
+  width: 60%;
+}
+.pro_photo img, .presentation_photo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pro {
+  padding: 80px 0px;
+}
+.pro_texte {
+  background-color: #28292A;
+  color: #CBD8CB;
+}
+.pro_texte_ligne {
+  border-bottom: 3px solid #CBD8CB;
+}
+
+.presentation {
+  padding-top: 80px;
+}
+.presentation_texte {
+  background-color: #CBD8CB;
+  color: #28292A;
+}
+.presentation_texte p {
+  font-size: 0.8em;
+}
+.presentation_texte_ligne {
+  border-bottom: 3px solid #28292A;
+}
+
+.boutton_espacePro {
+  align-self: center;
+  padding: 5px 10px;
+  border: 2px solid #CBD8CB;
+}
+
+/* Showroom - Image fixe parallax */
+.showroom {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  /*filter: blur(5px);*/
+  /*background: $silver-color;*/
+  background-image: url("../assets/showroom1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.showroom_div {
+  height: 70%;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.8), rgba(178, 182, 186, 0.8), rgba(167, 171, 174, 0.8), rgba(222, 224, 225, 0.8), rgba(235, 235, 235, 0.8), rgba(255, 255, 255, 0.8));
+}
+.showroom_div img {
+  height: 300px;
+  width: 600px;
+  padding-right: 40px;
+}
+.showroom_div_texte {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.showroom_div_texte p {
+  margin: 0px;
+  padding: 0px 40px;
+}
+
+.adresse {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Footer  */
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer a:hover {
+  color: green;
+}
+.footer_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  background: linear-gradient(145deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
+}
+.footer_list ul {
+  width: 33%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8em;
+  padding: 40px;
+  margin: 0px;
+}
+.footer_list li {
+  list-style: none;
+  font-size: 0.8em;
+}
+.footer_list h4 {
+  margin: 0px;
+  padding-bottom: 10px;
+}
+.footer_end {
+  gap: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  font-size: 14px;
+}
+.footer_end div {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+.footer_end img {
+  height: 60px;
+  width: 60px;
+}
+.footer_contact_showroom {
+  text-align: center;
+}
+.footer_contact_showroom p {
+  text-decoration: underline;
+  margin: 0px;
+}/*# sourceMappingURL=index.css.map */
