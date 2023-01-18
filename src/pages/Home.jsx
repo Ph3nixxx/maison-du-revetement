@@ -33,7 +33,7 @@ export default function Home() {
                     <div class="gallery">
                         <div class="gallery_un">
                             <div class="gallery_trois">
-                                <a href="#">
+                                <a href="./produits/parquet">
                                     <img src={Parquet} alt="Parquet Maison du Revêtement"/>
                                     <h3>Parquet</h3>
                                 </a>
@@ -49,7 +49,7 @@ export default function Home() {
                             <div class="gallery_deux">
                                 <div class="gallery_quatre">
                                     <div class="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement-15-0-staging-1-6887676.dev.odoo.com/shop/category/parquet-massif-8">
                                             <img src={Parquet} alt="Massif Maison du Revêtement"/>
                                             <h3>Massif</h3>
                                         </a>

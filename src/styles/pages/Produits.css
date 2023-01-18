@@ -1,0 +1,106 @@
+/* Variables */
+/* Mixins */
+/* Code */
+.produits_conteneur {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/texture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.produits_conteneur h1 {
+  letter-spacing: 10px;
+}
+.produits_categories {
+  height: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url("../../assets/texture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.produits_categories_un {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  background-image: url("../../assets/texture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.produits_categories_deux {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.produits_categories_deux img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.produits_categories_deux a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  color: black;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+.produits_categories_deux a:hover {
+  transform: scale(1.2);
+}
+.produits_categories_deux h3 {
+  display: flex;
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-size: 30px;
+}
+.produits_bottom {
+  height: 50px;
+  background-image: url("../../assets/texture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.plus {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  padding-bottom: 40px;
+  background-color: #A7FFC2;
+}
+.plus_ensemble {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.plus_bloc {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.plus_bloc h3 {
+  font-size: 14px;
+}
+.plus h2 {
+  padding: 30px 0px;
+}/*# sourceMappingURL=Produits.css.map */

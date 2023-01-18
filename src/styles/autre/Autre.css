@@ -1,0 +1,19 @@
+/* Variables */
+/* Mixins */
+/* Code */
+.cgv {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+.cgv h1 {
+  font-size: 40px;
+  text-align: center;
+}
+.cgv h2 {
+  font-size: 20px;
+  padding-left: 40px;
+}
+.cgv p {
+  font-size: 15px;
+}/*# sourceMappingURL=Autre.css.map */

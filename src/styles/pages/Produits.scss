@@ -1,0 +1,130 @@
+/* Variables */
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #A7FFC2;
+$fourth-color: #474141;
+$silver-color: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
+$font-family-primary: "Noto Serif JP";
+$font-family-default: sans-serif;
+
+/* Mixins */
+
+@mixin display-flex($flex-direction) {
+    display: flex;
+    flex-direction: $flex-direction;
+}
+
+/* Code */
+
+.produits {
+    &_conteneur {
+        @include display-flex(column);
+        height: 200px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../../assets/texture.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & h1 {
+            letter-spacing: 10px;
+        }
+    }
+
+    &_categories {
+        height: 1200px;
+        width: 100%;
+        @include display-flex(column);
+        gap: 10px;
+        background-image: url("../../assets/texture.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        &_un {      
+            height: 50%;
+            width: 100%;  
+            @include display-flex(column);
+            gap: 10px;
+            overflow: hidden;
+            background-image: url("../../assets/texture.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &_deux {    
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            
+            & img {
+                height: 100%;
+                width: 100%; 
+                object-fit: cover; 
+            }
+
+            & a {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                color: black;
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.5s;
+        
+                &:hover {
+                    transform : scale(1.2);
+                }
+            }
+
+            & h3 {
+                display: flex;
+                position: absolute;
+                color: white;
+                text-shadow: 0 0 10px black;
+                font-size: 30px;
+            }
+        }
+    }
+
+    &_bottom {
+        height: 50px;
+        background-image: url("../../assets/texture.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.plus {
+    height: auto;
+    @include display-flex(column);
+    text-align: center;
+    gap: 30px;
+    padding-bottom: 40px;
+    background-color: $tertiary-color;
+
+    &_ensemble {
+        height: auto;
+        @include display-flex(row);
+    }
+
+    &_bloc {
+        width: 20%;
+        @include display-flex(column);
+        gap: 20px;
+
+        & h3 {
+            font-size: 14px;
+        }
+    }
+
+    & h2 {
+        padding: 30px 0px;
+    }
+}
