@@ -1,9 +1,9 @@
 /* Variables */
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #A7FFC2;
-$fourth-color: #474141;
+$primary-color: #646464;
+$secondary-color: #D3D3D3;
+$tertiary-color: #F5F5F5;
+$black-color: #28292A;
 $silver-color: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
 $font-family-primary: "Noto Serif JP";
 $font-family-default: sans-serif;
@@ -18,19 +18,33 @@ $font-family-default: sans-serif;
 /* Code */
 
 .produits {
+    padding-bottom: 50px;
+    color: $black-color;
+    background: $tertiary-color;
+    
     &_conteneur {
         @include display-flex(column);
-        height: 200px;
         width: 100%;
         justify-content: center;
         align-items: center;
-        background-image: url("../../assets/texture.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        padding: 20px 0px;
 
         & h1 {
-            letter-spacing: 10px;
+            font-size: calc(2em + 2vw);
+            letter-spacing: 5px;
+        }
+
+        & h3 {
+            text-align: center;
+            font-size: calc(0.4em + 0.8vw);
+            padding: 20px 50px;
+        }
+
+        &_ligne {
+            width: 150px;
+            align-self: center;
+            border-bottom: 5px solid $black-color;
+            padding-bottom: 20px;
         }
     }
 
@@ -39,10 +53,6 @@ $font-family-default: sans-serif;
         width: 100%;
         @include display-flex(column);
         gap: 10px;
-        background-image: url("../../assets/texture.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         
         &_un {      
             height: 50%;
@@ -50,10 +60,6 @@ $font-family-default: sans-serif;
             @include display-flex(column);
             gap: 10px;
             overflow: hidden;
-            background-image: url("../../assets/texture.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
         }
 
         &_deux {    
@@ -63,7 +69,7 @@ $font-family-default: sans-serif;
             
             & img {
                 height: 100%;
-                width: 100%; 
+                width: 100%;
                 object-fit: cover; 
             }
 
@@ -71,7 +77,7 @@ $font-family-default: sans-serif;
                 height: 100%;
                 width: 100%;
                 display: flex;
-                color: black;
+                color: $black-color;
                 text-decoration: none;
                 justify-content: center;
                 align-items: center;
@@ -79,25 +85,22 @@ $font-family-default: sans-serif;
         
                 &:hover {
                     transform : scale(1.2);
+
+                    & h2 {
+                        color: $secondary-color;
+                    }
                 }
             }
 
-            & h3 {
+            & h2 {
                 display: flex;
                 position: absolute;
                 color: white;
-                text-shadow: 0 0 10px black;
-                font-size: 30px;
+                text-shadow: 0 0 10px $black-color;
+                font-size: calc(2em + 1.2vw);
+                letter-spacing: 5px;
             }
         }
-    }
-
-    &_bottom {
-        height: 50px;
-        background-image: url("../../assets/texture.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 }
 
@@ -106,8 +109,14 @@ $font-family-default: sans-serif;
     @include display-flex(column);
     text-align: center;
     gap: 30px;
-    padding-bottom: 40px;
-    background-color: $tertiary-color;
+    padding: 0px 20px 40px 20px;
+    background-color: $secondary-color;
+
+    & h2 {
+        font-size: calc(1em + 1.2vw); 
+        padding: 30px 0px;
+        letter-spacing: 3px;
+    }
 
     &_ensemble {
         height: auto;
@@ -120,11 +129,32 @@ $font-family-default: sans-serif;
         gap: 20px;
 
         & h3 {
-            font-size: 14px;
+            font-size: calc(0.3em + 0.8vw);
+        }
+
+        & i {
+            font-size: calc(1em + 1.6vw);
         }
     }
+}
 
-    & h2 {
-        padding: 30px 0px;
+.divEspace {
+    height: 50px;
+    background-color: $tertiary-color;
+}
+
+/* Tablet */
+
+@media all and (max-width: 1199px) {
+    .produits_categories {
+        height: 1000px;
+    }
+}
+
+/* Smartphone */
+
+@media all and (max-width: 767px) {
+    .produits_categories {
+        height: 800px;
     }
 }

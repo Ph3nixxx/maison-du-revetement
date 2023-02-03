@@ -1,9 +1,9 @@
 /* Variables */
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #A7FFC2;
-$fourth-color: #474141;
+$primary-color: #646464;
+$secondary-color: #D3D3D3;
+$tertiary-color: #F5F5F5;
+$black-color: #28292A;
 $silver-color: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
 $font-family-primary: "Noto Serif JP";
 $font-family-default: sans-serif;
@@ -17,21 +17,128 @@ $font-family-default: sans-serif;
 
 /* Code */
 
+/* Livraison & Retour */
+
+.pageLivraison {
+    background-color: $tertiary-color;
+}
+
+.livraison {
+    @include display-flex(column);
+    justify-content: space-between;
+    text-align: center;
+    padding: 40px;
+
+    &_titre {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+
+    &_texte {
+        @include display-flex(row);
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding-top: 30px;
+
+        &_livraison {
+            width: 50%;
+        }
+
+        &_retrait {
+            width: 50%;
+            @include display-flex(column);
+            align-items: center;
+        }
+    }
+
+    &_ligne {
+        width: 150px;
+        align-self: center;
+        border-bottom: 3px solid $black-color;    
+        padding-bottom: 10px;
+    }
+}
+
+.maps {
+    height:400px; 
+    width:500px;
+    position: relative;
+    margin: 0px;
+
+    &_canvas {
+        height: 400px; 
+        width: 500px;
+        overflow: hidden;
+        background: none!important;
+    }
+}
+
+/* CGV */
+
 .cgv {
     @include display-flex(column);
     padding: 40px;
+    background-color: $tertiary-color;
 
     & h1 {
-        font-size: 40px;
+        font-size: calc(1.7em + 1.7vw); 
         text-align: center;
     }
    
     & h2 {
-        font-size: 20px;
+        font-size: calc(0.8em + 0.8vw);
         padding-left: 40px;
     }
 
     & p {
-        font-size: 15px;
+        font-size: calc(0.5em + 0.5vw);
     }
+
+    &_ligne {
+        width: 150px;
+        align-self: center;
+        border-bottom: 3px solid $black-color;
+        padding-bottom: 20px;    
+    }
+}
+
+/* Erreur */
+
+.error {
+    &_wrapper {
+        @include display-flex(column);
+        align-items: center;
+        background-color: $tertiary-color;
+        margin: 30px;
+    }
+
+    &_title {
+        font-size: calc(2em + 2vw);
+        font-weight: 300;
+        color: $primary-color;
+    }
+
+    &_subtitle {
+        font-size: calc(1.2em + 1.2vw);
+        color: $primary-color;
+        font-weight: 300;
+    }
+}
+
+.illustration {
+    max-width: 800px;
+}
+
+/* Tablet */
+
+@media all and (max-width: 1199px) {
+
+}
+
+/* Smartphone */
+
+@media all and (max-width: 767px) {
+    
 }

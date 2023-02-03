@@ -10,8 +10,8 @@ export default function Plus() {
             <h2 className="plus_titre">Nos atouts</h2>
             <div className="plus_ensemble">
                 <div className="plus_bloc">
-                    <i className="fa-solid fa-people-carry-box fa-xl"></i>
-                    <h3>Gestions des Livraisons</h3>
+                    <i className="fa-solid fa-dolly fa-xl"></i>       
+                    <h3>Retrait gratuit dans notre entrepôt de Villeneuve-la-Garenne</h3>
                 </div>
                 <div className="plus_bloc">
                     <i className="fa-solid fa-truck-fast fa-xl"></i>
@@ -19,7 +19,7 @@ export default function Plus() {
                 </div>
                 <div className="plus_bloc">
                     <i className="fa-solid fa-shop fa-xl"></i>
-                    <h3>2 Showrooms pour vos yeux</h3>
+                    <h3>1 Showroom pour vos yeux</h3>
                 </div>
                 <div className="plus_bloc">
                     <i className="fa-solid fa-mobile fa-xl"></i>
@@ -27,7 +27,7 @@ export default function Plus() {
                 </div>
                 <div className="plus_bloc">
                     <i className="fa-solid fa-book fa-xl"></i>
-                    <h3>+10 000 références catalogue</h3>
+                    <h3>+130 références en stock</h3>
                 </div>
             </div>
         </div>

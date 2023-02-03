@@ -6,11 +6,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 /* Pages */
 import Home from './pages/Home'
 import Parquet from './pages/produits/Parquet'
+import Livraison from './pages/autre/Livraison'
 import CGV from './pages/autre/CGV'
+import Erreur from './pages/autre/Erreur'
 
 /* Components */
-import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 /* Styles */
 import './styles/index.css'
@@ -18,14 +20,17 @@ import './styles/index.css'
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(
   <BrowserRouter>
-    <Header />
+    <ScrollToTop />
     <Routes>
       <Route index element={<Home />} />
 
       <Route path="/home" element={<Home />} />
       <Route path="/produits/parquet" element={<Parquet />} />
 
-      <Route path="/conditions-generales-de-vente" element={<CGV />} />
+      <Route path="/livraison-et-retour" element={<Livraison />}/>
+      <Route path="/conditions-generales-de-vente" element={<CGV />}/>
+
+      <Route path="*" element= {<Erreur />} />
     </Routes>
     <Footer />
   </BrowserRouter>

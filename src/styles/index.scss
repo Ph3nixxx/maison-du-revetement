@@ -1,9 +1,9 @@
 /* Variables */
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$fourth-color: #474141;
+$primary-color: #646464;
+$secondary-color: #D3D3D3;
+$tertiary-color: #F5F5F5;
+$black-color: #28292A;
 $silver-color: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
 $font-family-primary: "Noto Serif JP";
 $font-family-default: sans-serif;
@@ -30,44 +30,53 @@ $font-family-default: sans-serif;
 
 body {
 	font-family: $font-family-primary, $font-family-default;    
-	font-size: 1.5em;
 	font-weight: 500;
+    color: $black-color;
 	margin: 0px;
-    color: black;
 }
 
 a {
-    color: black;
+    text-decoration: none;
+    color: $black-color;
 }
 
-h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin: 0;
-}
-
-h3 {
-    font-size: 0.8em;
+h1, h2, h3 {
     margin: 0;
 }
 
 /* Header */
 
-.header {  
-    height: 800px;
+.header, .headerHome {
     width: 100%;
     display: flex;
     position: relative;
 
-    & a {
-        text-decoration: none;
-        text-shadow: 0 0 10px white;
-        font-size: 1em;
+    & h2 {
+        font-size: calc(0.5em + 0.5vw);
         font-weight: bolder;
+    }
+
+    &_nav {
+        height: 100%;
+        width: 100%;
+        @include display-flex(row);
+        position: absolute;
+        gap: 20px;
+    }
+}
+
+.headerHome {
+    height: 800px;
+    z-index: 5;
+
+    &_nav_second {
+        height: 160px;
+        position: fixed;
+        z-index: -1;
+        background-image: url("../assets/texture.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     & video {
@@ -78,153 +87,266 @@ h3 {
         object-fit: cover;
     }
 
-    &_gauche {
-        @include display-flex(row);
-        height: 100px;
-        width: 40%;
-        gap: 50px;
-        justify-content: right;
-        text-align: center;
+    &_logo {
+        width: 25%;
+        display: flex;
+        padding-top: 30px; 
+
+        & img {
+            height: auto;
+            width: 100%; 
+        }
+    }
+}
+
+.header {
+    height: 120px;
+    background-image: url("../assets/texture.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_logo {
+        display: flex;
+        justify-content: center;
         align-items: center;
-        padding: 10px 40px 0px 0px;
-    }
 
-    &_nav {
-        height: 100%;
-        width: 100%;
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.header_gauche, .header_droite {
+    width: 37.5%;
+}
+
+.header .header_gauche, .header .header_droite {
+    padding-top: 0px;
+    align-items: center;
+}
+
+/* Header Gauche / Megamenu */
+
+.header_gauche {
+    @include display-flex(row);
+    gap: 20px;
+    text-align: center;
+    padding-top: 35px;
+
+    &_icones {
+        width: 20%;
         @include display-flex(row);
-        position: absolute;
         justify-content: space-between;
+        font-size: calc(0.5em + 0.8vw);
+        padding-left: 30px;
+
+        & a {
+            height: 26px;
+            width: 30px;
+
+            &:hover {
+                color: green;
+            }
+        }
     }
 
-    &_logo img {
-        height: 15%;
-        width: auto;
-        padding-top: 30px;  
+    &_megamenu {
+        width: 80%;
+        @include display-flex(row);
+        justify-content: space-between;
+        align-items: flex-start;
+
+        & li {
+            font-size: calc(0.5em + 0.5vw);
+            margin: 0px;
+        }
+    
+        & a:hover {
+            color: green;
+        }
+
+        &_carrelage, &_parquet, &_sanitaire {
+            &:hover {
+                padding-bottom: 50px;
+            }
+        }
+
+        &_carrelage {
+            &:hover .categories_carrelage {
+                @include display-flex(column);
+            }
+        }
+
+        &_parquet {
+            &:hover .categories_parquet {
+                @include display-flex(column);
+            }
+        }
+
+        &_sanitaire {
+            &:hover .categories_sanitaire {
+                @include display-flex(column);
+            }
+        }
+    
+        & .bouton_carrelage, & .bouton_parquet, & .bouton_sanitaire{
+            cursor: pointer;
+            color: $black-color;
+            font-family: $font-family-primary;
+            font-size: calc(0.5em + 1vw);
+            font-weight: bolder;
+            border: none;
+            background: none;
+        }
     }
 }
 
-/* Megamenu */
-
-.megamenu {
-    & h3 {
-        font-size: 1.2em;
-        font-style: italic;
-        text-decoration: underline;
-    }
-
-    & a:hover {
-        color: green;
-    }
-
-    &_button {
-        cursor: pointer;
-        border: none;
-        background: none;
-        text-shadow: 0 0 10px white;
-        font-size: 1em;
-        font-weight: bolder;
-        font-family: $font-family-primary;
-
-        & i {
-            padding-left: 10px;
-        }
-
-        &:hover ~ .categories {
-            @include display-flex(row);
-        }
-    }
-}
-
-.categories {
+.categories_carrelage, .categories_parquet, .categories_sanitaire {
+    width: 60%;
     display: none;
     position: absolute;
-    margin-top: 60px;
-    background: linear-gradient(100deg, rgba(255, 255, 255, 0.8), rgba(178, 182, 186, 0.8), rgba(167, 171, 174, 0.8), rgba(222, 224, 225, 0.8), rgba(235, 235, 235, 0.8), rgba(255, 255, 255, 0.8));
+    text-align: left;
+    background: rgba($tertiary-color, $alpha: 0.80);
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    gap: 10px;
 
-    &_parquet, &_carrelage, &_sanitaire {
-        @include display-flex(column);
-        width: 33.33%;
-        gap: 10px;
-        padding: 20px;
-        text-align: left;
+    & h3 {
+        font-size: calc(0.6em + 0.6vw);
+        text-transform: uppercase;
+        font-weight: bolder;
     }
+
+    & ul {
+        @include display-flex(row);
+        margin: 5px 0px;
+        gap: 40px;
+    }
+
+    &:hover {
+        @include display-flex(column);
+    }
+}
+
+.li_un {
+    list-style: none;
 }
 
 /* Header Droite */
 
 .header_droite {
-    width: 40%;
-    height: 100px;
     @include display-flex(row);
-    justify-content: space-between;
+    gap: 20px;
     text-align: center;
-    align-items: center;
-    padding: 10px 40px 0px 40px;
+    padding-top: 35px;
 
     &_onglets {
-        width: 65%;
-        gap: 50px;
+        width: 80%;
         @include display-flex(row);
+        justify-content: space-between;
+        font-size: calc(0.5em + 1vw);
+        
+        & a:hover {
+            color: green;
+        }
     }
 
     &_icones {
-        gap: 20px;
+        width: 20%;
         @include display-flex(row);
         justify-content: space-between;
+        font-size: calc(0.5em + 0.8vw);
+        padding-right: 30px;
+
+        & a {
+            height: 26px;
+            width: 30px;
+
+            &:hover {
+                color: green;
+            }
+        }
     }
 }
 
 /* Main */
 
 main {
-    background: $silver-color;
+    @include display-flex(column);
+    background: $tertiary-color;
 }
 
 /* Gammes de Produits */
 
 .gammes {
     @include display-flex(column);
+    position: relative;
+    text-align: center;
     padding: 0px 25px;
 
     &_titre {
+        @include display-flex(column);
+        position: relative;
         text-align: center;
         padding: 40px 0px;
+
+        & h2 {
+            font-size: calc(1.4em + 1vw);
+        }
+
+        & h3 {
+            font-size: calc(0.6em + 0.8vw);
+        }
     }
 }
 
 .gallery {
-    height: 500px;
+    display: flex;
+    position: relative;
+    height: 700px;
     width: 100%;
-    gap: 1%;
     @include display-flex(column);
     justify-content: space-between;
+    gap: 1%;
 
     &_un {
-        height: 50%;
+        height: 40%;
         width: 100%;
-        gap: 1.5%;
         @include display-flex(row);
+        gap: 1.5%;
     }
 
     &_deux {
         height: 50%;
         width: 100%;
-        gap: 1.5%;
         @include display-flex(row);
+        gap: 1.5%;
     }
 
     &_trois {
         height: 100%;
         width: 50%;
         display: flex;
+
+        & h3 {
+            font-size: calc(1.5em + 1vw) !important;
+        }
     }
 
     &_quatre {
         height: 100%;
         width: 25%;
-        gap: 8%;
         @include display-flex(column);
+        gap: 8%;
     }
 
     &_cinq {
@@ -237,13 +359,17 @@ main {
         height: 100%;
         width: 51.6%;
         display: flex;
+
+        & h3 {
+            font-size: calc(1.2em + 0.9vw) !important;
+        }
     }
 
     &_sept {
-        height: 50%;
+        height: 60%;
         width: 100%;
-        gap: 20%;
         @include display-flex(column);
+        gap: 12%;
     }
 
     & img {
@@ -266,42 +392,47 @@ main {
         height: 100%;
         width: 100%;
         display: flex;
-        color: black;
-        text-decoration: none;
+        color: $black-color;
         justify-content: center;
         align-items: center;
         transition: transform 0.5s;
 
         &:hover {
             transform : scale(1.2);
+
+            & h3 {
+                color: $secondary-color;
+            }
         }
     }
     
     & h3 {
         display: flex;
         position: absolute;
+        font-size: calc(0.8em + 0.4vw);
         color: white;
-        text-shadow: 0 0 10px black;
-        font-size: 30px;
+        text-shadow: 0 0 10px $black-color;
     }
 }
 
 .gallery, .gallery_un, .gallery_deux, .gallery_trois, .gallery_quatre, .gallery_cinq, .gallery_six, .gallery_sept {
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .gallery_trois, .gallery_cinq, .gallery_six {
     flex-wrap: wrap;
     position: relative;
     overflow: hidden;
-} 
+}
 
 /* Qui sommes-nous / Accompagnement professionnels */
 
-.pro, .presentation {
+.presentation, .pro {
     height: 800px;
-    gap: 20px;
     @include display-flex(row);
+    gap: 20px;
+    padding: 0px 20px;
 
     &_texte {
         width: 40%;
@@ -309,12 +440,18 @@ main {
         justify-content: center;
         text-align: center;
         padding: 0px 30px;
+        border-radius: 10px;
 
         & h2 {
             font-family: 'Assistant', sans-serif;
+            font-size: calc(1.6em + 0.6vw);
             font-weight: bold;
             letter-spacing : 3px;
             padding-bottom: 30px;
+        }
+
+        & p {
+            margin: 16px;
         }
 
         &_ligne {
@@ -334,47 +471,80 @@ main {
             height: 100%;
             width: 100%;
             object-fit: cover;
-        }
-    }
-}
-
-.pro {
-    padding: 80px 0px;
-
-    &_texte {
-        background-color: #28292A;
-        color: #CBD8CB;
-
-        &_ligne {
-            border-bottom: 3px solid #CBD8CB;
+            border-radius: 10px;
         }
     }
 }
 
 .presentation {
-    padding-top: 80px;
+    padding-bottom: 80px;
 
     &_texte {
-        background-color: #CBD8CB;
-        color: #28292A;
+        color: $black-color;
+        background-color: $secondary-color;
 
         & p {
-            font-size: 0.8em;
+            font-size: calc(0.5em + 0.6vw);
         }
 
         &_ligne {
-            border-bottom: 3px solid #28292A;    
+            border-bottom: 3px solid $black-color;    
         }
     }
 }
 
-.boutton_espacePro {
-    align-self: center;
-    padding: 5px 10px;
-    border: 2px solid #CBD8CB;
+.pro {
+    padding-bottom: 80px;
+    padding-top: 80px;
+
+    &_texte {
+        color: $tertiary-color;
+        background-color: $black-color;
+
+        & p {
+            font-size: calc(0.7em + 0.7vw);
+        }
+
+        &_ligne {
+            border-bottom: 3px solid $tertiary-color;
+        }
+    }
 }
 
-/* Showroom - Image fixe parallax */
+.pro_boutons {
+    @include display-flex(row);
+    justify-content: center;
+    gap: 50px;
+    padding-top: 30px;
+}
+
+.boutonPro {
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-family: $font-family-primary;
+    padding: 0px;
+    background: none;
+    border: none;
+    
+    & a {
+        height: 100%;
+        width: 100%;
+        font-size: calc(1em + 0.6vw);
+        color: $tertiary-color;
+        border: 2px solid $tertiary-color;
+        border-radius: 20px;
+        padding: 8px 16px;
+
+        &:hover {
+            color: $black-color;
+            background-color: $secondary-color;
+            border-color: $black-color;
+        }
+    }
+}
+
+/* Showroom */
 
 .showroom {
     height: 600px;
@@ -383,8 +553,6 @@ main {
     position: relative; 
     justify-content: center;
     align-items: center;
-    /*filter: blur(5px);*/
-    /*background: $silver-color;*/
     background-image: url("../assets/showroom1.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -398,7 +566,8 @@ main {
         justify-content: space-around;
         text-align: center;
         align-items: center;
-        background: linear-gradient(100deg, rgba(255, 255, 255, 0.8), rgba(178, 182, 186, 0.8), rgba(167, 171, 174, 0.8), rgba(222, 224, 225, 0.8), rgba(235, 235, 235, 0.8), rgba(255, 255, 255, 0.8));
+        background: $secondary-color;
+        border-radius: 40px;
 
         & img {
             height: 300px;
@@ -408,6 +577,7 @@ main {
         
         &_texte {
             @include display-flex(column);
+            font-size: calc(0.3em + 1vw);
             gap: 30px;
 
             & p {
@@ -419,8 +589,9 @@ main {
 }
 
 .adresse {
-    font-size: 1.5em;
+    font-size: calc(0.8em + 1vw);
     font-weight: bold;
+    font-style: italic
 }
 
 /* Footer  */
@@ -429,18 +600,13 @@ main {
     @include display-flex(column);
 
     & a {
-        text-decoration: none;
-        color: black;
-
-        &:hover {
-            color: green;
-        }
+        color: $black-color;
     }
 
     &_list {
         @include display-flex(row);
         justify-content: space-between;
-        list-style: none;
+        text-align: center;
         background-image: url("../assets/texture.jpg");
         background-position: center;
         background-repeat: no-repeat;
@@ -451,7 +617,7 @@ main {
             gap: 10px;
             @include display-flex(column);
             align-items: center;
-            font-size: 0.8em;
+            font-size: calc(0.8em + 0.4vw);
             padding: 40px;
             margin: 0px;
         }
@@ -465,15 +631,19 @@ main {
             margin: 0px;
             padding-bottom: 10px;
         }
+
+        & a:hover {
+            color: rgb(0, 255, 0);
+        }
     }
 
     &_end {
-        gap: 50px;
         @include display-flex(row);
         justify-content: center;
         align-items: center;
-        background: grey;
-        font-size: 14px;
+        text-align: center;
+        background: $secondary-color;
+        font-size: calc(0.6em + 0.2vw);
 
         & div {
             width: 20%;
@@ -485,10 +655,14 @@ main {
             height: 60px;
             width: 60px;
         }
+
+        & a:hover {
+            color: white;
+        }
     }
 
     &_contact {
-        &_showroom {
+        &_telephone, &_email, &_showroom {
             text-align: center;
 
             & p {
@@ -496,5 +670,222 @@ main {
                 margin: 0px;
             }
         }
+    }
+}
+
+.instagram {
+    padding-top: 20px;
+}
+
+/* Tablet */
+
+@media all and (max-width: 1199px) {
+    .headerHome {
+        height: 600px;
+    }
+
+    .header {
+        height: 100px;
+
+        &_gauche_icones {
+            padding-left: 15px;
+        }
+
+        &_droite_icones {
+            padding-right: 15px;
+        }
+    }
+
+    .presentation, .pro {
+        height: 600px;
+
+        & h2 {
+            font-size: calc(0.8em + 0.8vw);
+        }
+
+        &_texte {
+            padding: 0px 15px;
+        }
+    }
+
+    .presentation {
+        & p {
+            font-size: calc(0.45em + 0.45vw);
+        }
+    }
+
+    .gammes {
+        &_pays {
+            position: relative;
+            top: 0%;
+            right: 0%;
+            padding-bottom: 40px;
+
+            & p {
+                font-size: calc(0.6em + 0.5vw);
+            }
+
+        } 
+    }
+
+    .pro {
+        & p {
+            font-size: calc(0.55em + 0.55vw);
+        }
+    }
+
+    .pro_boutons {
+        gap: 20px;
+    }
+
+    .boutonPro {
+        & a {  
+            font-size: calc(0.8em + 0.6vw);
+        }
+    }
+
+    .showroom {
+        height: 500px;
+
+        &_div {
+            &_texte p {
+                padding: 0px 20px;
+            }
+
+            & img {
+                height: 200px;
+                width: 400px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+/* Smartphone */
+
+@media all and (max-width: 767px) {
+    .headerHome {
+        height: 400px;
+    }
+
+    .header {
+        &_gauche {
+            padding-top: 20px;
+        }
+
+        &_droite {
+            padding-top: 20px;
+
+            &_icones {
+                gap: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .gammes {
+        & h2 {
+            font-size: calc(0.9em + 0.9vw);            
+        }
+
+        & h3 {
+            font-size: calc(0.4em + 0.4vw);            
+        }
+
+
+        &_titre {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+    }
+
+    .presentation, .pro {
+        height: 400px;
+        padding-top: 40px;
+        gap: 10px;
+
+        &_photo {
+            width: 40%;
+        }
+
+        &_texte {
+            width: 60%;
+
+            & p {
+                margin: 8px;
+                font-size: calc(0.40em + 0.40vw);
+            }
+
+            & h2 {
+                font-size: calc(0.60em + 0.60vw);
+                padding-bottom: 10px;  
+            }
+
+            &_top {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .pro {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .boutonPro {
+        & a {
+            font-size: calc(0.60em + 0.60vw);    
+        }
+    }
+
+    .showroom {
+        height: 400px;
+
+        &_div {
+        @include display-flex(column);
+        justify-content: center;
+        gap: 20px;
+
+            & img {
+                height: 100px;
+                width: 200px;
+                padding-right: 0px;
+            }
+
+            &_texte {
+                gap: 15px;
+            }
+        }
+    }
+
+    .footer {
+        &_end {
+            font-size: calc(0.4em + 0.2vw);
+        }
+    }
+}
+
+@media all and (max-width: 499px) {
+    .footer {
+        & ul {
+            padding: 10px;
+        }
+
+        &_list {
+            @include display-flex(column);
+            align-items: center;
+        }
+    }
+
+    .instagram {
+        padding-top: 0px;
+    }
+}
+
+@media all and (max-width: 399px) {
+    .header_droite_icones {
+        @include display-flex(column);
+        justify-content: left;
+        padding-right: 0px;
     }
 }

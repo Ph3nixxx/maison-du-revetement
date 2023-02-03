@@ -1,19 +1,107 @@
 /* Variables */
 /* Mixins */
 /* Code */
+/* Livraison & Retour */
+.pageLivraison {
+  background-color: #F5F5F5;
+}
+
+.livraison {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 40px;
+}
+.livraison_titre {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.livraison_texte {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding-top: 30px;
+}
+.livraison_texte_livraison {
+  width: 50%;
+}
+.livraison_texte_retrait {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.livraison_ligne {
+  width: 150px;
+  align-self: center;
+  border-bottom: 3px solid #28292A;
+  padding-bottom: 10px;
+}
+
+.maps {
+  height: 400px;
+  width: 500px;
+  position: relative;
+  margin: 0px;
+}
+.maps_canvas {
+  height: 400px;
+  width: 500px;
+  overflow: hidden;
+  background: none !important;
+}
+
+/* CGV */
 .cgv {
   display: flex;
   flex-direction: column;
   padding: 40px;
+  background-color: #F5F5F5;
 }
 .cgv h1 {
-  font-size: 40px;
+  font-size: calc(1.7em + 1.7vw);
   text-align: center;
 }
 .cgv h2 {
-  font-size: 20px;
+  font-size: calc(0.8em + 0.8vw);
   padding-left: 40px;
 }
 .cgv p {
-  font-size: 15px;
-}/*# sourceMappingURL=Autre.css.map */
+  font-size: calc(0.5em + 0.5vw);
+}
+.cgv_ligne {
+  width: 150px;
+  align-self: center;
+  border-bottom: 3px solid #28292A;
+  padding-bottom: 20px;
+}
+
+/* Erreur */
+.error_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F5F5;
+  margin: 30px;
+}
+.error_title {
+  font-size: calc(2em + 2vw);
+  font-weight: 300;
+  color: #646464;
+}
+.error_subtitle {
+  font-size: calc(1.2em + 1.2vw);
+  color: #646464;
+  font-weight: 300;
+}
+
+.illustration {
+  max-width: 800px;
+}
+
+/* Tablet */
+/* Smartphone *//*# sourceMappingURL=Autre.css.map */
