@@ -35,14 +35,6 @@ export default function Home() {
                         <h2>Nos Différentes Gammes de Produits</h2>
                         <h3>Pour les professionnels et les particuliers</h3>
                     </div>
-                    {/*<div className="gammes_pays">
-                        <div><p>Tous nos produits sont fabriqués en :</p></div>
-                        <div className="gammes_pays_drapeaux">
-                            <img src={France} alt="Drapeau français"></img>
-                            <img src={Italie} alt="Drapeau italien"></img>
-                            <img src={Espagne} alt="Drapeau espagnol"></img>
-                        </div>
-                    </div>*/}
                     <div className="gallery">
                         <div className="gallery_un">
                             <div className="gallery_trois">
@@ -133,10 +125,10 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="gallery_six">
-                                    <a href="#">
-                                        <img src={Sanitaire} alt="Accessoires Maison du Revêtement"/>
+                                    <Link to="/produits/sanitaire">
+                                        <img src={Sanitaire} alt="Sanitaire Maison du Revêtement"/>
                                         <h3>Sanitaire</h3>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">

@@ -12,19 +12,18 @@ export default function CGV() {
             <section className="cgv">
                 <h1>Conditions Générales de Vente</h1>
                 <span className="cgv_ligne"></span>
-                <p>Les présentes conditions de vente sont conclues d'une part par la Société Maison du
+                <p className="p_un">Les présentes conditions de vente sont conclues d'une part par la Société Maison du
                 Revêtement, SAS au capital de 210 600€ ayant son siège à VILLENEUVE LA GARENNE,
                 (92390), 23 Avenue du Chemin des Reniers, immatriculée au R.C.S de NANTERRE sous le
                 n° 917 977 035, ci-après dénommée, « le Vendeur » ou « la Société » et d'autre part,
                 par tout consommateur, non professionnel ou professionnel, dénommé ci-après « le
-                Client ».Les conditions générales de ventes définissent les droits et obligations de la
+                Client ». Les conditions générales de ventes définissent les droits et obligations de la
                 société et de son client dans le cadre de la vente des marchandises et sont régies par le
                 droit des contrats issu du Code civil et du Code de la Consommation et au principe de
                 l'exécution de bonne foi des contrats. Les conditions générales de vente sont remises
-                au client, lors de chaque devis, bon de commande et bon de livraison sur lesquels elles
-                sont imprimées recto verso. Le seul fait de passer une commande ou d'accepter une
+                au client, lors de chaque devis, bon de commande et bon de livraison. Le seul fait de passer une commande ou d'accepter une
                 offre écrite du vendeur emporte l’acceptation sans réserve des présentes conditions
-                générales de vente par client. Les caractéristiques essentielles de chaque marchandise
+                générales de vente par le client. Les caractéristiques essentielles de chaque marchandise
                 sont indiquées dans le catalogue ou sur le site du vendeur, accompagnée, le cas échéant
                 d'une photographie de manière à respecter les dispositions de l’article L 111 -1, du code
                 de consommation. Toute photographie est fournie à titre indicatif et n'a par conséquent
@@ -32,15 +31,15 @@ export default function CGV() {
                 marchandise commandée, notamment en ce qui concerne les couleurs, tonalités,
                 calibres, aspect de surface, du fait de procédés de fabrication, de matériaux naturels ou
                 artisanaux et dès lors ne sauraient engager le vendeur. Il en est de même pour tout
-                échantillons exposés en magasin lesquelles sont présentés à titra indicatif et ne
+                échantillons exposés en magasin lesquelles sont présentés à titre indicatif et ne
                 disposent pas valeur contractuelle. Les offres sont valables dans la limite des stocks
                 disponibles. Les présentes conditions priment sur tous les autres documents qui
                 peuvent être échangés entre le vendeur et le client, sauf accord dérogatoire et à
                 l'exception du document d'ouverture de compte par un professionnel qui reprend les
                 présentes conditions générales de vente et les dispositions particulières spécifiques aux
                 professionnels lesquelles prévalent sur les présentes. Si une, des clauses ou dispositions
-                des présentes Conditions Générales Vente venait à être annulée ou déclarée illégale
-                par une décision de justice définitive, cette nullité ou illégalité 
+                des présentes Conditions Générales de Vente venait à être annulée ou déclarée illégale
+                par une décision de justice définitive, cette nullité ou illégalité.
                 </p>
                 <h2>COMMANDES</h2>
                 <p> Toute commande implique de la part du client l'acceptation sans réserve des présentes
@@ -50,7 +49,7 @@ export default function CGV() {
                 profession afin de permettre à la Société de remplir sa fiche d'identification, ou pour le
                 professionnel, souhaitant bénéficier d'un encours, remplir un document annexe
                 intitulé « ouverture de compte client professionnel » accompagné des pièces
-                obligatoiresindiquées et fournir une garantie financière couvrant obligatoirement ledit
+                obligatoires indiquées et fournir une garantie financière couvrant obligatoirement ledit
                 encours, d'autre part, apposer sa signature sur le bon de commande, après l'avoir
                 vérifiée et effectuer le règlement du prix ou, le cas échéant, s'acquitter d'un acompte
                 de QUARANTE POUR CENT (40%) du prix TTC afin de valider ladite commande, et le
@@ -83,16 +82,14 @@ export default function CGV() {
                 client avec lequel il existerait un litige relatif paiement ou à une contestation d'une
                 commande antérieure ou en cours.<br />
                 <strong>Aire géographique :</strong> La société vend ses produits en France Métropolitaine, dans les
-                départements d’Outre-mer et les collectivités ainsi qu'à l’étrange. Il appartient au client
+                départements d’Outre-mer et les collectivités ainsi qu'à l’étranger. Il appartient au client
                 de s'informer auprès de l'autorité locale de son pays des éventuelles limitations
                 d'importation et des taxes douanières portant sur produits qu'il envisage de
                 commander. Si la livraison est effectuée par transporteur privé et indépendant du
                 vendeur, s'appliquent pour celle-ci les dispositions contractuelles du transporteur.
                 </p>
                 <h2>DELAIS</h2>
-                <p>La livraison dans les délais ne peut intervenir que si client à de ses obligations envers le
-                vendeur quelle qu’en soit la cause. Le délai de livraison court à partir du lendemain de
-                la date de commande dans le cas d'un règlement par carte bancaire, sous réserve
+                <p>Le délai de livraison court à partir du lendemain de la date de commande dans le cas d'un règlement par carte bancaire, sous réserve
                 d'acceptation de celui-ci ou à réception du chèque dans le cas d'un règlement par
                 chèque. Dans le cas d'une commande de produits ayant des délais de livraison
                 différents, la totalité de la commande sera livrée sur la base du délai le plus long. En
@@ -101,7 +98,7 @@ export default function CGV() {
                 des fabrications spécifiques et sur mesure (dimensions, couleurs, etc.), la fixation du
                 délai de disponibilité s'effectue en fonction de faisabilité des demandes du client. Pour
                 les produits stockés dans nos entrepôts, le retrait en magasin ou départ livraison se fait
-                sous 72 heures à 2 semaines maximum. L'indication du délai de livraison porté sur le
+                sous 24 heures à 3 mois maximum. L'indication du délai de livraison porté sur le
                 bon de commande engage le vendeur qui se réserve le droit de le prolonger en cas de
                 force majeure ou fortuits ou des cas ci-après stipulés. En ce qui concerne, le client
                 professionnel, le délai de livraison indiqué lors de l'enregistrement de la commande

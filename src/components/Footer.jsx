@@ -42,7 +42,7 @@ export default function Footer() {
                     <img src={PetitLogo} alt="Petit Logo Maison du Revêtement"/>
                 </div>
                 <div>
-                    <Link to="/conditions-generales-de-vente">Mentions légales</Link>
+                    <Link to="/mentions-légales">Mentions légales</Link>
                 </div>
                 <div>
                     <p>2023</p>

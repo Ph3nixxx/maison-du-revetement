@@ -1,8 +1,10 @@
+@charset "UTF-8";
 /* Variables */
 /* Mixins */
 /* Code */
 /* Livraison & Retour */
 .pageLivraison {
+  padding-top: 120px;
   background-color: #F5F5F5;
 }
 
@@ -55,48 +57,109 @@
   background: none !important;
 }
 
-/* CGV */
-.cgv {
+/* CGV & Mentions Légales */
+.cgv, .mentionsLegales {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 160px 40px 40px 40px;
   background-color: #F5F5F5;
 }
-.cgv h1 {
+.cgv h1, .mentionsLegales h1 {
   font-size: calc(1.7em + 1.7vw);
   text-align: center;
 }
-.cgv h2 {
+.cgv h2, .mentionsLegales h2 {
   font-size: calc(0.8em + 0.8vw);
   padding-left: 40px;
 }
-.cgv p {
+.cgv p, .mentionsLegales p {
   font-size: calc(0.5em + 0.5vw);
 }
-.cgv_ligne {
+.cgv .p_un, .mentionsLegales .p_un {
+  padding-top: 30px;
+}
+.cgv_ligne, .mentionsLegales_ligne {
   width: 150px;
   align-self: center;
   border-bottom: 3px solid #28292A;
   padding-bottom: 20px;
 }
+.cgv_edition, .mentionsLegales_edition {
+  align-self: center;
+}
+
+/* Simulateur */
+.simulateur {
+  padding-top: 120px;
+  background-color: #F5F5F5;
+}
+
+.construction {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  margin: 40px;
+  border: solid 5px #D3D3D3;
+  text-align: center;
+  justify-content: center;
+  background-image: url("../../assets/construction.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.construction h2 {
+  font-size: calc(1.6em + 1.6vw);
+  text-transform: uppercase;
+  background-color: #28292A;
+  color: #D3D3D3;
+  padding: 0px 20px 16px 20px;
+}
+.construction p {
+  font-size: calc(0.8em + 0.8vw);
+  margin: 0px;
+  padding: 0px 20px 16px 20px;
+  background-color: #28292A;
+  color: #D3D3D3;
+}
+.construction a {
+  background-color: #28292A;
+  padding: 0px;
+}
+.construction .boutonPro {
+  padding-top: 40px;
+}
 
 /* Erreur */
-.error_wrapper {
+.error {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #F5F5F5;
-  margin: 30px;
+  padding: 120px 0px 20px 0px;
 }
 .error_title {
   font-size: calc(2em + 2vw);
   font-weight: 300;
-  color: #646464;
+  color: #28292A;
 }
 .error_subtitle {
   font-size: calc(1.2em + 1.2vw);
-  color: #646464;
+  color: #28292A;
   font-weight: 300;
+}
+.error .boutonPro {
+  padding: 20px 0px;
+}
+.error .boutonPro a {
+  color: #28292A;
+  border: 2px solid #28292A;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+.error .boutonPro a:hover {
+  color: #D3D3D3;
+  background-color: #28292A;
+  border-color: #D3D3D3;
 }
 
 .illustration {

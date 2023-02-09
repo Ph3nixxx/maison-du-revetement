@@ -107,6 +107,40 @@ export default function HeaderHome() {
                                             Les Marbres</a></li>
                                     </ul>
                                 </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Les Mosaïques</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Hexagonal</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Verre</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Cérame</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Pierre & Marbre</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Accessoires Carrelage</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Plinthes</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Colle</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Joints</a></li>
+                                        <li><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Croisillons</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Produits d'entretien</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Ragréages et primaires</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="header_gauche_megamenu_parquet">
@@ -118,61 +152,153 @@ export default function HeaderHome() {
                             <div className="categories_parquet">
                                 <div className="categories_deux">
                                     <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                        <h3>Sol & Mur</h3>
+                                        <h3>Massif</h3>
                                     </a>
                                     <ul>
                                         <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                            Les Formats XXL</a></li>
+                                            Les Bruts</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Terrazzo</a></li>
+                                            Les Huilés</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Hexagonales</a></li>
-                                        <li><a href="/produits/parquet">
-                                            Imitation Marbre</a></li>
+                                            Les Vernis</a></li>
                                     </ul>
                                     <ul>
                                         <li className="li_un"><a href="/produits/parquet">
-                                            Imitation Bois</a></li>
+                                            Les Géométriques</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Carreaux de Ciment</a></li>
+                                            Point de Hongrie</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Bétons Cirés</a></li>
+                                            Dalle Versailles</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Pierre</a></li>
+                                            Bâton Rompu</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Contrecollé</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Les Huilés</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Les Vernis</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Les Géométriques</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Stratifié & PVC</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Les Stratifiés</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Les PVC</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Accessoires Parquet</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Plinthes</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Colle</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Ragréages et primaires</a></li>
+                                        <li><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Sous-couche et isolation</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Produits d'entretien</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>                        
                         <div className="header_gauche_megamenu_sanitaire">
                             <button className="bouton_sanitaire">
-                                <Link to="/produits/sanitare">
+                                <Link to="/produits/sanitaire">
                                     <h2>Le<br />Sanitaire</h2>
                                 </Link>
                             </button>
                             <div className="categories_sanitaire">
                                 <div className="categories_deux">
                                     <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                        <h3>Sol & Mur</h3>
+                                        <h3>Lavabo</h3>
                                     </a>
                                     <ul>
                                         <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                            Les Formats XXL</a></li>
+                                            Robinet mitigeur à encastrer</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Terrazzo</a></li>
+                                            Robinet mitigeur sur plan</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Hexagonales</a></li>
-                                        <li><a href="/produits/parquet">
-                                            Imitation Marbre</a></li>
+                                            Robinet mitigeur thermostatique</a></li>
                                     </ul>
                                     <ul>
                                         <li className="li_un"><a href="/produits/parquet">
-                                            Imitation Bois</a></li>
+                                            Robinet mélangeur</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Baignoire</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Robinet monocommande à encastrer</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Carreaux de Ciment</a></li>
+                                            Robinet monocommande sur gorge</a></li>
+
+                                    </ul>
+                                    <ul>
+                                        <li className="li_un"><a href="/produits/parquet">
+                                            Robinet mitigeur thermostatique</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Bétons Cirés</a></li>
+                                            Robinet mitigeur pour bidet</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Colonne de baignoire au sol</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Pierre</a></li>
+                                            Douchette</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Robinet mélangeur</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Douche</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Robinet mitigeur monocommande</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Robinet mitigeur thermostatique</a></li>
+
+                                    </ul>
+                                    <ul>
+                                        <li className="li_un"><a href="/produits/parquet">
+                                            Mélangeur de douche</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Ensemble de douche</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Tête de pluie</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Accessoires Sanitaire</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Vidage</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Flexible</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Barre de douche</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Plaque WC</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -188,7 +314,7 @@ export default function HeaderHome() {
                     <div className="header_droite_onglets">
                         <h2><a href="https://maisondurevetement.odoo.com/contact">Nous<br />Contacter</a></h2>
                         <h2><Link to="/livraison-et-retour">Livraison</Link></h2>
-                        <h2><a href="https://maisondurevetement.odoo.com/contact">Simulateur<br />3D</a></h2>
+                        <h2><Link to="/simulateur-3D">Simulateur<br />3D</Link></h2>
                     </div>
                     <div className="header_droite_icones">
                         <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/cart"><i className="fa-solid fa-cart-shopping"></i></a>
@@ -197,7 +323,7 @@ export default function HeaderHome() {
                     </div>
                 </div>
             </div>
-            <div className="headerHome_nav headerHome_nav_second">
+            <div className="header headerHome_nav_second">
                 <nav className="header_gauche">
                     <div className="header_gauche_icones">
                         <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/cart"><i className="fa-brands fa-facebook-f"></i></a>
@@ -205,7 +331,7 @@ export default function HeaderHome() {
                         <a href="mailto:support@maisondurevetement.com"><i className="fa-solid fa-envelope"></i></a>
                     </div>
                     <div className="header_gauche_megamenu">
-                        <div className="header_gauche_megamenu_carrelage">
+                    <div className="header_gauche_megamenu_carrelage">
                             <button className="bouton_carrelage">
                                 <Link to="/produits/carrelage">
                                     <h2>Nos<br />Carrelages</h2>
@@ -294,6 +420,40 @@ export default function HeaderHome() {
                                             Les Marbres</a></li>
                                     </ul>
                                 </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Les Mosaïques</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Hexagonal</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Verre</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Cérame</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Pierre & Marbre</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Accessoires Carrelage</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Plinthes</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Colle</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Joints</a></li>
+                                        <li><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Croisillons</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Produits d'entretien</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Ragréages et primaires</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="header_gauche_megamenu_parquet">
@@ -305,61 +465,153 @@ export default function HeaderHome() {
                             <div className="categories_parquet">
                                 <div className="categories_deux">
                                     <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                        <h3>Sol & Mur</h3>
+                                        <h3>Massif</h3>
                                     </a>
                                     <ul>
                                         <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                            Les Formats XXL</a></li>
+                                            Les Bruts</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Terrazzo</a></li>
+                                            Les Huilés</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Hexagonales</a></li>
-                                        <li><a href="/produits/parquet">
-                                            Imitation Marbre</a></li>
+                                            Les Vernis</a></li>
                                     </ul>
                                     <ul>
                                         <li className="li_un"><a href="/produits/parquet">
-                                            Imitation Bois</a></li>
+                                            Les Géométriques</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Carreaux de Ciment</a></li>
+                                            Point de Hongrie</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Bétons Cirés</a></li>
+                                            Dalle Versailles</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Pierre</a></li>
+                                            Bâton Rompu</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Contrecollé</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Les Huilés</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Les Vernis</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Les Géométriques</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Stratifié & PVC</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Les Stratifiés</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Les PVC</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Accessoires Parquet</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Plinthes</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Colle</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Ragréages et primaires</a></li>
+                                        <li><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Sous-couche et isolation</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Produits d'entretien</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>                        
                         <div className="header_gauche_megamenu_sanitaire">
                             <button className="bouton_sanitaire">
-                                <Link to="/produits/sanitare">
+                                <Link to="/produits/sanitaire">
                                     <h2>Le<br />Sanitaire</h2>
                                 </Link>
                             </button>
                             <div className="categories_sanitaire">
                                 <div className="categories_deux">
                                     <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                        <h3>Sol & Mur</h3>
+                                        <h3>Lavabo</h3>
                                     </a>
                                     <ul>
                                         <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
-                                            Les Formats XXL</a></li>
+                                            Robinet mitigeur à encastrer</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Terrazzo</a></li>
+                                            Robinet mitigeur sur plan</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Hexagonales</a></li>
-                                        <li><a href="/produits/parquet">
-                                            Imitation Marbre</a></li>
+                                            Robinet mitigeur thermostatique</a></li>
                                     </ul>
                                     <ul>
                                         <li className="li_un"><a href="/produits/parquet">
-                                            Imitation Bois</a></li>
+                                            Robinet mélangeur</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Baignoire</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Robinet monocommande à encastrer</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Carreaux de Ciment</a></li>
+                                            Robinet monocommande sur gorge</a></li>
+
+                                    </ul>
+                                    <ul>
+                                        <li className="li_un"><a href="/produits/parquet">
+                                            Robinet mitigeur thermostatique</a></li>
                                         <li><a href="/produits/parquet">
-                                            Les Bétons Cirés</a></li>
+                                            Robinet mitigeur pour bidet</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Colonne de baignoire au sol</a></li>
                                         <li><a href="/produits/parquet">
-                                            Imitation Pierre</a></li>
+                                            Douchette</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Robinet mélangeur</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Douche</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Robinet mitigeur monocommande</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Robinet mitigeur thermostatique</a></li>
+
+                                    </ul>
+                                    <ul>
+                                        <li className="li_un"><a href="/produits/parquet">
+                                            Mélangeur de douche</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Ensemble de douche</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Tête de pluie</a></li>
+                                    </ul>
+                                </div>
+                                <div className="categories_deux">
+                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <h3>Accessoires Sanitaire</h3>
+                                    </a>
+                                    <ul>
+                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                            Vidage</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Flexible</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Barre de douche</a></li>
+                                        <li><a href="/produits/parquet">
+                                            Plaque WC</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -375,7 +627,7 @@ export default function HeaderHome() {
                     <div className="header_droite_onglets">
                         <h2><a href="https://maisondurevetement.odoo.com/contact">Nous<br />Contacter</a></h2>
                         <h2><Link to="/livraison-et-retour">Livraison</Link></h2>
-                        <h2><a href="https://maisondurevetement.odoo.com/contact">Simulateur<br />3D</a></h2>
+                        <h2><Link to="/simulateur-3D">Simulateur<br />3D</Link></h2>
                     </div>
                     <div className="header_droite_icones">
                         <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/cart"><i className="fa-solid fa-cart-shopping"></i></a>

@@ -18,6 +18,7 @@ $font-family-default: sans-serif;
 /* Code */
 
 .produits {
+    padding-top: 120px;
     padding-bottom: 50px;
     color: $black-color;
     background: $tertiary-color;
@@ -49,21 +50,12 @@ $font-family-default: sans-serif;
     }
 
     &_categories {
-        height: 1200px;
         width: 100%;
         @include display-flex(column);
         gap: 10px;
-        
-        &_un {      
-            height: 50%;
-            width: 100%;  
-            @include display-flex(column);
-            gap: 10px;
-            overflow: hidden;
-        }
 
-        &_deux {    
-            height: 100%;
+        &_card {    
+            height: 250px;
             width: 100%;
             overflow: hidden;
             
