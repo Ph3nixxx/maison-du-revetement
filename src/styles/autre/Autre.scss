@@ -30,24 +30,27 @@ $font-family-default: sans-serif;
     text-align: center;
     padding: 40px;
 
+    & h2 {
+        font-size: calc(1em + 1vw);
+    }
+
     &_titre {
         display: flex;
         justify-content: center;
-        padding-top: 30px;
     }
 
-    &_texte {
+    &_texte, &_couts {
         @include display-flex(row);
         justify-content: space-between;
         align-items: center;
         gap: 50px;
         padding-top: 30px;
 
-        &_livraison {
+        &_livraison, &_ileDeFrance {
             width: 50%;
         }
 
-        &_retrait {
+        &_retrait, &_france {
             width: 50%;
             @include display-flex(column);
             align-items: center;
@@ -63,16 +66,17 @@ $font-family-default: sans-serif;
 }
 
 .maps {
-    height: 400px;
-    width: 500px;
     position: relative;
     margin: 0px;
 
     &_canvas {
-        height: 400px;
-        width: 500px;
         overflow: hidden;
         background: none!important;
+    }
+
+    &_img {
+        height: 400px;
+        width: 500px;
     }
 }
 
@@ -90,15 +94,11 @@ $font-family-default: sans-serif;
    
     & h2 {
         font-size: calc(0.8em + 0.8vw);
-        padding-left: 40px;
+        padding: 20px 0px 0px 40px;
     }
 
     & p {
         font-size: calc(0.5em + 0.5vw);
-    }
-
-    & .p_un {
-        padding-top: 30px;
     }
 
     &_ligne {
@@ -116,14 +116,14 @@ $font-family-default: sans-serif;
 /* Simulateur */
 
 .simulateur {
-    padding-top: 120px;
     background-color: $tertiary-color;
+    padding-top: 120px;
 }
 
 .construction {
     @include display-flex(column);
     height: 500px;
-    margin: 40px;
+
     border: solid 5px $secondary-color;
     text-align: center;
     justify-content: center;
@@ -203,11 +203,42 @@ $font-family-default: sans-serif;
 /* Tablet */
 
 @media all and (max-width: 1199px) {
+    .pageLivraison {
+        padding-top: 100px;
 
+        .livraison {
+            padding: 0px 40px;
+        }
+
+        .livraison_titre{
+            padding-top: 30px;
+        }
+
+        .livraison_texte {
+            @include display-flex(column);
+        }
+        
+        .livraison_texte_livraison, .livraison_texte_retrait {
+            width: 100%;
+        }
+    }
+
+    .simulateur {
+        padding-top: 100px;
+    }
+
+    .cgv, .mentionsLegales {
+        padding: 120px 20px 20px 20px;
+    }
 }
 
 /* Smartphone */
 
 @media all and (max-width: 767px) {
-    
+    .pageLivraison {
+        .maps_img {
+            height: 300px;
+            width: 300px;
+        }
+    }
 }

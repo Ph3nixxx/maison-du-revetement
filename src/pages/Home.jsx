@@ -54,27 +54,27 @@ export default function Home() {
                             <div className="gallery_deux">
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
-                                        <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-39">
                                             <img src={CarrelageGres} alt="Massif Maison du Revêtement"/>
                                             <h3>Sol & Murs</h3>
                                         </a>
                                     </div>
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-faiences-40">
                                             <img src={CarrelageFaience} alt="Contrecollé Maison du Revêtement"/>
-                                            <h3>Les Faïences Murales</h3>
+                                            <h3>Les Faïences</h3>
                                         </a>
                                     </div>
                                 </div>
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-exterieurs-41">
                                             <img src={CarrelageExterieur} alt="Stratifié Maison du Revêtement"/>
                                             <h3>Les Extérieurs</h3>
                                         </a>
                                     </div>
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-42">
                                             <img src={CarrelagePierres} alt="PVC Maison du Revêtement"/>
                                             <h3>Pierres Naturelles</h3>
                                         </a>
@@ -82,13 +82,13 @@ export default function Home() {
                                 </div>
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-44">
                                             <img src={ParquetMassif} alt="Stratifié Maison du Revêtement"/>
                                             <h3>Massif</h3>
                                         </a>
                                     </div>
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-contrecolle-45">
                                             <img src={ParquetContrecolle} alt="PVC Maison du Revêtement"/>
                                             <h3>Contrecollé</h3>
                                         </a>
@@ -96,15 +96,15 @@ export default function Home() {
                                 </div>
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-stratifie-pvc-les-stratifies-90">
                                             <img src={ParquetStratifie} alt="Stratifié Maison du Revêtement"/>
                                             <h3>Stratifié</h3>
                                         </a>
                                     </div>
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-stratifie-pvc-les-pvc-91">
                                             <img src={ParquetPVC} alt="PVC Maison du Revêtement"/>
-                                            <h3>Lames PVC</h3>
+                                            <h3>PVC</h3>
                                         </a>
                                     </div>
                                 </div>
@@ -112,15 +112,15 @@ export default function Home() {
                             <div className="gallery_deux">
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-76">
                                             <img src={Robineterie} alt="PVC Maison du Revêtement"/>
-                                            <h3>Robineterie</h3>
+                                            <h3>Accessoires Carrelage</h3>
                                         </a>
                                     </div>                               
                                     <div className="gallery_cinq">
                                         <a href="#">
                                             <img src={Moulures} alt="PVC Maison du Revêtement"/>
-                                            <h3>Lames de Terrasses</h3>
+                                            <h3>Lavabo</h3>
                                         </a>
                                     </div>
                                 </div>
@@ -132,15 +132,15 @@ export default function Home() {
                                 </div>
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
-                                        <a href="#">
+                                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-accessoires-parquet-77">
                                             <img src={MeublesSDB} alt="PVC Maison du Revêtement"/>
-                                            <h3>Meubles Salle de Bain</h3>
+                                            <h3>Accessoires Parquet</h3>
                                         </a>
                                     </div>
                                     <div className="gallery_cinq">  
                                         <a href="#">
                                             <img src={Consommables} alt="PVC Maison du Revêtement"/>
-                                            <h3>Accessoires</h3>
+                                            <h3>Douche</h3>
                                         </a>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@ export default function Home() {
                         <p>Créer votre espace pro afin de conserver le suivi de vos devis, bons de commande et factures.</p>
                         <div className="pro_boutons">
                             <button className="boutonPro"><a href="https://maisondurevetement.odoo.com/contact">Nous Contacter</a></button>
-                            <button className="boutonPro"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/web/login">Espace Pro</a></button>
+                            <button className="boutonPro"><a href="https://maisondurevetement.odoo.com/cart">Espace Pro</a></button>
                         </div>
                     </div>
                     <div className="pro_photo">

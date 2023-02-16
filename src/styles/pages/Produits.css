@@ -111,13 +111,16 @@
 
 /* Tablet */
 @media all and (max-width: 1199px) {
-  .produits_categories {
-    height: 1000px;
+  .produits {
+    padding-top: 100px;
+  }
+  .produits_categories_card {
+    height: 200px;
   }
 }
 /* Smartphone */
 @media all and (max-width: 767px) {
-  .produits_categories {
-    height: 800px;
+  .produits_categories_card {
+    height: 150px;
   }
 }/*# sourceMappingURL=Produits.css.map */

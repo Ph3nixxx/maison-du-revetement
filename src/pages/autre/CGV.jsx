@@ -37,28 +37,11 @@ export default function CGV() {
                 peuvent être échangés entre le vendeur et le client, sauf accord dérogatoire et à
                 l'exception du document d'ouverture de compte par un professionnel qui reprend les
                 présentes conditions générales de vente et les dispositions particulières spécifiques aux
-                professionnels lesquelles prévalent sur les présentes. Si une, des clauses ou dispositions
-                des présentes Conditions Générales de Vente venait à être annulée ou déclarée illégale
-                par une décision de justice définitive, cette nullité ou illégalité.
+                professionnels lesquelles prévalent sur les présentes.
                 </p>
                 <h2>COMMANDES</h2>
                 <p> Toute commande implique de la part du client l'acceptation sans réserve des présentes
-                conditions générales de vente. Le client doit obligatoirement, condition préalable à
-                l'acceptation par le vendeur de la commande, d’une part, fournir une photocopie de sa
-                carte national d'identité ou de son extrait KBIS, ses coordonnées bancaires et sa
-                profession afin de permettre à la Société de remplir sa fiche d'identification, ou pour le
-                professionnel, souhaitant bénéficier d'un encours, remplir un document annexe
-                intitulé « ouverture de compte client professionnel » accompagné des pièces
-                obligatoires indiquées et fournir une garantie financière couvrant obligatoirement ledit
-                encours, d'autre part, apposer sa signature sur le bon de commande, après l'avoir
-                vérifiée et effectuer le règlement du prix ou, le cas échéant, s'acquitter d'un acompte
-                de QUARANTE POUR CENT (40%) du prix TTC afin de valider ladite commande, et le
-                solde au plus tard, HUIT (8) jours avant date de livraison.
-                Le client indique également la personne habilitée à passer la commande dans
-                l’entreprise, à suivre les factures, à enlever les marchandises ou à les réceptionner. Lors
-                d'une commande comportant des spécificités, le vendeur pourra solliciter du client le
-                règlement de la totalité du prix.
-                Toute commande prise est ferme et définitive.
+                conditions générales de vente. Toute commande prise est ferme et définitive.
                 Toute modification doit être formulée dans les deux (2) jours, à compter de la signature
                 du bon de commande sous peine d'irrecevabilité, sauf accord écrit du vendeur. Les
                 offres sont valables dans la limite des stocks disponibles. En cas de devis, l'offre restera
@@ -90,8 +73,7 @@ export default function CGV() {
                 </p>
                 <h2>DELAIS</h2>
                 <p>Le délai de livraison court à partir du lendemain de la date de commande dans le cas d'un règlement par carte bancaire, sous réserve
-                d'acceptation de celui-ci ou à réception du chèque dans le cas d'un règlement par
-                chèque. Dans le cas d'une commande de produits ayant des délais de livraison
+                d'acceptation de celui-ci. Dans le cas d'une commande de produits ayant des délais de livraison
                 différents, la totalité de la commande sera livrée sur la base du délai le plus long. En
                 principe, pour les produits non stockés dans nos entrepôts, le délai de disponibilité du
                 produit ne saurait dépasser TROIS (3) mois sauf pour le cas de commande portant sur
@@ -100,8 +82,8 @@ export default function CGV() {
                 les produits stockés dans nos entrepôts, le retrait en magasin ou départ livraison se fait
                 sous 24 heures à 3 mois maximum. L'indication du délai de livraison porté sur le
                 bon de commande engage le vendeur qui se réserve le droit de le prolonger en cas de
-                force majeure ou fortuits ou des cas ci-après stipulés. En ce qui concerne, le client
-                professionnel, le délai de livraison indiqué lors de l'enregistrement de la commande
+                force majeure ou fortuits ou des cas ci-après stipulés. En ce qui concerne le client, 
+                le délai de livraison indiqué lors de l'enregistrement de la commande
                 n'est donné qu'à titre indicatif et n'est aucunement garanti.
                 Les risques dont ceux du transport sont à la charge du client à compter du moment où
                 les produits ont quitté les locaux du vendeur. Le client dégage le vendeur de tout
@@ -114,7 +96,7 @@ export default function CGV() {
                 </p>
                 <h2>LIVRAISON OU ENLEVEMENT SUR PLACE </h2>
                 <p>Les livraisons sont faites à l’adresse indiquée sur le bon de commande. La livraison ou
-                l’enlèvement s'effectuent de 9h00 à 17h00. Il n'y a pas de livraison le samedi et les jours
+                l’enlèvement s'effectuent de 9h00 à 17h00. Il n'y a pas de livraison le samedi, le dimanche et les jours
                 fériés et/ou chômés. Les marchandises sont remises contre signature et après
                 vérification. Le tarif de la prestation de transport est fixé lors de la passation de la
                 commande en fonction de la quantité, du poids, de la destination et de l'accès au lieu
@@ -122,7 +104,7 @@ export default function CGV() {
                 résulteraient d'une difficulté d’accès lors de la livraison même si cette difficulté a été
                 signalée lors de la commande. Le vendeur ne saurait être tenu pour responsable des
                 retards résultant notamment d'un des évènements suivants : un cas de force majeure
-                ou d'événements tels que lock-out, grève, arrêt de travail total ou partiel dans l'usine
+                ou d'événements tels que confinement, grève, arrêt de travail total ou partiel dans l'usine
                 du vendeur ou chez ses fournisseurs, épidémie, guerre, réquisition, incendie,
                 inondation, interruption ou retard dans les transports, mesures légales ou
                 administratives empêchant, restreignant, retardant ou interdisant fabrication ou
@@ -153,7 +135,7 @@ export default function CGV() {
                 le, vendeur se réserve le droit de livrer le client selon le jour de son choix et de compter
                 des frais supplémentaires à régler, à réception des marchandises directement au
                 transporteur.
-                La livraison s'effectue devant la boite aux lettres du client, au pied de l'immeuble, sur la
+                La livraison s'effectue par défaut devant la boite aux lettres du client, au pied de l'immeuble, sur la
                 chaussée.
                 </p>
                 <h2>RECEPTION DES MARCHANDISES</h2>
@@ -192,15 +174,14 @@ export default function CGV() {
                 de livraison. Si le client souhaite formuler une réclamation, il s'engage à l’envoyer dans
                 un délai de 48 heures à compter de la réception des marchandises, par courrier
                 recommandée avec A.R, en indiquant la référence de la commande. Dans le cas,
-                d'impossibilité livrer le client de son fait : tout manquement notamment à un rendezvous de livraison, entraîne pour celui-ci la perte de la participation aux frais d'envoi et
+                d'impossibilité livrer le client de son fait : tout manquement notamment à un rendez-vous de livraison, entraîne pour celui-ci la perte de la participation aux frais d'envoi et
                 des frais supplémentaires seront à sa charge et réglés directement entre les mains du
                 transporteur. Bien que nous essayons de vous donner délais plus justes possibles sur la
                 commande, en cas de retard fondé ou pas, le client ne pourra prétendre à aucune
                 indemnité et/ou réparation financière pour quelque préjudice que ce soit.
                 </p>
                 <h2>PRIX</h2>
-                <p>Tout règlement versé au vendeur est considéré comme un acompte. Les prix figurant
-                dans notre catalogue sont des prix T.T.C en EUROS, au départ de nos magasins. Ils
+                <p>Les prix figurant dans notre catalogue sont des prix T.T.C en EUROS, au départ de nos magasins. Ils
                 comprennent les frais de traitement et d'emballage liés à la commande. Les frais de
                 livraison restent à la charge client et sont déterminés lors de la commande en fonction
                 de la quantité, du poids, de la destination et de l’accès au lieu de livraison. Tout
@@ -209,10 +190,9 @@ export default function CGV() {
                 entendu que le prix figurant au catalogue le jour de la commande sera le seul applicable
                 au client. Tous les produits sont payables à la commande. En aucun cas, le vendeur ne
                 sera tenu de livrer le client si la commande n'est pas réglée dans sa totalité. Les modes
-                de paiements acceptés sont : chèques bancaires domiciliés en France, cartes bancaires
-                privées : CB (exclusivement cartes bleues), Visa, Mastercard ou virements bancaires et
-                espèces* (*uniquement à nos magasins). Le défaut de paiement d’une échéance rend
-                immédiatement exigible toutes les autres créances échues ou à échoir, et ce, de plein
+                de paiements acceptés sont : cartes bancaires privées (exclusivement cartes bleues), Visa, Mastercard ou virements bancaires.
+                Le paiement en espèces ou par chèque est valable uniquement en magasin, tout règlement versé au vendeur est considéré comme un acompte.
+                Le défaut de paiement d’une échéance rend immédiatement exigible toutes les autres créances échues ou à échoir, et ce, de plein
                 droit, sans mise en demeure préalable. Il entraîne automatiquement la résolution des
                 marchés et commandes en cours et la perte de l'acompte au bénéfice du vendeur, à
                 titre d'indemnité forfaitaire ainsi que la reprise des marchandises non payées. La
@@ -295,9 +275,9 @@ export default function CGV() {
                 majeure, vous avez possibilité d'annuler votre commande et de vous faire rembourser
                 ; vous devez alors nous envoyer une lettre recommandée avec accusé de réception
                 dans les 3 jours ouvrables à compter de date de livraison prévue. De convention
-                expresse, un cas de force majeure ou d'évènements tels que lock-out, grève, arrêt de
+                expresse, un cas de force majeure ou d'évènements tels que confinement, grève, arrêt de
                 travail total ou partiel dans l'usine du vendeur ou chez ses fournisseurs, épidémie,
-                guerre/ réquisition, incendie, inondation, interruption ou retard dans les transports,
+                guerre, réquisition, incendie, inondation, interruption ou retard dans les transports,
                 mesures légales ou administratives empêchant, restreignant, retardant ou interdisant
                 la fabrication ou l'importation de la marchandise, le vendeur est dégagé de toutes
                 responsabilités à la livraison. Le vendeur tiendra le client au courant en temps opportun,
@@ -311,13 +291,13 @@ export default function CGV() {
                 <p>Les produits livrés et facturés au client resteront la propriété du vendeur jusqu'au
                 paiement intégral de leurs prix. Le défaut de paiement pourra entraîner la revendication
                 des produits par le vendeur, la restitution étant immédiate et les produits livrés à vos
-                frais, risques et périls. Durant période s'écoulant de la livraison au transfert de
+                frais, risques et périls. Durant la période s'écoulant de la livraison au transfert de
                 propriété, les risques de perte, vol ou destruction ainsi que les dommages occasionnés
                 par le client restent à sa charge. Le client s'engage à participer activement à
-                l'établissement d’un inventaire des marchandises se trouvant dans ses stocks et dont
+                l'établissement d’un inventaire des marchandises se trouvant dans ses stocks et dont le
                 vendeur revendique la propriété. A défaut, le vendeur a la faculté de faire constater
                 l'inventaire par huissier de justice aux frais du client. Le vendeur pourra interdire au
-                client de procéder à la revente, la transformation ou l'incorporation des marchandises
+                client de procéder à la revente, la transformation ou l'incorporation des marchandises en
                 cas de retard de paiement. Pour garantir les paiements non encore effectués et
                 notamment le solde du compte client dans les écritures du vendeur, il est expressément
                 stipulé que les droits relatifs aux marchandises livrées même impayées se reporteront
@@ -329,7 +309,7 @@ export default function CGV() {
                 répétant pas aux échantillons proposés, les produits décrits sur le bon de commande,
                 seront établis sous l'entière responsabilité du client.
                 Sauf convention spéciale et écrite, toute commande signée par le client implique son
-                adhésion de plein droit aux présentes conditions générales de, vente qu’il reconnaît
+                adhésion de plein droit aux présentes conditions générales de vente qu’il reconnaît
                 avoir lues avant signature.
                 Si l’une des clauses ou dispositions des présentes Conditions Générales de Vente venait
                 à être annulée ou déclarée illégale par une décision de justice définitive, cette nullité

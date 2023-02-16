@@ -50,7 +50,7 @@ button {
 
 /* Header */
 
-.header, .headerHome {
+.headerHome, .header {
     width: 100%;
     display: flex;
     position: relative;
@@ -74,7 +74,6 @@ button {
         display: flex;
 
         & img {
-            height: auto;
             width: 100%; 
         }
     }
@@ -113,6 +112,11 @@ button {
             justify-content: center;
             align-items: center;
         }
+
+        & img {
+            max-height: 100px;
+            min-width: 60px;
+        }
     }
 }
 
@@ -133,6 +137,34 @@ button {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        & img {
+            max-height: 100px;
+        }
+    }
+
+    & .header_gauche {
+        padding-top: 0px !important;
+    
+        &_megamenu {
+            align-items: center;
+
+            &_carrelage, &_parquet, &_sanitaire {
+                &:hover {
+                    padding: 100px 0px;
+                }
+            }
+        }
+    }
+}
+
+.header .header_gauche_megamenu {
+    &_carrelage, &_parquet, &_sanitaire {
+        display: flex;
+
+        &:hover {
+            padding: 100px 0px;
         }
     }
 }
@@ -207,30 +239,22 @@ button {
 }
 
 .headerHome .header_gauche {
-    padding-top: 35px;
+    padding-top: 55px;
 
     &_megamenu {
         &_carrelage, &_parquet, &_sanitaire {
+            display: flex;
+
             &:hover {
-                padding-bottom: 50px;
+                padding-bottom: 100px;
             }
         }
     }
 }
 
 .header .header_gauche {
-    align-items: center;
-    padding-top: 0px;
-
-    &_megamenu {
-        &_carrelage, &_parquet, &_sanitaire {
-            margin: 50px 0px;
-
-            &:hover {
-                margin : 0px;
-                padding: 50px 0px;
-            }
-        }
+    &_megamenu, &_icones {
+        align-items: center;
     }
 }
 
@@ -241,9 +265,10 @@ button {
     text-align: left;
     background: rgba($secondary-color, $alpha: 0.80);
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 70px;
     border-radius: 20px;
     gap: 10px;
+    top: 70px;
 
     & h3 {
         font-size: calc(0.6em + 0.6vw);
@@ -307,7 +332,7 @@ button {
 }
 
 .headerHome .header_droite {
-    padding-top: 35px;
+    padding-top: 55px;
 }
 
 .header .header_droite {
@@ -347,11 +372,10 @@ main {
 }
 
 .gallery {
-    display: flex;
-    position: relative;
     height: 700px;
     width: 100%;
     @include display-flex(column);
+    position: relative;
     justify-content: space-between;
     gap: 1%;
 
@@ -389,7 +413,11 @@ main {
     &_cinq {
         height: 50%;
         width: 100%;
-        display: flex;
+        display: flex;  
+
+        & h3 {
+            font-size: calc(0.7em + 0.9vw) !important;
+        }
     }
 
     &_six {
@@ -668,11 +696,17 @@ main {
         }
 
         & a:hover {
-            color: rgb(0, 255, 0);
+            color: blue;
         }
     }
 
+    &_produits_texte {
+        @include display-flex(column);
+        gap: 10px;
+    }
+
     &_end {
+        height: 60px;
         @include display-flex(row);
         justify-content: center;
         align-items: center;
@@ -687,12 +721,12 @@ main {
         }
 
         & img {
-            height: 60px;
-            width: 60px;
+            height: 40px;
+            width: 40px;
         }
 
         & a:hover {
-            color: white;
+            color: blue;
         }
     }
 
@@ -723,10 +757,6 @@ main {
         height: 100px;
 
         &_gauche {
-            &_megamenu {
-                width: 80%;  
-            }
-
             &_icones {
                 width: 20%;
                 padding-left: 10px;
@@ -734,15 +764,15 @@ main {
         }
 
         &_droite {
-            &_onglets {
-                width: 80%;  
-            }
-
             &_icones {
                 width: 20%;
                 padding-right: 10px;
             }
         }
+    }
+
+    .categories_carrelage, .categories_parquet, .categories_sanitaire {
+        margin-top: 40px;
     }
 
     .presentation, .pro {
@@ -764,17 +794,20 @@ main {
     }
 
     .gammes {
-        &_pays {
-            position: relative;
-            top: 0%;
-            right: 0%;
-            padding-bottom: 40px;
+        & p {
+            font-size: calc(0.6em + 0.5vw);
+        }
 
-            & p {
-                font-size: calc(0.6em + 0.5vw);
-            }
+        &_titre {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
 
-        } 
+    .gallery {
+        &_sept {
+            gap: 10%;
+        }
     }
 
     .pro {
@@ -814,21 +847,113 @@ main {
 
 @media all and (max-width: 767px) {
     .headerHome {
-        height: 400px;
+        height: 300px;
+
+        &_logo {
+            padding-top: 20px;
+        }
+            
+        & .header {
+            &_gauche {
+                @include display-flex(column-reverse);
+                justify-content: right;
+                align-items: center;
+                padding-top: 20px;
+
+                &_megamenu {
+                    &_carrelage, &_parquet, &_sanitaire {
+                        &:hover {
+                            padding-bottom: 40px;
+                        }
+                    }
+                }
+
+                &_icones {
+                    padding: 0px;
+                    width: 80%;
+                    justify-content: center;
+                    gap: 20px;
+                }
+            }
+
+            &_droite {
+                @include display-flex(column);
+                align-items: center;
+                padding-top: 20px !important;
+
+                &_onglets, &_icones {
+                    width: 80%;
+                    padding: 0px;
+                }
+
+                &_onglets {
+                    justify-content: space-between;
+                }
+
+                &_icones {
+                    justify-content: center;
+                    gap: 20px;
+                }
+            }
+        }
+
+        & .categories_carrelage, .categories_parquet, .categories_sanitaire {
+            width: 85%;
+            background-color: $secondary-color;
+            left: 5%;
+            top: 40px;
+        }
+    }
+
+    .headerHome_nav_second {
+        display: none;
     }
 
     .header {
-        &_gauche {
-            padding-top: 20px;
+        & .header {    
+            &_nav {
+                gap: 0px;
+            }
+    
+            &_gauche, &_droite {
+                justify-content: center;
+                align-items: center;
+    
+                &_megamenu {
+                    &_carrelage, &_parquet, &_sanitaire {  
+                        margin: 0px !important;
+                    }
+                }
+                
+                &_icones {
+                    justify-content: center;
+                    padding: 0px;
+                    gap: 30px;
+                }
+            }
+    
+            &_gauche {
+                @include display-flex(column-reverse);
+
+                &_megamenu {
+                    &_carrelage, &_parquet, &_sanitaire {
+                        &:hover .categories_carrelage {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+    
+            &_droite {
+                @include display-flex(column);
+            }
         }
 
-        &_droite {
-            padding-top: 20px;
-
-            &_icones {
-                gap: 10px;
-                padding-right: 10px;
-            }
+        & .categories_carrelage, .categories_parquet, .categories_sanitaire {
+            width: 85%;
+            background-color: $secondary-color;
+            left: 5%;
+            top: 40px;
         }
     }
 
@@ -841,16 +966,20 @@ main {
             font-size: calc(0.4em + 0.4vw);            
         }
 
-
         &_titre {
-        padding-top: 20px;
+        padding-top: 15px;
         padding-bottom: 20px;
+        }
+    }
+
+    .gallery {
+        &_sept {
+            gap: 7%;
         }
     }
 
     .presentation, .pro {
         height: 400px;
-        padding-top: 40px;
         gap: 10px;
 
         &_photo {
@@ -876,6 +1005,10 @@ main {
         }
     }
 
+    .presentation {
+            padding-bottom: 40px;
+    }
+
     .pro {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -891,9 +1024,9 @@ main {
         height: 400px;
 
         &_div {
-        @include display-flex(column);
-        justify-content: center;
-        gap: 20px;
+            @include display-flex(column);
+            justify-content: center;
+            gap: 20px;
 
             & img {
                 height: 100px;
@@ -915,8 +1048,113 @@ main {
 }
 
 @media all and (max-width: 499px) {
+    .headerHome {
+        &_logo {
+            display: flex;
+            justify-content: center;
+            padding-top: 15px;
+            
+            & img {
+                min-width: 120px;
+            }
+        }
+
+        &_nav {
+            gap: 0px;
+        }
+
+        & .header {
+            &_gauche {
+                padding-top: 60px !important;
+
+                &_megamenu {
+                    &_carrelage {
+                        &:hover {
+                            padding-bottom: 0px;
+                        }
+
+                        &:hover .categories_carrelage {
+                            display: none;
+                        }
+                    }
+                
+                    &_parquet {
+                        &:hover {
+                            padding-bottom: 0px;
+                        }
+
+                        &:hover .categories_parquet {
+                            display: none;
+                        }
+                    }
+                
+                    &_sanitaire {
+                        &:hover {
+                            padding-bottom: 0px;
+                        }
+                        
+                        &:hover .categories_sanitaire {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &_droite {
+                padding-top: 60px !important;
+            }
+        }
+    }
+
+    .header {
+        & .header {
+            &_gauche {
+                &_megamenu {
+                    &_carrelage {
+                        &:hover {
+                            padding: 0px;
+                        }
+
+                        &:hover .categories_carrelage {
+                            display: none;
+                        }
+                    }
+                
+                    &_parquet {
+                        &:hover {
+                            padding: 0px;
+                        }
+
+                        &:hover .categories_parquet {
+                            display: none;
+                        }
+                    }
+                
+                    &_sanitaire {
+                        &:hover {
+                            padding: 0px;
+                        }
+                        
+                        &:hover .categories_sanitaire {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gallery {
+        height: 500px;
+        
+        &_cinq {
+            font-size: calc(0.6em + 0.6vw);
+        }
+    }
+
     .footer {
         & ul {
+            width: 100%;
             padding: 10px;
         }
 
@@ -924,17 +1162,14 @@ main {
             @include display-flex(column);
             align-items: center;
         }
+
+        &_produits_texte {
+            @include display-flex(row);
+            gap: 20px;
+        }
     }
 
     .instagram {
         padding-top: 0px;
-    }
-}
-
-@media all and (max-width: 399px) {
-    .header_droite_icones {
-        @include display-flex(column);
-        justify-content: left;
-        padding-right: 0px;
     }
 }

@@ -31,17 +31,17 @@ button {
 }
 
 /* Header */
-.header, .headerHome {
+.headerHome, .header {
   width: 100%;
   display: flex;
   position: relative;
   z-index: 5;
 }
-.header h2, .headerHome h2 {
+.headerHome h2, .header h2 {
   font-size: calc(0.5em + 0.5vw);
   font-weight: bolder;
 }
-.header_nav, .headerHome_nav {
+.headerHome_nav, .header_nav {
   height: 100%;
   width: 100%;
   display: flex;
@@ -49,12 +49,11 @@ button {
   position: absolute;
   gap: 20px;
 }
-.header_logo, .headerHome_logo {
+.headerHome_logo, .header_logo {
   width: 25%;
   display: flex;
 }
-.header_logo img, .headerHome_logo img {
-  height: auto;
+.headerHome_logo img, .header_logo img {
   width: 100%;
 }
 
@@ -90,6 +89,10 @@ button {
   justify-content: center;
   align-items: center;
 }
+.header_logo img {
+  max-height: 100px;
+  min-width: 60px;
+}
 
 .header_gauche, .header_droite {
   width: 37.5%;
@@ -108,6 +111,25 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.headerHome_nav_second .headerHome_logo img {
+  max-height: 100px;
+}
+.headerHome_nav_second .header_gauche {
+  padding-top: 0px !important;
+}
+.headerHome_nav_second .header_gauche_megamenu {
+  align-items: center;
+}
+.headerHome_nav_second .header_gauche_megamenu_carrelage:hover, .headerHome_nav_second .header_gauche_megamenu_parquet:hover, .headerHome_nav_second .header_gauche_megamenu_sanitaire:hover {
+  padding: 100px 0px;
+}
+
+.header .header_gauche_megamenu_carrelage, .header .header_gauche_megamenu_parquet, .header .header_gauche_megamenu_sanitaire {
+  display: flex;
+}
+.header .header_gauche_megamenu_carrelage:hover, .header .header_gauche_megamenu_parquet:hover, .header .header_gauche_megamenu_sanitaire:hover {
+  padding: 100px 0px;
 }
 
 /* Header Gauche / Megamenu */
@@ -169,22 +191,17 @@ button {
 }
 
 .headerHome .header_gauche {
-  padding-top: 35px;
+  padding-top: 55px;
+}
+.headerHome .header_gauche_megamenu_carrelage, .headerHome .header_gauche_megamenu_parquet, .headerHome .header_gauche_megamenu_sanitaire {
+  display: flex;
 }
 .headerHome .header_gauche_megamenu_carrelage:hover, .headerHome .header_gauche_megamenu_parquet:hover, .headerHome .header_gauche_megamenu_sanitaire:hover {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
-.header .header_gauche {
+.header .header_gauche_megamenu, .header .header_gauche_icones {
   align-items: center;
-  padding-top: 0px;
-}
-.header .header_gauche_megamenu_carrelage, .header .header_gauche_megamenu_parquet, .header .header_gauche_megamenu_sanitaire {
-  margin: 50px 0px;
-}
-.header .header_gauche_megamenu_carrelage:hover, .header .header_gauche_megamenu_parquet:hover, .header .header_gauche_megamenu_sanitaire:hover {
-  margin: 0px;
-  padding: 50px 0px;
 }
 
 .categories_carrelage, .categories_parquet, .categories_sanitaire {
@@ -194,9 +211,10 @@ button {
   text-align: left;
   background: rgba(211, 211, 211, 0.8);
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 70px;
   border-radius: 20px;
   gap: 10px;
+  top: 70px;
 }
 .categories_carrelage h3, .categories_parquet h3, .categories_sanitaire h3 {
   font-size: calc(0.6em + 0.6vw);
@@ -256,7 +274,7 @@ button {
 }
 
 .headerHome .header_droite {
-  padding-top: 35px;
+  padding-top: 55px;
 }
 
 .header .header_droite {
@@ -294,12 +312,11 @@ main {
 }
 
 .gallery {
-  display: flex;
-  position: relative;
   height: 700px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: space-between;
   gap: 1%;
 }
@@ -336,6 +353,9 @@ main {
   height: 50%;
   width: 100%;
   display: flex;
+}
+.gallery_cinq h3 {
+  font-size: calc(0.7em + 0.9vw) !important;
 }
 .gallery_six {
   height: 100%;
@@ -590,9 +610,15 @@ main {
   padding-bottom: 10px;
 }
 .footer_list a:hover {
-  color: rgb(0, 255, 0);
+  color: blue;
+}
+.footer_produits_texte {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .footer_end {
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -607,11 +633,11 @@ main {
   justify-content: center;
 }
 .footer_end img {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
 }
 .footer_end a:hover {
-  color: white;
+  color: blue;
 }
 .footer_contact_telephone, .footer_contact_email, .footer_contact_showroom {
   text-align: center;
@@ -633,19 +659,16 @@ main {
   .header {
     height: 100px;
   }
-  .header_gauche_megamenu {
-    width: 80%;
-  }
   .header_gauche_icones {
     width: 20%;
     padding-left: 10px;
   }
-  .header_droite_onglets {
-    width: 80%;
-  }
   .header_droite_icones {
     width: 20%;
     padding-right: 10px;
+  }
+  .categories_carrelage, .categories_parquet, .categories_sanitaire {
+    margin-top: 40px;
   }
   .presentation, .pro {
     height: 600px;
@@ -659,14 +682,15 @@ main {
   .presentation p {
     font-size: calc(0.45em + 0.45vw);
   }
-  .gammes_pays {
-    position: relative;
-    top: 0%;
-    right: 0%;
-    padding-bottom: 40px;
-  }
-  .gammes_pays p {
+  .gammes p {
     font-size: calc(0.6em + 0.5vw);
+  }
+  .gammes_titre {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .gallery_sept {
+    gap: 10%;
   }
   .pro p {
     font-size: calc(0.55em + 0.55vw);
@@ -692,17 +716,84 @@ main {
 /* Smartphone */
 @media all and (max-width: 767px) {
   .headerHome {
-    height: 400px;
+    height: 300px;
   }
-  .header_gauche {
+  .headerHome_logo {
     padding-top: 20px;
   }
-  .header_droite {
+  .headerHome .header_gauche {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: right;
+    align-items: center;
     padding-top: 20px;
   }
-  .header_droite_icones {
-    gap: 10px;
-    padding-right: 10px;
+  .headerHome .header_gauche_megamenu_carrelage:hover, .headerHome .header_gauche_megamenu_parquet:hover, .headerHome .header_gauche_megamenu_sanitaire:hover {
+    padding-bottom: 40px;
+  }
+  .headerHome .header_gauche_icones {
+    padding: 0px;
+    width: 80%;
+    justify-content: center;
+    gap: 20px;
+  }
+  .headerHome .header_droite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px !important;
+  }
+  .headerHome .header_droite_onglets, .headerHome .header_droite_icones {
+    width: 80%;
+    padding: 0px;
+  }
+  .headerHome .header_droite_onglets {
+    justify-content: space-between;
+  }
+  .headerHome .header_droite_icones {
+    justify-content: center;
+    gap: 20px;
+  }
+  .headerHome .categories_carrelage, .headerHome .categories_parquet, .headerHome .categories_sanitaire {
+    width: 85%;
+    background-color: #D3D3D3;
+    left: 5%;
+    top: 40px;
+  }
+  .headerHome_nav_second {
+    display: none;
+  }
+  .header .header_nav {
+    gap: 0px;
+  }
+  .header .header_gauche, .header .header_droite {
+    justify-content: center;
+    align-items: center;
+  }
+  .header .header_gauche_megamenu_carrelage, .header .header_gauche_megamenu_parquet, .header .header_gauche_megamenu_sanitaire, .header .header_droite_megamenu_carrelage, .header .header_droite_megamenu_parquet, .header .header_droite_megamenu_sanitaire {
+    margin: 0px !important;
+  }
+  .header .header_gauche_icones, .header .header_droite_icones {
+    justify-content: center;
+    padding: 0px;
+    gap: 30px;
+  }
+  .header .header_gauche {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .header .header_gauche_megamenu_carrelage:hover .categories_carrelage, .header .header_gauche_megamenu_parquet:hover .categories_carrelage, .header .header_gauche_megamenu_sanitaire:hover .categories_carrelage {
+    width: 80%;
+  }
+  .header .header_droite {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .categories_carrelage, .header .categories_parquet, .header .categories_sanitaire {
+    width: 85%;
+    background-color: #D3D3D3;
+    left: 5%;
+    top: 40px;
   }
   .gammes h2 {
     font-size: calc(0.9em + 0.9vw);
@@ -711,12 +802,14 @@ main {
     font-size: calc(0.4em + 0.4vw);
   }
   .gammes_titre {
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 20px;
+  }
+  .gallery_sept {
+    gap: 7%;
   }
   .presentation, .pro {
     height: 400px;
-    padding-top: 40px;
     gap: 10px;
   }
   .presentation_photo, .pro_photo {
@@ -735,6 +828,9 @@ main {
   }
   .presentation_texte_top, .pro_texte_top {
     padding-top: 20px;
+  }
+  .presentation {
+    padding-bottom: 40px;
   }
   .pro {
     padding-top: 40px;
@@ -765,7 +861,67 @@ main {
   }
 }
 @media all and (max-width: 499px) {
+  .headerHome_logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .headerHome_logo img {
+    min-width: 120px;
+  }
+  .headerHome_nav {
+    gap: 0px;
+  }
+  .headerHome .header_gauche {
+    padding-top: 60px !important;
+  }
+  .headerHome .header_gauche_megamenu_carrelage:hover {
+    padding-bottom: 0px;
+  }
+  .headerHome .header_gauche_megamenu_carrelage:hover .categories_carrelage {
+    display: none;
+  }
+  .headerHome .header_gauche_megamenu_parquet:hover {
+    padding-bottom: 0px;
+  }
+  .headerHome .header_gauche_megamenu_parquet:hover .categories_parquet {
+    display: none;
+  }
+  .headerHome .header_gauche_megamenu_sanitaire:hover {
+    padding-bottom: 0px;
+  }
+  .headerHome .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
+    display: none;
+  }
+  .headerHome .header_droite {
+    padding-top: 60px !important;
+  }
+  .header .header_gauche_megamenu_carrelage:hover {
+    padding: 0px;
+  }
+  .header .header_gauche_megamenu_carrelage:hover .categories_carrelage {
+    display: none;
+  }
+  .header .header_gauche_megamenu_parquet:hover {
+    padding: 0px;
+  }
+  .header .header_gauche_megamenu_parquet:hover .categories_parquet {
+    display: none;
+  }
+  .header .header_gauche_megamenu_sanitaire:hover {
+    padding: 0px;
+  }
+  .header .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
+    display: none;
+  }
+  .gallery {
+    height: 500px;
+  }
+  .gallery_cinq {
+    font-size: calc(0.6em + 0.6vw);
+  }
   .footer ul {
+    width: 100%;
     padding: 10px;
   }
   .footer_list {
@@ -773,15 +929,12 @@ main {
     flex-direction: column;
     align-items: center;
   }
+  .footer_produits_texte {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
   .instagram {
     padding-top: 0px;
-  }
-}
-@media all and (max-width: 399px) {
-  .header_droite_icones {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    padding-right: 0px;
   }
 }/*# sourceMappingURL=index.css.map */

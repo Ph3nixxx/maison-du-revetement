@@ -17,7 +17,7 @@ export default function Livraison() {
                     <span className="livraison_ligne"></span>
                     <div className="livraison_texte">
                         <div className="livraison_texte_livraison">
-                            <p>Le délais d'expédition peuvent varier en fonction de la disponibilité des produits à savoir :<br />
+                            <p>Le délai d'expédition peuvent varier en fonction de la disponibilité des produits à savoir :<br />
                             - <strong>8 à 12 jours ouvrés</strong> pour les produits en stock<br />
                             - <strong>4 à 5 semaines</strong> pour les produits à la commande d'Italie<br />
                             - <strong>5 à 8 semaines</strong> pour les produits à la commande d'Espagne<br /><br />
@@ -31,7 +31,7 @@ export default function Livraison() {
                             <br /></p>
                             <div class="maps">
                                 <div class="maps_canvas">
-                                    <iframe width="500" height="400" src="https://maps.google.com/maps?q=25%20Avenue%20du%20Chemin%20des%20Reniers&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+                                    <iframe className="maps_img" src="https://maps.google.com/maps?q=25%20Avenue%20du%20Chemin%20des%20Reniers&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -42,8 +42,8 @@ export default function Livraison() {
                         <h2>Coûts de livraison</h2>
                     </div>
                     <span className="livraison_ligne"></span>
-                    <div className="livraison_texte">
-                        <div className="livraison_texte_livraison">
+                    <div className="livraison_couts">
+                        <div className="livraison_couts_ileDeFrance">
                             <h3>Ile-de-France</h3>
                             <p>Dans la limite de 18 m² :<br />
                             <strong>49,00 €HT</strong> *
@@ -52,7 +52,7 @@ export default function Livraison() {
                             <strong>79,00 €HT</strong> *
                             </p>
                         </div>
-                        <div className="livraison_texte_retrait">
+                        <div className="livraison_couts_france">
                             <h3>France Métropolitaine (hors Ile-de-France)</h3>
                             <p>Dans la limite de 18 m² :<br />
                             <strong>79,00 €HT</strong> *

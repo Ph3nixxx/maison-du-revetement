@@ -15,12 +15,14 @@
   text-align: center;
   padding: 40px;
 }
+.livraison h2 {
+  font-size: calc(1em + 1vw);
+}
 .livraison_titre {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
 }
-.livraison_texte {
+.livraison_texte, .livraison_couts {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,10 +30,10 @@
   gap: 50px;
   padding-top: 30px;
 }
-.livraison_texte_livraison {
+.livraison_texte_livraison, .livraison_texte_ileDeFrance, .livraison_couts_livraison, .livraison_couts_ileDeFrance {
   width: 50%;
 }
-.livraison_texte_retrait {
+.livraison_texte_retrait, .livraison_texte_france, .livraison_couts_retrait, .livraison_couts_france {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -45,16 +47,16 @@
 }
 
 .maps {
-  height: 400px;
-  width: 500px;
   position: relative;
   margin: 0px;
 }
 .maps_canvas {
-  height: 400px;
-  width: 500px;
   overflow: hidden;
   background: none !important;
+}
+.maps_img {
+  height: 400px;
+  width: 500px;
 }
 
 /* CGV & Mentions Légales */
@@ -70,13 +72,10 @@
 }
 .cgv h2, .mentionsLegales h2 {
   font-size: calc(0.8em + 0.8vw);
-  padding-left: 40px;
+  padding: 20px 0px 0px 40px;
 }
 .cgv p, .mentionsLegales p {
   font-size: calc(0.5em + 0.5vw);
-}
-.cgv .p_un, .mentionsLegales .p_un {
-  padding-top: 30px;
 }
 .cgv_ligne, .mentionsLegales_ligne {
   width: 150px;
@@ -90,15 +89,14 @@
 
 /* Simulateur */
 .simulateur {
-  padding-top: 120px;
   background-color: #F5F5F5;
+  padding-top: 120px;
 }
 
 .construction {
   display: flex;
   flex-direction: column;
   height: 500px;
-  margin: 40px;
   border: solid 5px #D3D3D3;
   text-align: center;
   justify-content: center;
@@ -167,4 +165,34 @@
 }
 
 /* Tablet */
-/* Smartphone *//*# sourceMappingURL=Autre.css.map */
+@media all and (max-width: 1199px) {
+  .pageLivraison {
+    padding-top: 100px;
+  }
+  .pageLivraison .livraison {
+    padding: 0px 40px;
+  }
+  .pageLivraison .livraison_titre {
+    padding-top: 30px;
+  }
+  .pageLivraison .livraison_texte {
+    display: flex;
+    flex-direction: column;
+  }
+  .pageLivraison .livraison_texte_livraison, .pageLivraison .livraison_texte_retrait {
+    width: 100%;
+  }
+  .simulateur {
+    padding-top: 100px;
+  }
+  .cgv, .mentionsLegales {
+    padding: 120px 20px 20px 20px;
+  }
+}
+/* Smartphone */
+@media all and (max-width: 767px) {
+  .pageLivraison .maps_img {
+    height: 300px;
+    width: 300px;
+  }
+}/*# sourceMappingURL=Autre.css.map */
