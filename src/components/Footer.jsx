@@ -15,6 +15,10 @@ export default function Footer() {
                         <li><Link to="/produits/carrelage" className="footer_produits_carrelage">Carrelage</Link></li>
                         <li><Link to="/produits/parquet" className="footer_produits_parquet">Parquet</Link></li>
                         <li><Link to="/produits/sanitaire" className="footer_produits_sanitaire">Sanitaire</Link></li>
+                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-39" className="footer_produits_sanitaire">Carrelage Sol & Murs</a></li>
+                        <li><a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-44" className="footer_produits_sanitaire">Parquet Massif</a></li>
+                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-76" className="footer_produits_sanitaire">Accessoires Carrelage</a></li>
+                        <li><a href="https://maisondurevetement.odoo.com/shop/category/parquet-accessoires-parquet-77" className="footer_produits_sanitaire">Accessoires Parquet</a></li><li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-76" className="footer_produits_sanitaire">Accessoires Carrelage</a></li>
                     </div>
                 </ul>
                 <ul className="footer_services">
@@ -24,7 +28,8 @@ export default function Footer() {
                         <li><a href="https://maisondurevetement.odoo.com/cart" className="footer_produits_panier">Mon Panier</a></li>
                         <li><Link to="/livraison-et-retour" className="footer_produits_livraison">Livraison & Retour</Link></li>
                         </div>
-                    <div className="instagram"><li><a href="https://www.instagram.com/maison_du_revetement/"><i className="fa-brands fa-instagram fa-3x"></i></a></li></div>
+                    <div className="rs"><li><a href="https://www.instagram.com/maison_du_revetement/"><i className="fa-brands fa-instagram fa-3x"></i></a></li></div>
+                    <div className="rs"><li><a href="https://www.facebook.com/profile.php?id=100089922982015"><i className="fa-brands fa-facebook-f fa-3x"></i></a></li></div>
                 </ul>
                 <ul className="footer_contact">
                     <h4>Contacts</h4>

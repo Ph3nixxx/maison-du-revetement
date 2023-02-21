@@ -1,5 +1,4 @@
 /* Variables */
-
 $primary-color: #646464;
 $secondary-color: #D3D3D3;
 $tertiary-color: #F5F5F5;
@@ -9,18 +8,16 @@ $font-family-primary: "Noto Serif JP";
 $font-family-default: sans-serif;
 
 /* Mixins */
-
 @mixin display-flex($flex-direction) {
     display: flex;
     flex-direction: $flex-direction;
 }
 
 /* Code */
-
 .produits {
-    padding-top: 120px;
-    padding-bottom: 50px;
-    color: $black-color;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: $tertiary-color;
     background: $tertiary-color;
     
     &_conteneur {
@@ -31,11 +28,13 @@ $font-family-default: sans-serif;
         padding: 20px 0px;
 
         & h1 {
+            color: $tertiary-color;
             font-size: calc(2em + 2vw);
             letter-spacing: 5px;
         }
 
         & h3 {
+            color: $tertiary-color;
             text-align: center;
             font-size: calc(0.4em + 0.8vw);
             padding: 20px 50px;
@@ -44,7 +43,7 @@ $font-family-default: sans-serif;
         &_ligne {
             width: 150px;
             align-self: center;
-            border-bottom: 5px solid $black-color;
+            border-bottom: 5px solid $tertiary-color;
             padding-bottom: 20px;
         }
     }
@@ -69,7 +68,7 @@ $font-family-default: sans-serif;
                 height: 100%;
                 width: 100%;
                 display: flex;
-                color: $black-color;
+                color: $tertiary-color;
                 text-decoration: none;
                 justify-content: center;
                 align-items: center;
@@ -88,7 +87,6 @@ $font-family-default: sans-serif;
                 display: flex;
                 position: absolute;
                 color: white;
-                text-shadow: 0 0 10px $black-color;
                 font-size: calc(2em + 1.2vw);
                 letter-spacing: 5px;
             }
@@ -131,17 +129,13 @@ $font-family-default: sans-serif;
 }
 
 .divEspace {
-    height: 50px;
+    height: 30px;
     background-color: $tertiary-color;
 }
 
 /* Tablet */
 
 @media all and (max-width: 1199px) {
-    .produits {
-        padding-top: 100px;
-    }
-
     .produits_categories_card {
         height: 200px;
     }

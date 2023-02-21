@@ -20,7 +20,6 @@ $font-family-default: sans-serif;
 /* Livraison & Retour */
 
 .pageLivraison {
-    padding-top: 120px;
     background-color: $tertiary-color;
 }
 
@@ -84,7 +83,7 @@ $font-family-default: sans-serif;
 
 .cgv, .mentionsLegales {
     @include display-flex(column);
-    padding: 160px 40px 40px 40px;
+    padding: 40px 40px 40px 40px;
     background-color: $tertiary-color;
 
     & h1 {
@@ -111,13 +110,16 @@ $font-family-default: sans-serif;
     &_edition {
         align-self: center;
     }
+
+    & .p_un {
+        padding-top: 20px;
+    }
 }
 
 /* Simulateur */
 
 .simulateur {
     background-color: $tertiary-color;
-    padding-top: 120px;
 }
 
 .construction {
@@ -204,8 +206,6 @@ $font-family-default: sans-serif;
 
 @media all and (max-width: 1199px) {
     .pageLivraison {
-        padding-top: 100px;
-
         .livraison {
             padding: 0px 40px;
         }
@@ -223,12 +223,8 @@ $font-family-default: sans-serif;
         }
     }
 
-    .simulateur {
-        padding-top: 100px;
-    }
-
     .cgv, .mentionsLegales {
-        padding: 120px 20px 20px 20px;
+        padding: 20px 20px 20px 20px;
     }
 }
 

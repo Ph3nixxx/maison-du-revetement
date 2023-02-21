@@ -8,15 +8,17 @@ import Header from '../../components/Header'
 export default function MentionsLegales() {
     return (
         <>
-            <Header />
+            <header className="header">
+                <Header />
+            </header>
             <section className="mentionsLegales">
                 <h1>Mentions Légales</h1>
                 <span className="mentionsLegales_ligne"></span>
                 <h2>Édition du site</h2>
                 <div className="mentionsLegales_edition">
-                    <p className="p_un">
+                    <p>
                     <strong>Maison du Revêtement</strong><br />
-                    Société par actions simplifiée au capital de 210 600 euros.<br /><br />
+                    Société par actions simplifiée au capital de 210 600 €.<br /><br />
                     <strong>ADRESSE COMMERCIALE</strong><br />
                     23 Avenue du Chemin des Reniers<br />
                     92 390 Villeneuve-la-Garenne<br /><br />

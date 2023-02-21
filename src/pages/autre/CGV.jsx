@@ -8,12 +8,14 @@ import Header from '../../components/Header'
 export default function CGV() {
     return (
         <>
-            <Header />
+            <header className="header">
+                <Header />
+            </header>
             <section className="cgv">
                 <h1>Conditions Générales de Vente</h1>
                 <span className="cgv_ligne"></span>
                 <p className="p_un">Les présentes conditions de vente sont conclues d'une part par la Société Maison du
-                Revêtement, SAS au capital de 210 600€ ayant son siège à VILLENEUVE LA GARENNE,
+                Revêtement, SAS au capital de 210 600 € ayant son siège à VILLENEUVE LA GARENNE,
                 (92390), 23 Avenue du Chemin des Reniers, immatriculée au R.C.S de NANTERRE sous le
                 n° 917 977 035, ci-après dénommée, « le Vendeur » ou « la Société » et d'autre part,
                 par tout consommateur, non professionnel ou professionnel, dénommé ci-après « le

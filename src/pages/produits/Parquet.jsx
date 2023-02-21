@@ -16,27 +16,30 @@ import MassifImg from "../../assets/parquet-massif.jpg"
 import ContrecolleImg from "../../assets/parquet-contrecolle.jpg"
 import StratifieImg from "../../assets/parquet-stratifie.jpg"
 
+/* Code */
 export default function Parquet() {
     return (
         <>
-            <Header />
+            <header className="header">
+                <Header />
+                <Produits pdt={"PARQUET"} txt={"2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+            </header>
             <section className="produits">
-                <Produits pdt={"PARQUET"} txt={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
                 <div className="produits_categories">
                     <div className="produits_categories_card">
-                        <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-2">
+                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-44">
                             <img src={MassifImg} alt="Parquet Massif"/>
                             <h2>Massif</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
-                        <a href="#">
+                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-contrecolle-45">
                             <img src={ContrecolleImg} alt="Parquet Contrecollé"/> 
                             <h2>Contrecollé</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
-                        <a href="#">
+                        <a href="https://maisondurevetement.odoo.com/shop/category/parquet-stratifie-pvc-46">
                             <img src={StratifieImg} alt="Parquet Stratifié & PVC"/>
                             <h2>Stratifié & PVC</h2>
                         </a>

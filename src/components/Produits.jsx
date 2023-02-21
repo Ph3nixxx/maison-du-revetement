@@ -6,7 +6,6 @@ import '../styles/pages/Produits.css'
 import '../styles/autre/Autre.css'
 
 /* Code */
-
 export default function Produits({pdt, txt}) {
     return (
         <div className="produits_conteneur">

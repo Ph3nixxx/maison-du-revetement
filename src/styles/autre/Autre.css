@@ -4,7 +4,6 @@
 /* Code */
 /* Livraison & Retour */
 .pageLivraison {
-  padding-top: 120px;
   background-color: #F5F5F5;
 }
 
@@ -63,7 +62,7 @@
 .cgv, .mentionsLegales {
   display: flex;
   flex-direction: column;
-  padding: 160px 40px 40px 40px;
+  padding: 40px 40px 40px 40px;
   background-color: #F5F5F5;
 }
 .cgv h1, .mentionsLegales h1 {
@@ -86,11 +85,13 @@
 .cgv_edition, .mentionsLegales_edition {
   align-self: center;
 }
+.cgv .p_un, .mentionsLegales .p_un {
+  padding-top: 20px;
+}
 
 /* Simulateur */
 .simulateur {
   background-color: #F5F5F5;
-  padding-top: 120px;
 }
 
 .construction {
@@ -166,9 +167,6 @@
 
 /* Tablet */
 @media all and (max-width: 1199px) {
-  .pageLivraison {
-    padding-top: 100px;
-  }
   .pageLivraison .livraison {
     padding: 0px 40px;
   }
@@ -182,11 +180,8 @@
   .pageLivraison .livraison_texte_livraison, .pageLivraison .livraison_texte_retrait {
     width: 100%;
   }
-  .simulateur {
-    padding-top: 100px;
-  }
   .cgv, .mentionsLegales {
-    padding: 120px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
   }
 }
 /* Smartphone */

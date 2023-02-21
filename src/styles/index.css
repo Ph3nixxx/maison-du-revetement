@@ -1,6 +1,6 @@
 /* Variables */
 /* Mixins */
-/* Import de polices */
+/* Keyframes */
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
@@ -9,6 +9,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+@keyframes anim_un {
+  0% {
+    background-position: 0px -300px;
+  }
+  25% {
+    background-position: 0px -350px;
+  }
+  50% {
+    background-position: 0px -400px;
+  }
+  75% {
+    background-position: 0px -350px;
+  }
+  100% {
+    background-position: 0px -300px;
+  }
+}
+@keyframes anim_deux {
+  0% {
+    background-position: 0px -150px;
+  }
+  25% {
+    background-position: 0px -175px;
+  }
+  50% {
+    background-position: 0px -200px;
+  }
+  75% {
+    background-position: 0px -175px;
+  }
+  100% {
+    background-position: 0px -150px;
+  }
+}
+@keyframes anim_trois {
+  0% {
+    background-position: 0px 0px;
+  }
+  25% {
+    background-position: 0px -12.5px;
+  }
+  50% {
+    background-position: 0px -25px;
+  }
+  75% {
+    background-position: 0px -12.5px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+/* Import de polices */
 /* Body */
 body {
   font-family: "Noto Serif JP", sans-serif;
@@ -19,7 +71,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #28292A;
 }
 
 h1, h2, h3 {
@@ -30,35 +81,17 @@ button {
   padding: 0px;
 }
 
-/* Header */
-.headerHome, .header {
+/* Header Home */
+.headerHome {
+  height: 700px;
   width: 100%;
   display: flex;
   position: relative;
   z-index: 5;
 }
-.headerHome h2, .header h2 {
+.headerHome h2 {
   font-size: calc(0.5em + 0.5vw);
   font-weight: bolder;
-}
-.headerHome_nav, .header_nav {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  gap: 20px;
-}
-.headerHome_logo, .header_logo {
-  width: 25%;
-  display: flex;
-}
-.headerHome_logo img, .header_logo img {
-  width: 100%;
-}
-
-.headerHome {
-  height: 700px;
 }
 .headerHome video {
   height: 100%;
@@ -69,36 +102,75 @@ button {
      object-fit: cover;
 }
 .headerHome_logo {
+  width: 25%;
+  display: flex;
   padding-top: 30px;
 }
-
-.header {
-  height: 120px;
-  position: fixed;
-  background-image: url("../assets/texture.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.headerHome_logo img {
+  width: 100%;
 }
-.header_logo {
-  justify-content: center;
-  align-items: center;
-}
-.header_logo a {
+.headerHome_nav {
+  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  gap: 20px;
 }
-.header_logo img {
-  max-height: 100px;
-  min-width: 60px;
+.headerHome_nav .header_gauche {
+  padding-top: 55px;
+}
+.headerHome_nav .header_gauche_megamenu {
+  align-items: flex-start;
+}
+.headerHome_nav .header_gauche_megamenu_carrelage, .headerHome_nav .header_gauche_megamenu_parquet, .headerHome_nav .header_gauche_megamenu_sanitaire {
+  display: flex;
+}
+.headerHome_nav .header_gauche_megamenu_carrelage:hover, .headerHome_nav .header_gauche_megamenu_parquet:hover, .headerHome_nav .header_gauche_megamenu_sanitaire:hover {
+  padding-bottom: 100px;
+}
+.headerHome_nav .header_droite {
+  padding-top: 55px;
+}
+.headerHome .categories_carrelage, .headerHome .categories_parquet, .headerHome .categories_sanitaire {
+  width: 60%;
+  display: none;
+  position: absolute;
+  text-align: left;
+  background: rgba(211, 211, 211, 0.9);
+  padding: 20px;
+  margin-top: 70px;
+  border-radius: 20px;
+  gap: 10px;
+  top: 70px;
+}
+.headerHome .categories_carrelage h3, .headerHome .categories_parquet h3, .headerHome .categories_sanitaire h3 {
+  font-size: calc(0.6em + 0.6vw);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.headerHome .categories_carrelage ul, .headerHome .categories_parquet ul, .headerHome .categories_sanitaire ul {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0px;
+  gap: 40px;
+}
+.headerHome .categories_carrelage:hover, .headerHome .categories_parquet:hover, .headerHome .categories_sanitaire:hover {
+  display: flex;
+  flex-direction: column;
+}
+.headerHome .categories_carrelage .li_un, .headerHome .categories_parquet .li_un, .headerHome .categories_sanitaire .li_un {
+  list-style: none;
 }
 
-.header_gauche, .header_droite {
-  width: 37.5%;
-}
-
+/* Header Scroll */
 .headerHome_nav_second {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  background-color: #646464;
   z-index: -1;
   gap: 20px;
 }
@@ -113,31 +185,176 @@ button {
   align-items: center;
 }
 .headerHome_nav_second .headerHome_logo img {
-  max-height: 100px;
+  max-height: 50px;
+  min-width: 60px;
 }
 .headerHome_nav_second .header_gauche {
   padding-top: 0px !important;
-}
-.headerHome_nav_second .header_gauche_megamenu {
   align-items: center;
 }
 .headerHome_nav_second .header_gauche_megamenu_carrelage:hover, .headerHome_nav_second .header_gauche_megamenu_parquet:hover, .headerHome_nav_second .header_gauche_megamenu_sanitaire:hover {
   padding: 100px 0px;
 }
+.headerHome_nav_second .header_droite {
+  align-items: center;
+}
+.headerHome_nav_second .header_droite a {
+  align-items: center;
+}
+.headerHome_nav_second .categories_carrelage, .headerHome_nav_second .categories_parquet, .headerHome_nav_second .categories_sanitaire {
+  width: 60%;
+  display: none;
+  position: absolute;
+  text-align: left;
+  background-color: #D3D3D3;
+  padding: 20px;
+  margin-top: 70px;
+  border-radius: 20px;
+  gap: 10px;
+  top: 70px;
+}
+.headerHome_nav_second .categories_carrelage h3, .headerHome_nav_second .categories_parquet h3, .headerHome_nav_second .categories_sanitaire h3 {
+  font-size: calc(0.6em + 0.6vw);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.headerHome_nav_second .categories_carrelage ul, .headerHome_nav_second .categories_parquet ul, .headerHome_nav_second .categories_sanitaire ul {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0px;
+  gap: 40px;
+}
+.headerHome_nav_second .categories_carrelage:hover, .headerHome_nav_second .categories_parquet:hover, .headerHome_nav_second .categories_sanitaire:hover {
+  display: flex;
+  flex-direction: column;
+}
+.headerHome_nav_second .categories_carrelage .li_un, .headerHome_nav_second .categories_parquet .li_un, .headerHome_nav_second .categories_sanitaire .li_un {
+  list-style: none;
+}
 
+/* Header Produits */
+.header {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/noir.jpeg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
+}
+.header h2 {
+  font-size: calc(0.5em + 0.5vw);
+}
+.header_nav {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.header_nav_scroll {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #646464;
+  z-index: 10;
+}
+.header_nav_scroll .header_logo img {
+  height: calc(2em + 4vw);
+  max-height: 50px;
+  min-width: 60px;
+}
+.header .produits_conteneur {
+  padding-top: 120px;
+}
+.header_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_logo img {
+  height: calc(2em + 4vw);
+  max-height: 100px;
+  min-width: 60px;
+}
 .header .header_gauche_megamenu_carrelage, .header .header_gauche_megamenu_parquet, .header .header_gauche_megamenu_sanitaire {
   display: flex;
 }
 .header .header_gauche_megamenu_carrelage:hover, .header .header_gauche_megamenu_parquet:hover, .header .header_gauche_megamenu_sanitaire:hover {
   padding: 100px 0px;
 }
+.header .header_gauche_megamenu, .header .header_gauche_icones {
+  align-items: center;
+}
+.header .categories_carrelage, .header .categories_parquet, .header .categories_sanitaire {
+  width: 60%;
+  display: none;
+  position: absolute;
+  text-align: left;
+  background: rgba(211, 211, 211, 0.9);
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 20px;
+  gap: 10px;
+  top: 70px;
+}
+.header .categories_carrelage h3, .header .categories_parquet h3, .header .categories_sanitaire h3 {
+  font-size: calc(0.6em + 0.6vw);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.header .categories_carrelage ul, .header .categories_parquet ul, .header .categories_sanitaire ul {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0px;
+  gap: 40px;
+}
+.header .categories_carrelage:hover, .header .categories_parquet:hover, .header .categories_sanitaire:hover {
+  display: flex;
+  flex-direction: column;
+}
+.header .categories_carrelage .li_un, .header .categories_parquet .li_un, .header .categories_sanitaire .li_un {
+  list-style: none;
+}
+.header .header_droite {
+  align-items: center;
+  padding-top: 0px;
+}
+.header .header_droite a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-/* Header Gauche / Megamenu */
+/* Tout */
+.header_gauche, .header_droite {
+  width: 37.5%;
+}
+.header_gauche a, .header_droite a {
+  color: #F5F5F5;
+}
+.header_gauche .categories_carrelage a, .header_gauche .categories_parquet a, .header_gauche .categories_sanitaire a, .header_droite .categories_carrelage a, .header_droite .categories_parquet a, .header_droite .categories_sanitaire a {
+  color: #28292A;
+}
+
 .header_gauche {
   display: flex;
   flex-direction: row;
-  gap: 20px;
   text-align: center;
+  gap: 20px;
 }
 .header_gauche_icones {
   width: 25%;
@@ -150,31 +367,42 @@ button {
 .header_gauche_icones a {
   height: 26px;
   width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header_gauche_icones a:hover {
-  color: blue;
+  text-decoration: underline;
 }
 .header_gauche_megamenu {
-  width: 80%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
 }
 .header_gauche_megamenu li {
   font-size: calc(0.5em + 0.5vw);
   margin: 0px;
 }
 .header_gauche_megamenu a:hover {
-  color: blue;
+  text-decoration: underline;
+}
+.header_gauche_megamenu_carrelage {
+  display: flex;
 }
 .header_gauche_megamenu_carrelage:hover .categories_carrelage {
   display: flex;
   flex-direction: column;
 }
+.header_gauche_megamenu_parquet {
+  display: flex;
+}
 .header_gauche_megamenu_parquet:hover .categories_parquet {
   display: flex;
   flex-direction: column;
+}
+.header_gauche_megamenu_sanitaire {
+  display: flex;
 }
 .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
   display: flex;
@@ -182,7 +410,6 @@ button {
 }
 .header_gauche_megamenu .bouton_carrelage, .header_gauche_megamenu .bouton_parquet, .header_gauche_megamenu .bouton_sanitaire {
   cursor: pointer;
-  color: #28292A;
   font-family: "Noto Serif JP";
   font-size: calc(0.5em + 1vw);
   font-weight: bolder;
@@ -190,57 +417,6 @@ button {
   background: none;
 }
 
-.headerHome .header_gauche {
-  padding-top: 55px;
-}
-.headerHome .header_gauche_megamenu_carrelage, .headerHome .header_gauche_megamenu_parquet, .headerHome .header_gauche_megamenu_sanitaire {
-  display: flex;
-}
-.headerHome .header_gauche_megamenu_carrelage:hover, .headerHome .header_gauche_megamenu_parquet:hover, .headerHome .header_gauche_megamenu_sanitaire:hover {
-  padding-bottom: 100px;
-}
-
-.header .header_gauche_megamenu, .header .header_gauche_icones {
-  align-items: center;
-}
-
-.categories_carrelage, .categories_parquet, .categories_sanitaire {
-  width: 60%;
-  display: none;
-  position: absolute;
-  text-align: left;
-  background: rgba(211, 211, 211, 0.8);
-  padding: 20px;
-  margin-top: 70px;
-  border-radius: 20px;
-  gap: 10px;
-  top: 70px;
-}
-.categories_carrelage h3, .categories_parquet h3, .categories_sanitaire h3 {
-  font-size: calc(0.6em + 0.6vw);
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-.categories_carrelage ul, .categories_parquet ul, .categories_sanitaire ul {
-  display: flex;
-  flex-direction: row;
-  margin: 5px 0px;
-  gap: 40px;
-}
-.categories_carrelage:hover, .categories_parquet:hover, .categories_sanitaire:hover {
-  display: flex;
-  flex-direction: column;
-}
-
-.header .categories_carrelage, .header .categories_parquet, .header .categories_sanitaire {
-  background-color: #D3D3D3;
-}
-
-.li_un {
-  list-style: none;
-}
-
-/* Header Droite */
 .header_droite {
   display: flex;
   flex-direction: row;
@@ -248,14 +424,14 @@ button {
   text-align: center;
 }
 .header_droite_onglets {
-  width: 80%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: calc(0.5em + 1vw);
 }
 .header_droite_onglets a:hover {
-  color: blue;
+  text-decoration: underline;
 }
 .header_droite_icones {
   width: 25%;
@@ -268,18 +444,12 @@ button {
 .header_droite_icones a {
   height: 26px;
   width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header_droite_icones a:hover {
-  color: blue;
-}
-
-.headerHome .header_droite {
-  padding-top: 55px;
-}
-
-.header .header_droite {
-  align-items: center;
-  padding-top: 0px;
+  text-decoration: underline;
 }
 
 /* Main */
@@ -577,19 +747,15 @@ main {
 .footer {
   display: flex;
   flex-direction: column;
-}
-.footer a {
-  color: #28292A;
+  color: #F5F5F5;
 }
 .footer_list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
-  background-image: url("../assets/texture.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #D3D3D3;
+  color: #28292A;
 }
 .footer_list ul {
   width: 33%;
@@ -609,8 +775,11 @@ main {
   margin: 0px;
   padding-bottom: 10px;
 }
+.footer_list a {
+  color: #28292A;
+}
 .footer_list a:hover {
-  color: blue;
+  text-decoration: underline;
 }
 .footer_produits_texte {
   display: flex;
@@ -624,7 +793,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #D3D3D3;
+  background: #646464;
+  color: #F5F5F5;
   font-size: calc(0.6em + 0.2vw);
 }
 .footer_end div {
@@ -636,8 +806,11 @@ main {
   height: 40px;
   width: 40px;
 }
+.footer_end a {
+  color: #F5F5F5;
+}
 .footer_end a:hover {
-  color: blue;
+  text-decoration: underline;
 }
 .footer_contact_telephone, .footer_contact_email, .footer_contact_showroom {
   text-align: center;
@@ -647,7 +820,7 @@ main {
   margin: 0px;
 }
 
-.instagram {
+.rs {
   padding-top: 20px;
 }
 
@@ -656,19 +829,24 @@ main {
   .headerHome {
     height: 550px;
   }
+  .headerHome .categories_carrelage, .headerHome .categories_parquet, .headerHome .categories_sanitaire {
+    width: 85%;
+    background-color: #D3D3D3;
+    left: 5%;
+    top: 40px;
+  }
   .header {
-    height: 100px;
+    height: 300px;
+    animation: anim_deux 10s linear infinite;
+  }
+  .header .produits_conteneur {
+    padding-top: 100px;
   }
   .header_gauche_icones {
-    width: 20%;
     padding-left: 10px;
   }
   .header_droite_icones {
-    width: 20%;
     padding-right: 10px;
-  }
-  .categories_carrelage, .categories_parquet, .categories_sanitaire {
-    margin-top: 40px;
   }
   .presentation, .pro {
     height: 600px;
@@ -728,9 +906,6 @@ main {
     align-items: center;
     padding-top: 20px;
   }
-  .headerHome .header_gauche_megamenu_carrelage:hover, .headerHome .header_gauche_megamenu_parquet:hover, .headerHome .header_gauche_megamenu_sanitaire:hover {
-    padding-bottom: 40px;
-  }
   .headerHome .header_gauche_icones {
     padding: 0px;
     width: 80%;
@@ -755,18 +930,23 @@ main {
     gap: 20px;
   }
   .headerHome .categories_carrelage, .headerHome .categories_parquet, .headerHome .categories_sanitaire {
-    width: 85%;
-    background-color: #D3D3D3;
-    left: 5%;
-    top: 40px;
+    top: 10px;
   }
   .headerHome_nav_second {
     display: none;
   }
+  .header {
+    animation: anim_trois 10s linear infinite;
+  }
   .header .header_nav {
+    justify-content: space-between;
     gap: 0px;
   }
+  .header .header_nav_scroll .header_gauche, .header .header_nav_scroll .header_droite {
+    gap: 5px;
+  }
   .header .header_gauche, .header .header_droite {
+    width: 40%;
     justify-content: center;
     align-items: center;
   }
@@ -788,6 +968,9 @@ main {
   .header .header_droite {
     display: flex;
     flex-direction: column;
+  }
+  .header .header_logo img {
+    height: calc(2em + 2vw);
   }
   .header .categories_carrelage, .header .categories_parquet, .header .categories_sanitaire {
     width: 85%;
@@ -895,6 +1078,9 @@ main {
   }
   .headerHome .header_droite {
     padding-top: 60px !important;
+  }
+  .header {
+    height: 250px;
   }
   .header .header_gauche_megamenu_carrelage:hover {
     padding: 0px;

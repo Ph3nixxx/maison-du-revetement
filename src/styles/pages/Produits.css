@@ -2,9 +2,9 @@
 /* Mixins */
 /* Code */
 .produits {
-  padding-top: 120px;
-  padding-bottom: 50px;
-  color: #28292A;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: #F5F5F5;
   background: #F5F5F5;
 }
 .produits_conteneur {
@@ -16,10 +16,12 @@
   padding: 20px 0px;
 }
 .produits_conteneur h1 {
+  color: #F5F5F5;
   font-size: calc(2em + 2vw);
   letter-spacing: 5px;
 }
 .produits_conteneur h3 {
+  color: #F5F5F5;
   text-align: center;
   font-size: calc(0.4em + 0.8vw);
   padding: 20px 50px;
@@ -27,7 +29,7 @@
 .produits_conteneur_ligne {
   width: 150px;
   align-self: center;
-  border-bottom: 5px solid #28292A;
+  border-bottom: 5px solid #F5F5F5;
   padding-bottom: 20px;
 }
 .produits_categories {
@@ -51,7 +53,7 @@
   height: 100%;
   width: 100%;
   display: flex;
-  color: #28292A;
+  color: #F5F5F5;
   text-decoration: none;
   justify-content: center;
   align-items: center;
@@ -67,7 +69,6 @@
   display: flex;
   position: absolute;
   color: white;
-  text-shadow: 0 0 10px #28292A;
   font-size: calc(2em + 1.2vw);
   letter-spacing: 5px;
 }
@@ -105,15 +106,12 @@
 }
 
 .divEspace {
-  height: 50px;
+  height: 30px;
   background-color: #F5F5F5;
 }
 
 /* Tablet */
 @media all and (max-width: 1199px) {
-  .produits {
-    padding-top: 100px;
-  }
   .produits_categories_card {
     height: 200px;
   }

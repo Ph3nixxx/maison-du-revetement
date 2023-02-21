@@ -8,7 +8,9 @@ import Header from '../../components/Header'
 export default function Livraison() {
     return (
         <>
-            <Header />
+            <header className="header">
+                <Header />
+            </header>
             <section className="pageLivraison">
                 <div className="livraison">
                     <div className="livraison_titre">
@@ -74,8 +76,19 @@ export default function Livraison() {
                         <h2>Annulation de commande & Retour de marchandises</h2>
                     </div>
                     <span className="livraison_ligne"></span>
-                    <div className="livraison_titre">
-                        <p>texte</p>
+                    <div className="livraison_texte">
+                        <p>Annulation de commande :<br />
+                        Une fois la commande passée sur notre site, vous avez la possibilité d’annuler votre commande pendant les SEPT (7) JOURS suivants.
+                        Cette annulation doit faire l’objet d’une demande formulée via notre formulaire de contact ou directement par email à l’adresse suivante : support@maisondurevetement.com. Veuillez bien indiquer votre numéro de commande afin de pouvoir vous identifier facilement.
+                        Toutefois, si une annulation nous parvenait alors que l'expédition ou la livraison est déjà effectuée, l'annulation ne serait pas prise en compte, la date d'enlèvement par le transporteur faisant foi.
+                        Dans ce cas, le droit de rétractation peut éventuellement prendre le relai.<br /><br />
+                        Droit de rétractation :<br />
+                        Le droit de rétractation prend effet à la livraison de la commande et cela pour une durée de QUATORZE (14) JOURS.
+                        Ce droit ne peut s’appliquer si les produits ou consommables livrés ont fait l’objet d’un usage même limité.
+                        Après étude par nos services, si le droit de rétractation est applicable et uniquement si les produits sont dans un état d’origine permettant la revente, le client est chargé d’effectuer le retour à notre entrepôt par ses propres moyens.
+                        Le retour des produits donnera alors lieu au remboursement des produits et non de la commande, c’est-à-dire en excluant les éventuels coûts de livraison et de retour.<br />
+                        Vous pouvez consulter les conditions générales de vente disponibles sur le site pour tout complément d’informations.
+                        </p>
                     </div>
                 </div>
             </section>

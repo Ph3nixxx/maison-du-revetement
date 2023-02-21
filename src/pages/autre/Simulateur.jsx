@@ -9,7 +9,9 @@ import Header from '../../components/Header'
 export default function Simulateur() {
     return (
         <>
-            <Header />
+            <header className="header">
+                <Header />
+            </header>
             <section className="simulateur">
                 <div className="construction">
                     <h2>Cette page est en cours de construction</h2>

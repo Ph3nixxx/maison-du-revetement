@@ -18,10 +18,12 @@ import DoucheImg from "../../assets/sanitaire-douche.jpg"
 
 export default function Sanitaire() {
     return (
-        <>
+        <>            
+        <header className="header">
             <Header />
+            <Produits pdt={"SANITAIRE"} txt={"2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+        </header>
             <section className="produits">
-                <Produits pdt={"SANITAIRE"} txt={"2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
                 <div className="produits_categories">
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-2">

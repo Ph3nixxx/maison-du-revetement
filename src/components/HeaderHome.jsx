@@ -1,12 +1,21 @@
 /* Modules */
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 
 /* Images */
 import Logo from "../assets/mdr_logo2.png";
 import Video from "../assets/video.mov";
 
-export default function HeaderHome() { 
+export default function HeaderHome() {
+
+    /* Réduction du header lors d'un scroll */
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 20);
+        });
+    }, []);
+        
     return (
         <header className="headerHome">
             <video src={Video} type="video/mov" muted loop ></video>
@@ -21,7 +30,7 @@ export default function HeaderHome() {
                         <div className="header_gauche_megamenu_carrelage">
                             <button className="bouton_carrelage">
                                 <Link to="/produits/carrelage">
-                                    <h2>Carrelages</h2>
+                                    <h2>Carrelage</h2>
                                 </Link>
                             </button>
                             <div className="categories_carrelage">
@@ -148,7 +157,7 @@ export default function HeaderHome() {
                         <div className="header_gauche_megamenu_parquet">
                             <button className="bouton_parquet">
                                 <Link to="/produits/parquet">
-                                    <h2>Parquets</h2>
+                                    <h2>Parquet</h2>
                                 </Link>
                             </button>
                             <div className="categories_parquet">
@@ -325,7 +334,7 @@ export default function HeaderHome() {
                     </div>
                 </div>
             </div>
-            <div className="header headerHome_nav_second">
+            <div className="headerHome_nav_second">
                 <nav className="header_gauche">
                     <div className="header_gauche_icones">
                         <a href="https://www.facebook.com/profile.php?id=100089922982015"><i className="fa-brands fa-facebook-f"></i></a>
@@ -336,7 +345,7 @@ export default function HeaderHome() {
                     <div className="header_gauche_megamenu_carrelage">
                             <button className="bouton_carrelage">
                                 <Link to="/produits/carrelage">
-                                    <h2>Carrelages</h2>
+                                    <h2>Carrelage</h2>
                                 </Link>
                             </button>
                             <div className="categories_carrelage">
@@ -463,7 +472,7 @@ export default function HeaderHome() {
                         <div className="header_gauche_megamenu_parquet">
                             <button className="bouton_parquet">
                                 <Link to="/produits/parquet">
-                                    <h2>Parquets</h2>
+                                    <h2>Parquet</h2>
                                 </Link>
                             </button>
                             <div className="categories_parquet">
@@ -629,7 +638,7 @@ export default function HeaderHome() {
                 </div>
                 <div className="header_droite">
                     <div className="header_droite_onglets">
-                        <h2><a href="https://maisondurevetement.odoo.com/contact">Nous<br />Contacter</a></h2>
+                        <h2><a href="https://maisondurevetement.odoo.com/contact">Contacts</a></h2>
                         <h2><Link to="/livraison-et-retour">Livraison</Link></h2>
                         <h2><Link to="/simulateur-3D">Simul. 3D</Link></h2>
                     </div>
