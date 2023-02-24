@@ -25,6 +25,7 @@ import Consommables from "../assets/consommables.jpg"
 import Nav5 from "../assets/nav5.png"
 import Showroom2 from "../assets/showroom2.jpeg"
 
+/* Code */
 export default function Home() {
     return (
         <>
@@ -182,7 +183,7 @@ export default function Home() {
                 <div className="showroom_div">
                     <div className="showroom_div_texte">
                         <p>Notre équipe d'experts vous attend dans notre showroom situé :</p>
-                        <p className="adresse">23 Avenue du Chemin des Reniers<br />à Villeneuve-la-Garenne</p>
+                        <p className="showroom_adresse">23 Avenue du Chemin des Reniers<br />à Villeneuve-la-Garenne</p>
                     </div>
                     <img src={Showroom2} alt="Showroom Maison du Revêtement"/>
                 </div>

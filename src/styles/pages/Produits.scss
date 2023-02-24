@@ -1,9 +1,8 @@
 /* Variables */
 $primary-color: #646464;
 $secondary-color: #D3D3D3;
-$tertiary-color: #F5F5F5;
+$tertiary-color: #F0F0F0;
 $black-color: #28292A;
-$silver-color: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
 $font-family-primary: "Noto Serif JP";
 $font-family-default: sans-serif;
 
@@ -11,6 +10,112 @@ $font-family-default: sans-serif;
 @mixin display-flex($flex-direction) {
     display: flex;
     flex-direction: $flex-direction;
+}
+
+/* Keyframes */
+@keyframes anim_un {
+    0% {
+        background-position: 0px -300px;
+    }
+    25% {
+        background-position: 0px -350px;
+    }
+    50% {
+        background-position: 0px -400px; 
+    }
+    75% {
+        background-position: 0px -350px;
+    }
+    100% {
+        background-position: 0px -300px;
+    }
+}
+
+@keyframes anim_deux {
+    0% {
+        background-position: 0px -150px;
+    }
+    25% {
+        background-position: 0px -175px;
+    }
+    50% {
+        background-position: 0px -200px; 
+    }
+    75% {
+        background-position: 0px -175px;
+    }
+    100% {
+        background-position: 0px -150px;
+    }
+}
+
+@keyframes anim_trois {
+    0% {
+        background-position: 0px 0px;
+    }
+    25% {
+        background-position: 0px -12.5px;
+    }
+    50% {
+        background-position: 0px -25px; 
+    }
+    75% {
+        background-position: 0px -12.5px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@keyframes anim_quatre {
+    0% {
+        background-position: 0px 0px;
+    }
+    25% {
+        background-position: -5px 0px;
+    }
+    50% {
+        background-position: -10px 0px; 
+    }
+    75% {
+        background-position: -5px 0px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@keyframes cat {
+    0% {
+        background: rgba($secondary-color, $alpha: 0);
+    }
+    100% {
+        background: rgba($secondary-color, $alpha: 0.90);
+    }
+}
+
+@keyframes presentation {
+    0% {
+        right: 100%
+    }
+    25% {
+        right: 40%
+    }
+    100% {
+        right: 0%;
+    }
+}
+
+@keyframes pro {
+    0% {
+        left: 100%
+    }
+    25% {
+        left: 40%
+    }
+    100% {
+        left: 0%;
+    }
 }
 
 /* Code */
@@ -86,7 +191,7 @@ $font-family-default: sans-serif;
             & h2 {
                 display: flex;
                 position: absolute;
-                color: white;
+                text-align: center;
                 font-size: calc(2em + 1.2vw);
                 letter-spacing: 5px;
             }
@@ -134,7 +239,6 @@ $font-family-default: sans-serif;
 }
 
 /* Tablet */
-
 @media all and (max-width: 1199px) {
     .produits_categories_card {
         height: 200px;
@@ -142,7 +246,6 @@ $font-family-default: sans-serif;
 }
 
 /* Smartphone */
-
 @media all and (max-width: 767px) {
     .produits_categories_card {
         height: 150px;

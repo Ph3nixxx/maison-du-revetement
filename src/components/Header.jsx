@@ -16,14 +16,41 @@ export default function Header() {
         });
     }, []);
 
+    /* Menu Burger */
+    const [showLinks, setShowLinks] = useState(false);
+
+    const handleShowLinks = () => {
+        setShowLinks(!showLinks)
+    }
+
     return (
-        <div className={scroll ? "header_nav_scroll" : "header_nav"}>
-            <nav className="header_gauche">
+        <nav className={`${scroll ? "header_nav_scroll" : "header_nav"} ${showLinks ? "show-burger" : "hide-burger"}`}>
+            <button className="burger_button" onClick={handleShowLinks}>
+                <span className="burger_bar"></span>
+            </button>
+            <div className="header_gauche">
                 <div className="header_gauche_icones">
                     <a href="https://www.facebook.com/profile.php?id=100089922982015"><i className="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/maison_du_revetement/"><i className="fa-brands fa-instagram"></i></a>
                     <a href="mailto:support@maisondurevetement.com"><i className="fa-solid fa-envelope"></i></a>
                 </div>
+                    <div className={`header_gauche_megamenu ${showLinks ? "show" : "hidden"}`}>
+                        <button className="bouton_carrelage">
+                            <a href="https://maisondurevetement.odoo.com/contact">
+                                <h2>Contacts</h2>
+                            </a>
+                        </button>
+                        <button className="bouton_carrelage">
+                            <Link to="/livraison-et-retour">
+                                <h2>Livraison</h2>
+                            </Link>
+                        </button>
+                        <button className="bouton_carrelage">
+                            <Link to="/simulateur-3D">
+                                <h2>Simul. 3D</h2>
+                            </Link>
+                        </button>
+                    </div>
                 <div className="header_gauche_megamenu">
                     <div className="header_gauche_megamenu_carrelage">
                         <button className="bouton_carrelage">
@@ -40,21 +67,21 @@ export default function Header() {
                                     <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-formats-xxl-47">
                                         Les Formats XXL</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-terrazzo-48">
-                                        Imitation Terrazzo</a></li>
+                                        Imitation Marbre</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-hexagonaux-49">
                                         Les Hexagonaux</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-marbre-50">
-                                        Imitation Marbre</a></li>
+                                        Imitation Terrazzo</a></li>
                                 </ul>
                                 <ul>
                                     <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-bois-51">
-                                        Imitation Bois</a></li>
-                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-carreaux-de-ciment-52">
-                                        Imitation Carreaux de Ciment</a></li>
-                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-betons-cires-53">
                                         Les Bétons Cirés</a></li>
-                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-pierre-54">
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-carreaux-de-ciment-52">
                                         Imitation Pierre</a></li>
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-betons-cires-53">
+                                        Imitation Bois</a></li>
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-pierre-54">
+                                        Imitation Carreaux de Ciment</a></li>
                                 </ul>
                             </div>
                             <div className="categories_deux">
@@ -68,9 +95,7 @@ export default function Header() {
                                         3D / Les Reliefs</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-faiences-les-coordonnees-sol-murs-57">
                                         Les Coordonnées Sol et Murs</a></li>
-                                </ul>
-                                <ul>
-                                    <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-faiences-les-motifs-58">
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-faiences-les-motifs-58">
                                         Les Motifs</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-faiences-les-unis-59">
                                         Les Unis</a></li>
@@ -99,17 +124,17 @@ export default function Header() {
                                     <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-terrazos-64">
                                         Les Terrazzos</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-travertins-65">
-                                        Les Travertins</a></li>
-                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-tomettes-66">
-                                        Les Tomettes</a></li>
-                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-ardoises-67">
                                         Les Ardoises</a></li>
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-tomettes-66">
+                                        Les Zelliges</a></li>
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-ardoises-67">
+                                        Les Carreaux de Ciment</a></li>
                                 </ul>
                                 <ul>
                                     <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-carreaux-de-ciment-68">
-                                        Les Carreaux de Ciment</a></li>
+                                        Les Travertins</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-zelliges-69">
-                                        Les Zelliges</a></li>
+                                        Les Tomettes</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-marbres-70">
                                         Les Marbres</a></li>
                                 </ul>
@@ -142,9 +167,7 @@ export default function Header() {
                                         Joints</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-croisillons-95">
                                         Croisillons</a></li>
-                                </ul>
-                                <ul>
-                                    <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-produits-d-entretien-96">
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-produits-d-entretien-96">
                                         Produits d'entretien</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-ragreages-et-primaires-97">
                                         Ragréages et primaires</a></li>
@@ -170,9 +193,7 @@ export default function Header() {
                                         Les Huilés</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-les-vernis-81">
                                         Les Vernis</a></li>
-                                </ul>
-                                <ul>
-                                    <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-les-geometriques-83">
+                                    <li><a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-les-geometriques-83">
                                         Les Géométriques</a></li>
                                     <li><a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-les-geometriques-point-de-hongrie-84">
                                         Point de Hongrie</a></li>
@@ -313,7 +334,7 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
             <div className="header_logo">
                 <Link to="/home">
                     <img src={Logo} alt="logo Maison du Revêtement"/>
@@ -331,6 +352,6 @@ export default function Header() {
                     <a href="tel:+33156555526"><i className="fa-solid fa-phone"></i></a>
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }

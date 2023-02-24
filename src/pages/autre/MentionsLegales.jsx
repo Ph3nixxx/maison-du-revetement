@@ -8,7 +8,7 @@ import Header from '../../components/Header'
 export default function MentionsLegales() {
     return (
         <>
-            <header className="header">
+            <header className="header header_mentionsLegales">
                 <Header />
             </header>
             <section className="mentionsLegales">

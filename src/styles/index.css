@@ -1,14 +1,12 @@
+/* Import de polices */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
 /* Variables */
 /* Mixins */
 /* Keyframes */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
 @keyframes anim_un {
   0% {
     background-position: 0px -300px;
@@ -60,7 +58,53 @@
     background-position: 0px 0px;
   }
 }
-/* Import de polices */
+@keyframes anim_quatre {
+  0% {
+    background-position: 0px 0px;
+  }
+  25% {
+    background-position: -5px 0px;
+  }
+  50% {
+    background-position: -10px 0px;
+  }
+  75% {
+    background-position: -5px 0px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes cat {
+  0% {
+    background: rgba(211, 211, 211, 0);
+  }
+  100% {
+    background: rgba(211, 211, 211, 0.9);
+  }
+}
+@keyframes presentation {
+  0% {
+    right: 100%;
+  }
+  25% {
+    right: 40%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes pro {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 40%;
+  }
+  100% {
+    left: 0%;
+  }
+}
 /* Body */
 body {
   font-family: "Noto Serif JP", sans-serif;
@@ -87,11 +131,19 @@ button {
   width: 100%;
   display: flex;
   position: relative;
-  z-index: 5;
+  z-index: 10;
 }
 .headerHome h2 {
   font-size: calc(0.5em + 0.5vw);
-  font-weight: bolder;
+}
+.headerHome a {
+  display: flex;
+  align-items: center;
+  color: #F0F0F0;
+}
+.headerHome a img {
+  max-height: 100px;
+  min-width: 60px;
 }
 .headerHome video {
   height: 100%;
@@ -104,45 +156,133 @@ button {
 .headerHome_logo {
   width: 25%;
   display: flex;
-  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
 }
 .headerHome_logo img {
   width: 100%;
 }
 .headerHome_nav {
-  height: 100%;
+  height: 70px;
   width: 100%;
   display: flex;
   flex-direction: row;
   position: absolute;
+  align-items: center;
   gap: 20px;
+  transition: all 1s ease-in-out;
 }
 .headerHome_nav .header_gauche {
-  padding-top: 55px;
+  width: 37.5%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.headerHome_nav .header_gauche_icones {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(0.5em + 0.8vw);
+  padding-left: 15px;
+}
+.headerHome_nav .header_gauche_icones a {
+  height: 26px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerHome_nav .header_gauche_icones a:hover {
+  text-decoration: underline;
 }
 .headerHome_nav .header_gauche_megamenu {
-  align-items: flex-start;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerHome_nav .header_gauche_megamenu li {
+  font-size: calc(0.5em + 0.5vw);
+  margin: 0px;
+}
+.headerHome_nav .header_gauche_megamenu a:hover {
+  text-decoration: underline;
 }
 .headerHome_nav .header_gauche_megamenu_carrelage, .headerHome_nav .header_gauche_megamenu_parquet, .headerHome_nav .header_gauche_megamenu_sanitaire {
   display: flex;
 }
 .headerHome_nav .header_gauche_megamenu_carrelage:hover, .headerHome_nav .header_gauche_megamenu_parquet:hover, .headerHome_nav .header_gauche_megamenu_sanitaire:hover {
-  padding-bottom: 100px;
+  padding: 100px 0px;
+}
+.headerHome_nav .header_gauche_megamenu_carrelage:hover .categories_carrelage {
+  display: flex;
+  flex-direction: column;
+}
+.headerHome_nav .header_gauche_megamenu_parquet:hover .categories_parquet {
+  display: flex;
+  flex-direction: column;
+}
+.headerHome_nav .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
+  display: flex;
+  flex-direction: column;
+}
+.headerHome_nav .header_gauche_megamenu .bouton_carrelage, .headerHome_nav .header_gauche_megamenu .bouton_parquet, .headerHome_nav .header_gauche_megamenu .bouton_sanitaire {
+  cursor: pointer;
+  font-family: "Noto Serif JP";
+  font-size: calc(0.5em + 1vw);
+  border: none;
+  background: none;
 }
 .headerHome_nav .header_droite {
-  padding-top: 55px;
+  width: 37.5%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-align: center;
+}
+.headerHome_nav .header_droite_onglets {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: calc(0.5em + 1vw);
+}
+.headerHome_nav .header_droite_onglets a:hover {
+  text-decoration: underline;
+}
+.headerHome_nav .header_droite_icones {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: calc(0.5em + 0.8vw);
+  padding-right: 15px;
+}
+.headerHome_nav .header_droite_icones a {
+  height: 26px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerHome_nav .header_droite_icones a:hover {
+  text-decoration: underline;
 }
 .headerHome .categories_carrelage, .headerHome .categories_parquet, .headerHome .categories_sanitaire {
   width: 60%;
   display: none;
   position: absolute;
   text-align: left;
-  background: rgba(211, 211, 211, 0.9);
   padding: 20px;
-  margin-top: 70px;
+  margin-top: 50px;
   border-radius: 20px;
   gap: 10px;
   top: 70px;
+  animation: cat 0.4s linear forwards;
 }
 .headerHome .categories_carrelage h3, .headerHome .categories_parquet h3, .headerHome .categories_sanitaire h3 {
   font-size: calc(0.6em + 0.6vw);
@@ -154,6 +294,10 @@ button {
   flex-direction: row;
   margin: 5px 0px;
   gap: 40px;
+  padding: 0px;
+}
+.headerHome .categories_carrelage li::marker, .headerHome .categories_parquet li::marker, .headerHome .categories_sanitaire li::marker {
+  color: #28292A;
 }
 .headerHome .categories_carrelage:hover, .headerHome .categories_parquet:hover, .headerHome .categories_sanitaire:hover {
   display: flex;
@@ -162,74 +306,8 @@ button {
 .headerHome .categories_carrelage .li_un, .headerHome .categories_parquet .li_un, .headerHome .categories_sanitaire .li_un {
   list-style: none;
 }
-
-/* Header Scroll */
-.headerHome_nav_second {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  background-color: #646464;
-  z-index: -1;
-  gap: 20px;
-}
-.headerHome_nav_second .headerHome_logo {
-  padding-top: 0px;
-  justify-content: center;
-  align-items: center;
-}
-.headerHome_nav_second .headerHome_logo a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.headerHome_nav_second .headerHome_logo img {
-  max-height: 50px;
-  min-width: 60px;
-}
-.headerHome_nav_second .header_gauche {
-  padding-top: 0px !important;
-  align-items: center;
-}
-.headerHome_nav_second .header_gauche_megamenu_carrelage:hover, .headerHome_nav_second .header_gauche_megamenu_parquet:hover, .headerHome_nav_second .header_gauche_megamenu_sanitaire:hover {
-  padding: 100px 0px;
-}
-.headerHome_nav_second .header_droite {
-  align-items: center;
-}
-.headerHome_nav_second .header_droite a {
-  align-items: center;
-}
-.headerHome_nav_second .categories_carrelage, .headerHome_nav_second .categories_parquet, .headerHome_nav_second .categories_sanitaire {
-  width: 60%;
-  display: none;
-  position: absolute;
-  text-align: left;
-  background-color: #D3D3D3;
-  padding: 20px;
-  margin-top: 70px;
-  border-radius: 20px;
-  gap: 10px;
-  top: 70px;
-}
-.headerHome_nav_second .categories_carrelage h3, .headerHome_nav_second .categories_parquet h3, .headerHome_nav_second .categories_sanitaire h3 {
-  font-size: calc(0.6em + 0.6vw);
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-.headerHome_nav_second .categories_carrelage ul, .headerHome_nav_second .categories_parquet ul, .headerHome_nav_second .categories_sanitaire ul {
-  display: flex;
-  flex-direction: row;
-  margin: 5px 0px;
-  gap: 40px;
-}
-.headerHome_nav_second .categories_carrelage:hover, .headerHome_nav_second .categories_parquet:hover, .headerHome_nav_second .categories_sanitaire:hover {
-  display: flex;
-  flex-direction: column;
-}
-.headerHome_nav_second .categories_carrelage .li_un, .headerHome_nav_second .categories_parquet .li_un, .headerHome_nav_second .categories_sanitaire .li_un {
-  list-style: none;
+.headerHome .categories_carrelage a, .headerHome .categories_parquet a, .headerHome .categories_sanitaire a {
+  color: #28292A;
 }
 
 /* Header Produits */
@@ -237,45 +315,29 @@ button {
   height: 400px;
   display: flex;
   flex-direction: column;
-  background-image: url("../assets/noir.jpeg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: anim_un 10s linear infinite;
 }
 .header h2 {
   font-size: calc(0.5em + 0.5vw);
+  font-weight: normal;
+}
+.header a {
+  color: #F0F0F0;
 }
 .header_nav {
-  height: 100px;
+  height: 70px;
   width: 100%;
   position: fixed;
-  z-index: 5;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-.header_nav_scroll {
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  justify-content: space-between;
-  z-index: 5;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  background-color: #646464;
   z-index: 10;
-}
-.header_nav_scroll .header_logo img {
-  height: calc(2em + 4vw);
-  max-height: 50px;
-  min-width: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: all 1s ease-in-out;
 }
 .header .produits_conteneur {
   padding-top: 120px;
 }
 .header_logo {
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,8 +349,49 @@ button {
 }
 .header_logo img {
   height: calc(2em + 4vw);
-  max-height: 100px;
+  max-height: 70px;
   min-width: 60px;
+}
+.header_carrelage {
+  background-image: url("../assets/noir.jpeg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
+}
+.header_parquet {
+  background-image: url("../assets/parquet.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
+}
+.header_sanitaire {
+  background-image: url("../assets/noir3.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
+}
+.header .header_gauche {
+  width: 37.5%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.header .header_gauche_megamenu {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header_gauche_megamenu li {
+  font-size: calc(0.4em + 0.5vw);
+  margin: 0px;
+}
+.header .header_gauche_megamenu a:hover {
+  text-decoration: underline;
 }
 .header .header_gauche_megamenu_carrelage, .header .header_gauche_megamenu_parquet, .header .header_gauche_megamenu_sanitaire {
   display: flex;
@@ -296,23 +399,57 @@ button {
 .header .header_gauche_megamenu_carrelage:hover, .header .header_gauche_megamenu_parquet:hover, .header .header_gauche_megamenu_sanitaire:hover {
   padding: 100px 0px;
 }
-.header .header_gauche_megamenu, .header .header_gauche_icones {
+.header .header_gauche_megamenu_carrelage:hover .categories_carrelage {
+  display: flex;
+  flex-direction: column;
+}
+.header .header_gauche_megamenu_parquet:hover .categories_parquet {
+  display: flex;
+  flex-direction: column;
+}
+.header .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
+  display: flex;
+  flex-direction: column;
+}
+.header .header_gauche_megamenu .bouton_carrelage, .header .header_gauche_megamenu .bouton_parquet, .header .header_gauche_megamenu .bouton_sanitaire {
+  cursor: pointer;
+  font-family: "Noto Serif JP";
+  font-size: calc(0.5em + 1vw);
+  font-weight: bolder;
+  border: none;
+  background: none;
+}
+.header .header_gauche_icones {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  font-size: calc(0.5em + 0.8vw);
+  padding-left: 15px;
+}
+.header .header_gauche_icones a {
+  height: 26px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header_gauche_icones a:hover {
+  text-decoration: underline;
 }
 .header .categories_carrelage, .header .categories_parquet, .header .categories_sanitaire {
   width: 60%;
   display: none;
   position: absolute;
-  text-align: left;
-  background: rgba(211, 211, 211, 0.9);
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 10px;
   border-radius: 20px;
-  gap: 10px;
   top: 70px;
+  animation: cat 0.4s linear forwards;
 }
 .header .categories_carrelage h3, .header .categories_parquet h3, .header .categories_sanitaire h3 {
-  font-size: calc(0.6em + 0.6vw);
+  font-size: calc(0.5em + 0.6vw);
   text-transform: uppercase;
   font-weight: bolder;
 }
@@ -321,6 +458,10 @@ button {
   flex-direction: row;
   margin: 5px 0px;
   gap: 40px;
+  padding: 0px;
+}
+.header .categories_carrelage li::marker, .header .categories_parquet li::marker, .header .categories_sanitaire li::marker {
+  color: #28292A;
 }
 .header .categories_carrelage:hover, .header .categories_parquet:hover, .header .categories_sanitaire:hover {
   display: flex;
@@ -329,7 +470,15 @@ button {
 .header .categories_carrelage .li_un, .header .categories_parquet .li_un, .header .categories_sanitaire .li_un {
   list-style: none;
 }
+.header .categories_carrelage a, .header .categories_parquet a, .header .categories_sanitaire a {
+  color: #28292A;
+}
 .header .header_droite {
+  width: 37.5%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  text-align: center;
   align-items: center;
   padding-top: 0px;
 }
@@ -338,102 +487,17 @@ button {
   align-items: center;
   justify-content: center;
 }
-
-/* Tout */
-.header_gauche, .header_droite {
-  width: 37.5%;
-}
-.header_gauche a, .header_droite a {
-  color: #F5F5F5;
-}
-.header_gauche .categories_carrelage a, .header_gauche .categories_parquet a, .header_gauche .categories_sanitaire a, .header_droite .categories_carrelage a, .header_droite .categories_parquet a, .header_droite .categories_sanitaire a {
-  color: #28292A;
-}
-
-.header_gauche {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  gap: 20px;
-}
-.header_gauche_icones {
-  width: 25%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: calc(0.5em + 0.8vw);
-  padding-left: 15px;
-}
-.header_gauche_icones a {
-  height: 26px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header_gauche_icones a:hover {
-  text-decoration: underline;
-}
-.header_gauche_megamenu {
-  width: 75%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.header_gauche_megamenu li {
-  font-size: calc(0.5em + 0.5vw);
-  margin: 0px;
-}
-.header_gauche_megamenu a:hover {
-  text-decoration: underline;
-}
-.header_gauche_megamenu_carrelage {
-  display: flex;
-}
-.header_gauche_megamenu_carrelage:hover .categories_carrelage {
-  display: flex;
-  flex-direction: column;
-}
-.header_gauche_megamenu_parquet {
-  display: flex;
-}
-.header_gauche_megamenu_parquet:hover .categories_parquet {
-  display: flex;
-  flex-direction: column;
-}
-.header_gauche_megamenu_sanitaire {
-  display: flex;
-}
-.header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
-  display: flex;
-  flex-direction: column;
-}
-.header_gauche_megamenu .bouton_carrelage, .header_gauche_megamenu .bouton_parquet, .header_gauche_megamenu .bouton_sanitaire {
-  cursor: pointer;
-  font-family: "Noto Serif JP";
-  font-size: calc(0.5em + 1vw);
-  font-weight: bolder;
-  border: none;
-  background: none;
-}
-
-.header_droite {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  text-align: center;
-}
-.header_droite_onglets {
+.header .header_droite_onglets {
   width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: calc(0.5em + 1vw);
 }
-.header_droite_onglets a:hover {
+.header .header_droite_onglets a:hover {
   text-decoration: underline;
 }
-.header_droite_icones {
+.header .header_droite_icones {
   width: 25%;
   display: flex;
   flex-direction: row;
@@ -441,22 +505,102 @@ button {
   font-size: calc(0.5em + 0.8vw);
   padding-right: 15px;
 }
-.header_droite_icones a {
+.header .header_droite_icones a {
   height: 26px;
   width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header_droite_icones a:hover {
+.header .header_droite_icones a:hover {
   text-decoration: underline;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* HeaderHome Scroll */
+.headerHome_scroll {
+  height: 700px;
+}
+.headerHome_scroll video {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.headerHome_scroll .headerHome_logo {
+  width: auto;
+}
+.headerHome_scroll .headerHome_logo img {
+  width: auto;
+}
+
+/* Header Scroll Produits */
+.header_nav_scroll {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #646464;
+  z-index: 10;
+  transition: all 1s ease-in-out;
+}
+.header_nav_scroll .header_gauche {
+  width: 40% !important;
+  gap: 40px;
+}
+.header_nav_scroll .header_logo img {
+  height: calc(2em + 4vw);
+  max-height: 50px;
+  min-width: 60px;
+  padding-top: 0px;
+}
+.header_nav_scroll .headerHome_logo {
+  justify-content: center;
+  align-items: center;
+  padding-top: 0px;
+}
+.header_nav_scroll .headerHome_logo img {
+  height: calc(2em + 4vw);
+  max-height: 50px;
+  min-width: 60px;
+}
+.header_nav_scroll .headerHome_logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_nav_scroll .header_droite {
+  width: 40% !important;
+  gap: 40px;
+}
+.header_nav_scroll .categories_carrelage, .header_nav_scroll .categories_parquet, .header_nav_scroll .categories_sanitaire {
+  background-color: #D3D3D3;
+  margin-top: 0px;
+}
+
+/* Hamburger menu */
+.burger_button {
+  width: 30px;
+  height: 30px;
+  display: none;
+  background: transparent;
+  border: none;
+  color: inherit;
 }
 
 /* Main */
 main {
   display: flex;
   flex-direction: column;
-  background: #F5F5F5;
+  background: #F0F0F0;
 }
 
 /* Gammes de Produits */
@@ -510,7 +654,7 @@ main {
   display: flex;
 }
 .gallery_trois h3 {
-  font-size: calc(1.5em + 1vw) !important;
+  font-size: calc(1.5em + 1vw);
 }
 .gallery_quatre {
   height: 100%;
@@ -525,7 +669,7 @@ main {
   display: flex;
 }
 .gallery_cinq h3 {
-  font-size: calc(0.7em + 0.9vw) !important;
+  font-size: calc(0.7em + 0.9vw);
 }
 .gallery_six {
   height: 100%;
@@ -533,7 +677,7 @@ main {
   display: flex;
 }
 .gallery_six h3 {
-  font-size: calc(1.2em + 0.9vw) !important;
+  font-size: calc(1.2em + 0.9vw);
 }
 .gallery_sept {
   height: 60%;
@@ -562,7 +706,7 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  color: #28292A;
+  color: #F0F0F0;
   justify-content: center;
   align-items: center;
   transition: transform 0.5s;
@@ -576,9 +720,6 @@ main {
 .gallery h3 {
   display: flex;
   position: absolute;
-  font-size: calc(0.8em + 0.4vw);
-  color: white;
-  text-shadow: 0 0 10px #28292A;
 }
 
 .gallery, .gallery_un, .gallery_deux, .gallery_trois, .gallery_quatre, .gallery_cinq, .gallery_six, .gallery_sept {
@@ -589,7 +730,6 @@ main {
 .gallery_trois, .gallery_cinq, .gallery_six {
   flex-wrap: wrap;
   position: relative;
-  overflow: hidden;
 }
 
 /* Qui sommes-nous / Accompagnement professionnels */
@@ -639,6 +779,8 @@ main {
 
 .presentation {
   padding-bottom: 80px;
+  position: relative;
+  animation: presentation 5s forwards ease-in-out;
 }
 .presentation_texte {
   color: #28292A;
@@ -654,18 +796,19 @@ main {
 .pro {
   padding-bottom: 80px;
   padding-top: 80px;
+  position: relative;
+  animation: pro 5s forwards ease-in-out;
 }
 .pro_texte {
-  color: #F5F5F5;
+  color: #F0F0F0;
   background-color: #28292A;
 }
 .pro_texte p {
   font-size: calc(0.7em + 0.7vw);
 }
 .pro_texte_ligne {
-  border-bottom: 3px solid #F5F5F5;
+  border-bottom: 3px solid #F0F0F0;
 }
-
 .pro_boutons {
   display: flex;
   flex-direction: row;
@@ -685,8 +828,8 @@ main {
 }
 .boutonPro a {
   font-size: calc(1em + 0.6vw);
-  color: #F5F5F5;
-  border: 2px solid #F5F5F5;
+  color: #F0F0F0;
+  border: 2px solid #F0F0F0;
   border-radius: 20px;
   padding: 8px 16px;
 }
@@ -694,6 +837,7 @@ main {
   color: #28292A;
   background-color: #D3D3D3;
   border-color: #28292A;
+  transition: all 0.6s linear;
 }
 
 /* Showroom */
@@ -736,44 +880,38 @@ main {
   margin: 0px;
   padding: 0px 40px;
 }
-
-.adresse {
+.showroom_adresse {
   font-size: calc(0.8em + 1vw);
   font-weight: bold;
   font-style: italic;
 }
 
-/* Footer  */
+/* Footer */
 .footer {
   display: flex;
   flex-direction: column;
-  color: #F5F5F5;
+  color: #F0F0F0;
 }
 .footer_list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
   background-color: #D3D3D3;
   color: #28292A;
-}
-.footer_list ul {
-  width: 33%;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(0.8em + 0.4vw);
-  padding: 40px;
-  margin: 0px;
-}
-.footer_list li {
-  list-style: none;
-  font-size: 0.8em;
 }
 .footer_list h4 {
   margin: 0px;
   padding-bottom: 10px;
+}
+.footer_list ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  gap: 10px;
+}
+.footer_list li {
+  list-style: none;
+  font-size: 0.8em;
 }
 .footer_list a {
   color: #28292A;
@@ -781,10 +919,33 @@ main {
 .footer_list a:hover {
   text-decoration: underline;
 }
-.footer_produits_texte {
+.footer_produits, .footer_services, .footer_contact {
+  width: 33%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: calc(0.8em + 0.4vw);
+  padding: 40px;
+  margin: 0px;
+}
+.footer_produits_texte, .footer_services_texte, .footer_contact_texte {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.footer_contact_telephone, .footer_contact_email, .footer_contact_showroom {
+  text-align: center;
+}
+.footer_contact_telephone p, .footer_contact_email p, .footer_contact_showroom p {
+  text-decoration: underline;
+  margin: 0px;
+}
+.footer_services .rs {
+  padding-top: 10px;
+}
+.footer_services .rs i {
+  font-size: 2.8em;
 }
 .footer_end {
   height: 60px;
@@ -794,7 +955,7 @@ main {
   align-items: center;
   text-align: center;
   background: #646464;
-  color: #F5F5F5;
+  color: #F0F0F0;
   font-size: calc(0.6em + 0.2vw);
 }
 .footer_end div {
@@ -807,21 +968,10 @@ main {
   width: 40px;
 }
 .footer_end a {
-  color: #F5F5F5;
+  color: #F0F0F0;
 }
 .footer_end a:hover {
   text-decoration: underline;
-}
-.footer_contact_telephone, .footer_contact_email, .footer_contact_showroom {
-  text-align: center;
-}
-.footer_contact_telephone p, .footer_contact_email p, .footer_contact_showroom p {
-  text-decoration: underline;
-  margin: 0px;
-}
-
-.rs {
-  padding-top: 20px;
 }
 
 /* Tablet */
@@ -831,19 +981,27 @@ main {
   }
   .headerHome .categories_carrelage, .headerHome .categories_parquet, .headerHome .categories_sanitaire {
     width: 85%;
-    background-color: #D3D3D3;
     left: 5%;
     top: 40px;
   }
-  .header {
+  .headerHome_scroll {
+    height: 550px;
+  }
+  .header_parquet, .header_carrelage, .header_sanitaire {
     height: 300px;
     animation: anim_deux 10s linear infinite;
   }
   .header .produits_conteneur {
-    padding-top: 100px;
+    padding-top: 70px;
+  }
+  .header_gauche {
+    gap: 5px !important;
   }
   .header_gauche_icones {
     padding-left: 10px;
+  }
+  .header_droite {
+    gap: 5px !important;
   }
   .header_droite_icones {
     padding-right: 10px;
@@ -930,10 +1088,11 @@ main {
     gap: 20px;
   }
   .headerHome .categories_carrelage, .headerHome .categories_parquet, .headerHome .categories_sanitaire {
+    margin-top: 60px;
     top: 10px;
   }
-  .headerHome_nav_second {
-    display: none;
+  .headerHome_scroll {
+    height: 300px;
   }
   .header {
     animation: anim_trois 10s linear infinite;
@@ -974,15 +1133,12 @@ main {
   }
   .header .categories_carrelage, .header .categories_parquet, .header .categories_sanitaire {
     width: 85%;
-    background-color: #D3D3D3;
     left: 5%;
     top: 40px;
+    margin-top: 30px;
   }
-  .gammes h2 {
-    font-size: calc(0.9em + 0.9vw);
-  }
-  .gammes h3 {
-    font-size: calc(0.4em + 0.4vw);
+  .header_nav_scroll .categories_carrelage, .header_nav_scroll .categories_parquet, .header_nav_scroll .categories_sanitaire {
+    margin-top: 15px;
   }
   .gammes_titre {
     padding-top: 15px;
@@ -993,6 +1149,7 @@ main {
   }
   .presentation, .pro {
     height: 400px;
+    padding-bottom: 40px;
     gap: 10px;
   }
   .presentation_photo, .pro_photo {
@@ -1003,7 +1160,7 @@ main {
   }
   .presentation_texte p, .pro_texte p {
     margin: 8px;
-    font-size: calc(0.4em + 0.4vw);
+    font-size: calc(0.4em + 0.3vw);
   }
   .presentation_texte h2, .pro_texte h2 {
     font-size: calc(0.6em + 0.6vw);
@@ -1012,12 +1169,8 @@ main {
   .presentation_texte_top, .pro_texte_top {
     padding-top: 20px;
   }
-  .presentation {
-    padding-bottom: 40px;
-  }
   .pro {
     padding-top: 40px;
-    padding-bottom: 40px;
   }
   .boutonPro a {
     font-size: calc(0.6em + 0.6vw);
@@ -1033,7 +1186,7 @@ main {
   }
   .showroom_div img {
     height: 100px;
-    width: 200px;
+    width: 125px;
     padding-right: 0px;
   }
   .showroom_div_texte {
@@ -1043,84 +1196,165 @@ main {
     font-size: calc(0.4em + 0.2vw);
   }
 }
-@media all and (max-width: 499px) {
-  .headerHome_logo {
-    display: flex;
+@media all and (max-width: 549px) {
+  .headerHome_nav {
     justify-content: center;
-    padding-top: 15px;
+  }
+  .headerHome_logo {
+    width: 35%;
+    text-align: center;
+    padding-top: 0px;
   }
   .headerHome_logo img {
-    min-width: 120px;
-  }
-  .headerHome_nav {
-    gap: 0px;
-  }
-  .headerHome .header_gauche {
-    padding-top: 60px !important;
-  }
-  .headerHome .header_gauche_megamenu_carrelage:hover {
-    padding-bottom: 0px;
-  }
-  .headerHome .header_gauche_megamenu_carrelage:hover .categories_carrelage {
-    display: none;
-  }
-  .headerHome .header_gauche_megamenu_parquet:hover {
-    padding-bottom: 0px;
-  }
-  .headerHome .header_gauche_megamenu_parquet:hover .categories_parquet {
-    display: none;
-  }
-  .headerHome .header_gauche_megamenu_sanitaire:hover {
-    padding-bottom: 0px;
-  }
-  .headerHome .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
-    display: none;
-  }
-  .headerHome .header_droite {
-    padding-top: 60px !important;
+    min-width: 160px !important;
   }
   .header {
-    height: 250px;
+    animation: anim_quatre 10s linear infinite;
   }
-  .header .header_gauche_megamenu_carrelage:hover {
-    padding: 0px;
+  .header_nav {
+    justify-content: center !important;
   }
-  .header .header_gauche_megamenu_carrelage:hover .categories_carrelage {
-    display: none;
+  .header_gauche {
+    height: 100%;
+    position: fixed;
+    left: -500px;
+    top: 0;
+    align-self: center;
+    visibility: hidden;
+    background-color: #28292A;
+    transition: all 0.8s ease-out;
+    justify-content: space-evenly !important;
   }
-  .header .header_gauche_megamenu_parquet:hover {
-    padding: 0px;
+  .header_gauche h2 {
+    font-size: calc(1em + 1vw);
   }
-  .header .header_gauche_megamenu_parquet:hover .categories_parquet {
-    display: none;
+  .header_gauche_megamenu {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 50px;
   }
-  .header .header_gauche_megamenu_sanitaire:hover {
-    padding: 0px;
+  .header_gauche_megamenu_carrelage, .header_gauche_megamenu_parquet, .header_gauche_megamenu_sanitaire {
+    padding: 0px !important;
   }
-  .header .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
-    display: none;
+  .header_gauche_megamenu_carrelage:hover .categories_carrelage, .header_gauche_megamenu_parquet:hover .categories_parquet, .header_gauche_megamenu_sanitaire:hover .categories_sanitaire {
+    display: none !important;
+  }
+  .header_gauche_icones {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+  .header_gauche_icones i {
+    font-size: calc(2em + 2vw);
+  }
+  .show-burger .header_gauche {
+    width: 40% !important;
+    visibility: visible;
+    left: 0;
+    z-index: 3;
+    padding-top: 0px;
+  }
+  .header_droite {
+    display: none !important;
+  }
+  /* Hamburger menu */
+  .burger_button {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 5;
+  }
+  .headerHome_scroll .burger_button, .header_nav_scroll .burger_button {
+    top: 10px;
+  }
+  .header_nav_scroll {
+    display: flex;
+    justify-content: center;
+  }
+  .header_nav_scroll .headerHome_logo {
+    width: 35%;
+    text-align: center;
+    padding-top: 0px;
+  }
+  .header_nav_scroll .headerHome_logo img {
+    min-width: 0px !important;
+  }
+  .burger_button:hover {
+    cursor: pointer;
+    position: fixed;
+  }
+  .burger_bar, .burger_bar::before, .burger_bar::after {
+    display: block;
+    width: 30px;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #F0F0F0;
+    transition: all 0.5s ease-in-out;
+  }
+  .burger_bar::before, .burger_bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  .burger_bar::before {
+    transform: translateY(12px);
+  }
+  .burger_bar::after {
+    transform: translateY(24px);
+  }
+  .show-burger .burger_bar {
+    width: 0;
+    background: transparent;
+    padding-top: 10px;
+  }
+  .show-burger .burger_bar::before {
+    transform: rotate(45deg);
+  }
+  .show-burger .burger_bar::after {
+    transform: rotate(-45deg);
   }
   .gallery {
     height: 500px;
   }
+  .gallery_trois h3 {
+    font-size: calc(1.2em + 1vw);
+  }
   .gallery_cinq {
     font-size: calc(0.6em + 0.6vw);
   }
-  .footer ul {
-    width: 100%;
-    padding: 10px;
+  .footer h4 {
+    padding: 0px;
   }
   .footer_list {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .footer_produits_texte {
+  .footer_produits_texte, .footer_services {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
   }
-  .instagram {
-    padding-top: 0px;
+  .footer_produits_texte ul, .footer_services ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+  }
+  .footer_produits_texte .list_un, .footer_services .list_un {
+    gap: 40px;
+  }
+  .footer_produits, .footer_services, .footer_contact {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .footer_produits .rs, .footer_services .rs, .footer_contact .rs {
+    padding: 0px;
+    gap: 40px;
+  }
+  .footer_produits .rs li, .footer_services .rs li, .footer_contact .rs li {
+    font-size: 0.6em;
   }
 }/*# sourceMappingURL=index.css.map */

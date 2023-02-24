@@ -1,43 +1,152 @@
 /* Variables */
-
 $primary-color: #646464;
 $secondary-color: #D3D3D3;
-$tertiary-color: #F5F5F5;
+$tertiary-color: #F0F0F0;
 $black-color: #28292A;
-$silver-color: linear-gradient(100deg, white, #B2B6BA, #A7ABAE, #DEE0E1, #EBEBEB, white);
 $font-family-primary: "Noto Serif JP";
 $font-family-default: sans-serif;
 
 /* Mixins */
-
 @mixin display-flex($flex-direction) {
     display: flex;
     flex-direction: $flex-direction;
 }
 
+/* Keyframes */
+@keyframes anim_un {
+    0% {
+        background-position: 0px -300px;
+    }
+    25% {
+        background-position: 0px -350px;
+    }
+    50% {
+        background-position: 0px -400px; 
+    }
+    75% {
+        background-position: 0px -350px;
+    }
+    100% {
+        background-position: 0px -300px;
+    }
+}
+
+@keyframes anim_deux {
+    0% {
+        background-position: 0px -150px;
+    }
+    25% {
+        background-position: 0px -175px;
+    }
+    50% {
+        background-position: 0px -200px; 
+    }
+    75% {
+        background-position: 0px -175px;
+    }
+    100% {
+        background-position: 0px -150px;
+    }
+}
+
+@keyframes anim_trois {
+    0% {
+        background-position: 0px 0px;
+    }
+    25% {
+        background-position: 0px -12.5px;
+    }
+    50% {
+        background-position: 0px -25px; 
+    }
+    75% {
+        background-position: 0px -12.5px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@keyframes anim_quatre {
+    0% {
+        background-position: 0px 0px;
+    }
+    25% {
+        background-position: -5px 0px;
+    }
+    50% {
+        background-position: -10px 0px; 
+    }
+    75% {
+        background-position: -5px 0px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@keyframes cat {
+    0% {
+        background: rgba($secondary-color, $alpha: 0);
+    }
+    100% {
+        background: rgba($secondary-color, $alpha: 0.90);
+    }
+}
+
+@keyframes presentation {
+    0% {
+        right: 100%
+    }
+    25% {
+        right: 40%
+    }
+    100% {
+        right: 0%;
+    }
+}
+
+@keyframes pro {
+    0% {
+        left: 100%
+    }
+    25% {
+        left: 40%
+    }
+    100% {
+        left: 0%;
+    }
+}
+
 /* Code */
-
 /* Livraison & Retour */
-
-.pageLivraison {
-    background-color: $tertiary-color;
+.header_livraison {
+    background-image: url("../../assets/parquet-pvc.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: anim_un 10s linear infinite;
 }
 
 .livraison {
-    @include display-flex(column);
-    justify-content: space-between;
-    text-align: center;
-    padding: 40px;
+    background-color: $tertiary-color;
 
     & h2 {
         font-size: calc(1em + 1vw);
     }
 
+    &_conteneur {
+        @include display-flex(column);
+        justify-content: space-between;
+        text-align: center;
+        padding: 40px;
+    }
+    
     &_titre {
         display: flex;
         justify-content: center;
     }
-
+    
     &_texte, &_couts {
         @include display-flex(row);
         justify-content: space-between;
@@ -45,45 +154,46 @@ $font-family-default: sans-serif;
         gap: 50px;
         padding-top: 30px;
 
-        &_livraison, &_ileDeFrance {
+        &_livraison, &_ileDeFrance, &_retrait, &_france {
             width: 50%;
-        }
-
-        &_retrait, &_france {
-            width: 50%;
-            @include display-flex(column);
-            align-items: center;
         }
     }
-
+    
     &_ligne {
         width: 150px;
         align-self: center;
         border-bottom: 3px solid $black-color;    
         padding-bottom: 10px;
     }
-}
 
-.maps {
-    position: relative;
-    margin: 0px;
-
-    &_canvas {
-        overflow: hidden;
-        background: none!important;
-    }
-
-    &_img {
-        height: 400px;
-        width: 500px;
+    & .maps {
+        position: relative;
+        margin: 0px;
+    
+        &_canvas {
+            overflow: hidden;
+            background: none!important;
+        }
+    
+        &_img {
+            height: 400px;
+            width: 500px;
+        }
     }
 }
 
 /* CGV & Mentions Légales */
+.header_cgv, .header_mentionsLegales {
+    background-image: url("../../assets/carrelage-faience.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: anim_un 10s linear infinite;
+}
 
 .cgv, .mentionsLegales {
     @include display-flex(column);
-    padding: 40px 40px 40px 40px;
+    padding: 40px;
     background-color: $tertiary-color;
 
     & h1 {
@@ -117,6 +227,13 @@ $font-family-default: sans-serif;
 }
 
 /* Simulateur */
+.header_simulateur {
+    background-image: url("../../assets/parquet-pvc.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: anim_un 10s linear infinite;
+}
 
 .simulateur {
     background-color: $tertiary-color;
@@ -125,14 +242,9 @@ $font-family-default: sans-serif;
 .construction {
     @include display-flex(column);
     height: 500px;
-
     border: solid 5px $secondary-color;
     text-align: center;
     justify-content: center;
-    background-image: url("../../assets/construction.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
     & h2 {
         font-size: calc(1.6em + 1.6vw);
@@ -161,23 +273,27 @@ $font-family-default: sans-serif;
 }
 
 /* Erreur */
+.header_error {
+    height: 200px !important;
+    background-image: url("../../assets/nav6.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: anim_un 10s linear infinite;
+}
 
 .error {
     @include display-flex(column);
     align-items: center;
     background-color: $tertiary-color;
-    padding: 120px 0px 20px 0px;
+    padding-bottom: 20px;
 
     &_title {
         font-size: calc(2em + 2vw);
-        font-weight: 300;
-        color: $black-color;
     }
 
     &_subtitle {
         font-size: calc(1.2em + 1.2vw);
-        color: $black-color;
-        font-weight: 300;
     }
 
     & .boutonPro {
@@ -198,43 +314,62 @@ $font-family-default: sans-serif;
     }
 }
 
-.illustration {
-    max-width: 800px;
-}
-
 /* Tablet */
-
 @media all and (max-width: 1199px) {
-    .pageLivraison {
-        .livraison {
+    .header {
+        &_livraison, &_simulateur, &_cgv, &_mentionsLegales {
+            height: 300px !important;
+            animation: anim_deux 10s linear infinite;
+        }
+    }
+
+    .livraison {
+        &_conteneur {
             padding: 0px 40px;
         }
 
-        .livraison_titre{
+        &_titre{
             padding-top: 30px;
         }
 
-        .livraison_texte {
+        &_texte {
             @include display-flex(column);
         }
         
-        .livraison_texte_livraison, .livraison_texte_retrait {
+        &_texte_livraison, &_texte_retrait {
             width: 100%;
         }
     }
 
     .cgv, .mentionsLegales {
-        padding: 20px 20px 20px 20px;
+        padding: 20px;
     }
 }
 
 /* Smartphone */
-
 @media all and (max-width: 767px) {
-    .pageLivraison {
+    .header {
+        &_livraison, &_simulateur, &_cgv, &_mentionsLegales {
+            animation: anim_trois 10s linear infinite;
+        }
+    }
+
+    .livraison {
+        &_conteneur {
+            padding: 0px 10px;
+        }
+
         .maps_img {
             height: 300px;
             width: 300px;
+        }
+    }
+}
+
+@media all and (max-width: 549px) {
+    .header {
+        &_livraison, &_simulateur, &_cgv, &_mentionsLegales {
+            animation: anim_quatre 10s linear infinite;
         }
     }
 }

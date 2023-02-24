@@ -16,13 +16,14 @@ import LavaboImg from "../../assets/sanitaire-lavabo.jpg"
 import BaignoireImg from "../../assets/sanitaire-baignoire.jpg"
 import DoucheImg from "../../assets/sanitaire-douche.jpg"
 
+/* Code */
 export default function Sanitaire() {
     return (
         <>            
-        <header className="header">
-            <Header />
-            <Produits pdt={"SANITAIRE"} txt={"2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
-        </header>
+            <header className="header header_sanitaire">
+                <Header />
+                <Produits pdt={"SANITAIRE"} txt={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+            </header>
             <section className="produits">
                 <div className="produits_categories">
                     <div className="produits_categories_card">

@@ -12,7 +12,9 @@ import Illustration from '../../assets/404.svg'
 export default function Error() {
   return (
     <>
-        <Header />
+        <header className="header header_error">
+            <Header />
+        </header>
         <div className='error'>
             <div className='error_title'>Oups...</div>
             <br />

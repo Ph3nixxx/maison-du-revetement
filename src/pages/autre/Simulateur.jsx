@@ -9,7 +9,7 @@ import Header from '../../components/Header'
 export default function Simulateur() {
     return (
         <>
-            <header className="header">
+            <header className="header header_simulateur">
                 <Header />
             </header>
             <section className="simulateur">

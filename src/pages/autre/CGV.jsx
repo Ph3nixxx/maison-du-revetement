@@ -8,14 +8,14 @@ import Header from '../../components/Header'
 export default function CGV() {
     return (
         <>
-            <header className="header">
+            <header className="header header_cgv">
                 <Header />
             </header>
             <section className="cgv">
                 <h1>Conditions Générales de Vente</h1>
                 <span className="cgv_ligne"></span>
                 <p className="p_un">Les présentes conditions de vente sont conclues d'une part par la Société Maison du
-                Revêtement, SAS au capital de 210 600 € ayant son siège à VILLENEUVE LA GARENNE,
+                Revêtement, SAS au capital de 210 600 € ayant son siège à VILLENEUVE-LA-GARENNE
                 (92390), 23 Avenue du Chemin des Reniers, immatriculée au R.C.S de NANTERRE sous le
                 n° 917 977 035, ci-après dénommée, « le Vendeur » ou « la Société » et d'autre part,
                 par tout consommateur, non professionnel ou professionnel, dénommé ci-après « le
@@ -78,7 +78,7 @@ export default function CGV() {
                 d'acceptation de celui-ci. Dans le cas d'une commande de produits ayant des délais de livraison
                 différents, la totalité de la commande sera livrée sur la base du délai le plus long. En
                 principe, pour les produits non stockés dans nos entrepôts, le délai de disponibilité du
-                produit ne saurait dépasser TROIS (3) mois sauf pour le cas de commande portant sur
+                produit ne saurait dépasser TROIS (3) MOIS sauf pour le cas de commande portant sur
                 des fabrications spécifiques et sur mesure (dimensions, couleurs, etc.), la fixation du
                 délai de disponibilité s'effectue en fonction de faisabilité des demandes du client. Pour
                 les produits stockés dans nos entrepôts, le retrait en magasin ou départ livraison se fait

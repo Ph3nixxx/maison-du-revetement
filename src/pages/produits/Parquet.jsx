@@ -20,9 +20,9 @@ import StratifieImg from "../../assets/parquet-stratifie.jpg"
 export default function Parquet() {
     return (
         <>
-            <header className="header">
+            <header className="header header_parquet">
                 <Header />
-                <Produits pdt={"PARQUET"} txt={"2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <Produits pdt={"PARQUET"} txt={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
             </header>
             <section className="produits">
                 <div className="produits_categories">

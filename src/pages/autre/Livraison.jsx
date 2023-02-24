@@ -8,11 +8,11 @@ import Header from '../../components/Header'
 export default function Livraison() {
     return (
         <>
-            <header className="header">
+            <header className="header header_livraison">
                 <Header />
             </header>
-            <section className="pageLivraison">
-                <div className="livraison">
+            <section className="livraison">
+                <div className="livraison_conteneur">
                     <div className="livraison_titre">
                         <h2>Livraison</h2>
                     </div>
@@ -33,13 +33,13 @@ export default function Livraison() {
                             <br /></p>
                             <div class="maps">
                                 <div class="maps_canvas">
-                                    <iframe className="maps_img" src="https://maps.google.com/maps?q=25%20Avenue%20du%20Chemin%20des%20Reniers&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+                                    <iframe className="maps_img" src="https://maps.google.com/maps?q=Maison%20du%20Rev%C3%AAtement+(Maison%20du%20Rev%C3%AAtement)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="livraison">
+                <div className="livraison_conteneur">
                     <div className="livraison_titre">
                         <h2>Coûts de livraison</h2>
                     </div>
@@ -71,7 +71,7 @@ export default function Livraison() {
                         Si une erreur est toujours présente après validation de la commande, notre service est susceptible de vous recontacter par email ou par téléphone dans ce sens.</p>
                     </div>
                 </div>
-                <div className="livraison">
+                <div className="livraison_conteneur">
                     <div className="livraison_titre">
                         <h2>Annulation de commande & Retour de marchandises</h2>
                     </div>

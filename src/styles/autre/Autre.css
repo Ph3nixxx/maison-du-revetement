@@ -1,21 +1,127 @@
 @charset "UTF-8";
 /* Variables */
 /* Mixins */
+/* Keyframes */
+@keyframes anim_un {
+  0% {
+    background-position: 0px -300px;
+  }
+  25% {
+    background-position: 0px -350px;
+  }
+  50% {
+    background-position: 0px -400px;
+  }
+  75% {
+    background-position: 0px -350px;
+  }
+  100% {
+    background-position: 0px -300px;
+  }
+}
+@keyframes anim_deux {
+  0% {
+    background-position: 0px -150px;
+  }
+  25% {
+    background-position: 0px -175px;
+  }
+  50% {
+    background-position: 0px -200px;
+  }
+  75% {
+    background-position: 0px -175px;
+  }
+  100% {
+    background-position: 0px -150px;
+  }
+}
+@keyframes anim_trois {
+  0% {
+    background-position: 0px 0px;
+  }
+  25% {
+    background-position: 0px -12.5px;
+  }
+  50% {
+    background-position: 0px -25px;
+  }
+  75% {
+    background-position: 0px -12.5px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes anim_quatre {
+  0% {
+    background-position: 0px 0px;
+  }
+  25% {
+    background-position: -5px 0px;
+  }
+  50% {
+    background-position: -10px 0px;
+  }
+  75% {
+    background-position: -5px 0px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes cat {
+  0% {
+    background: rgba(211, 211, 211, 0);
+  }
+  100% {
+    background: rgba(211, 211, 211, 0.9);
+  }
+}
+@keyframes presentation {
+  0% {
+    right: 100%;
+  }
+  25% {
+    right: 40%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+@keyframes pro {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 40%;
+  }
+  100% {
+    left: 0%;
+  }
+}
 /* Code */
 /* Livraison & Retour */
-.pageLivraison {
-  background-color: #F5F5F5;
+.header_livraison {
+  background-image: url("../../assets/parquet-pvc.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
 }
 
 .livraison {
+  background-color: #F0F0F0;
+}
+.livraison h2 {
+  font-size: calc(1em + 1vw);
+}
+.livraison_conteneur {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   padding: 40px;
-}
-.livraison h2 {
-  font-size: calc(1em + 1vw);
 }
 .livraison_titre {
   display: flex;
@@ -29,14 +135,8 @@
   gap: 50px;
   padding-top: 30px;
 }
-.livraison_texte_livraison, .livraison_texte_ileDeFrance, .livraison_couts_livraison, .livraison_couts_ileDeFrance {
+.livraison_texte_livraison, .livraison_texte_ileDeFrance, .livraison_texte_retrait, .livraison_texte_france, .livraison_couts_livraison, .livraison_couts_ileDeFrance, .livraison_couts_retrait, .livraison_couts_france {
   width: 50%;
-}
-.livraison_texte_retrait, .livraison_texte_france, .livraison_couts_retrait, .livraison_couts_france {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .livraison_ligne {
   width: 150px;
@@ -44,26 +144,33 @@
   border-bottom: 3px solid #28292A;
   padding-bottom: 10px;
 }
-
-.maps {
+.livraison .maps {
   position: relative;
   margin: 0px;
 }
-.maps_canvas {
+.livraison .maps_canvas {
   overflow: hidden;
   background: none !important;
 }
-.maps_img {
+.livraison .maps_img {
   height: 400px;
   width: 500px;
 }
 
 /* CGV & Mentions Légales */
+.header_cgv, .header_mentionsLegales {
+  background-image: url("../../assets/carrelage-faience.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
+}
+
 .cgv, .mentionsLegales {
   display: flex;
   flex-direction: column;
-  padding: 40px 40px 40px 40px;
-  background-color: #F5F5F5;
+  padding: 40px;
+  background-color: #F0F0F0;
 }
 .cgv h1, .mentionsLegales h1 {
   font-size: calc(1.7em + 1.7vw);
@@ -90,8 +197,16 @@
 }
 
 /* Simulateur */
+.header_simulateur {
+  background-image: url("../../assets/parquet-pvc.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
+}
+
 .simulateur {
-  background-color: #F5F5F5;
+  background-color: #F0F0F0;
 }
 
 .construction {
@@ -101,10 +216,6 @@
   border: solid 5px #D3D3D3;
   text-align: center;
   justify-content: center;
-  background-image: url("../../assets/construction.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .construction h2 {
   font-size: calc(1.6em + 1.6vw);
@@ -129,22 +240,27 @@
 }
 
 /* Erreur */
+.header_error {
+  height: 200px !important;
+  background-image: url("../../assets/nav6.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: anim_un 10s linear infinite;
+}
+
 .error {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F5F5F5;
-  padding: 120px 0px 20px 0px;
+  background-color: #F0F0F0;
+  padding-bottom: 20px;
 }
 .error_title {
   font-size: calc(2em + 2vw);
-  font-weight: 300;
-  color: #28292A;
 }
 .error_subtitle {
   font-size: calc(1.2em + 1.2vw);
-  color: #28292A;
-  font-weight: 300;
 }
 .error .boutonPro {
   padding: 20px 0px;
@@ -161,33 +277,44 @@
   border-color: #D3D3D3;
 }
 
-.illustration {
-  max-width: 800px;
-}
-
 /* Tablet */
 @media all and (max-width: 1199px) {
-  .pageLivraison .livraison {
+  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales {
+    height: 300px !important;
+    animation: anim_deux 10s linear infinite;
+  }
+  .livraison_conteneur {
     padding: 0px 40px;
   }
-  .pageLivraison .livraison_titre {
+  .livraison_titre {
     padding-top: 30px;
   }
-  .pageLivraison .livraison_texte {
+  .livraison_texte {
     display: flex;
     flex-direction: column;
   }
-  .pageLivraison .livraison_texte_livraison, .pageLivraison .livraison_texte_retrait {
+  .livraison_texte_livraison, .livraison_texte_retrait {
     width: 100%;
   }
   .cgv, .mentionsLegales {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
   }
 }
 /* Smartphone */
 @media all and (max-width: 767px) {
-  .pageLivraison .maps_img {
+  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales {
+    animation: anim_trois 10s linear infinite;
+  }
+  .livraison_conteneur {
+    padding: 0px 10px;
+  }
+  .livraison .maps_img {
     height: 300px;
     width: 300px;
+  }
+}
+@media all and (max-width: 549px) {
+  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales {
+    animation: anim_quatre 10s linear infinite;
   }
 }/*# sourceMappingURL=Autre.css.map */
