@@ -1,9 +1,9 @@
 /* Import de polices */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+
 
 /* Variables */
 $primary-color: #646464;
@@ -125,6 +125,7 @@ $font-family-default: sans-serif;
     }
 }
 
+/* Code */
 /* Body */
 body {
 	font-family: $font-family-primary, $font-family-default;    
@@ -676,12 +677,7 @@ button {
 
 /* Hamburger menu */
 .burger_button {
-    width: 30px;
-    height: 30px;
     display: none;
-    background: transparent;
-    border: none;
-    color: inherit;
 }
 
 /* Main */
@@ -974,8 +970,9 @@ main {
         border-radius: 40px;
 
         & img {
-            height: 300px;
-            width: 600px;
+            height: 75%;
+            width: 50%;
+            object-fit: cover;
             padding-right: 40px;
         }
         
@@ -1001,7 +998,6 @@ main {
 /* Footer */
 .footer {
     @include display-flex(column);
-    color: $tertiary-color;
 
     &_list {
         @include display-flex(row);
@@ -1204,8 +1200,6 @@ main {
             }
 
             & img {
-                height: 200px;
-                width: 400px;
                 padding-right: 20px;
             }
         }
@@ -1398,8 +1392,7 @@ main {
             gap: 20px;
 
             & img {
-                height: 100px;
-                width: 125px;
+                height: 40%;
                 padding-right: 0px;
             }
 
@@ -1481,25 +1474,8 @@ main {
         }
     }
 
-    .show-burger .header_gauche {
-        width: 40% !important;
-        visibility: visible;
-        left: 0;
-        z-index: 3;
-        padding-top: 0px;
-    }
-
     .header_droite {
         display: none !important;
-    }
-
-    /* Hamburger menu */
-    .burger_button {
-        display: flex;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        z-index: 5;
     }
 
     .headerHome_scroll, .header_nav_scroll {
@@ -1525,9 +1501,21 @@ main {
         }
     }
 
-    .burger_button:hover {
-        cursor: pointer;
-        position: fixed;
+    /* Hamburger menu */
+    .burger_button {
+        display: flex;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 5;       
+        background: transparent;
+        border: none;
+        color: inherit;
+
+        &:hover {
+            cursor: pointer;
+            position: fixed;
+        }
     }
 
     .burger_bar, .burger_bar::before, .burger_bar::after {
@@ -1546,26 +1534,38 @@ main {
         left: 0;
     }
 
-    .burger_bar::before {
-        transform: translateY(12px);
+    .burger_bar {
+        &::before {
+            transform: translateY(12px);
+        }
+
+        &::after {
+            transform: translateY(24px);
+        }
     }
 
-    .burger_bar::after {
-        transform: translateY(24px);
-    }
+    .show-burger {
+        & .burger_bar {
+            width: 0;
+            background: transparent;
+            padding-top: 10px;
 
-    .show-burger .burger_bar {
-        width: 0;
-        background: transparent;
-        padding-top: 10px;
-    }
+            &::before {
+                transform: rotate(45deg);
+            }
 
-    .show-burger .burger_bar::before {
-        transform: rotate(45deg);
-    }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
 
-    .show-burger .burger_bar::after {
-        transform: rotate(-45deg);
+        & .header_gauche {
+            width: 40% !important;
+            visibility: visible;
+            left: 0;
+            z-index: 3;
+            padding-top: 0px;
+        }
     }
 
     .gallery {
@@ -1579,6 +1579,16 @@ main {
         
         &_cinq {
             font-size: calc(0.6em + 0.6vw);
+        }
+    }
+
+    .presentation_texte, .pro_texte {
+        &_top {
+            padding-top: 5px;
+        }
+
+        & p {
+            font-size: calc(0.3em + 0.8vw);
         }
     }
 

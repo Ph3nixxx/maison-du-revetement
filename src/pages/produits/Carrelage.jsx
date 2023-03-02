@@ -1,15 +1,7 @@
-/* Modules */
-import React from "react"
-
-/* Dépendences */
-import Produits from "../../components/Produits"
-import Plus from "../../components/Plus"
-
 /* Components */
 import Header from '../../components/Header'
-
-/* Styles */
-import '../../styles/pages/Produits.css'
+import Produits from "../../components/Produits"
+import Plus from "../../components/Plus"
 
 /* Images */
 import MassifImg from "../../assets/parquet-massif.jpg"
@@ -22,7 +14,7 @@ export default function Carrelage() {
         <>
             <header className="header header_carrelage">
                 <Header />
-                <Produits pdt={"CARRELAGE"} txt={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <Produits pdt={"CARRELAGE"} txt={"Réputé pour son entretien minimal, le carrelage saura résister à toutes les épreuves du quotidien. Fort d'un choix important d'aspects, de formes et de couleurs, le carrelage se démarque par sa polyvalence et sa propension à reflèter la lumière."} />
             </header>
             <section className="produits">
                 <div className="produits_categories">

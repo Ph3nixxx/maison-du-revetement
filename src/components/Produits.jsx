@@ -1,10 +1,3 @@
-/* Modules */
-import React from "react"
-
-/* Styles */
-import '../styles/pages/Produits.css'
-import '../styles/autre/Autre.css'
-
 /* Code */
 export default function Produits({pdt, txt}) {
     return (

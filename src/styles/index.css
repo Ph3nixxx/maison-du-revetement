@@ -1,9 +1,8 @@
 /* Import de polices */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Baskervville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petrona&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&display=swap");
 /* Variables */
 /* Mixins */
 /* Keyframes */
@@ -105,6 +104,7 @@
     left: 0%;
   }
 }
+/* Code */
 /* Body */
 body {
   font-family: "Noto Serif JP", sans-serif;
@@ -588,12 +588,7 @@ button {
 
 /* Hamburger menu */
 .burger_button {
-  width: 30px;
-  height: 30px;
   display: none;
-  background: transparent;
-  border: none;
-  color: inherit;
 }
 
 /* Main */
@@ -866,8 +861,10 @@ main {
   border-radius: 40px;
 }
 .showroom_div img {
-  height: 300px;
-  width: 600px;
+  height: 75%;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
   padding-right: 40px;
 }
 .showroom_div_texte {
@@ -890,7 +887,6 @@ main {
 .footer {
   display: flex;
   flex-direction: column;
-  color: #F0F0F0;
 }
 .footer_list {
   display: flex;
@@ -1044,8 +1040,6 @@ main {
     padding: 0px 20px;
   }
   .showroom_div img {
-    height: 200px;
-    width: 400px;
     padding-right: 20px;
   }
 }
@@ -1185,8 +1179,7 @@ main {
     gap: 20px;
   }
   .showroom_div img {
-    height: 100px;
-    width: 125px;
+    height: 40%;
     padding-right: 0px;
   }
   .showroom_div_texte {
@@ -1247,23 +1240,8 @@ main {
   .header_gauche_icones i {
     font-size: calc(2em + 2vw);
   }
-  .show-burger .header_gauche {
-    width: 40% !important;
-    visibility: visible;
-    left: 0;
-    z-index: 3;
-    padding-top: 0px;
-  }
   .header_droite {
     display: none !important;
-  }
-  /* Hamburger menu */
-  .burger_button {
-    display: flex;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    z-index: 5;
   }
   .headerHome_scroll .burger_button, .header_nav_scroll .burger_button {
     top: 10px;
@@ -1279,6 +1257,17 @@ main {
   }
   .header_nav_scroll .headerHome_logo img {
     min-width: 0px !important;
+  }
+  /* Hamburger menu */
+  .burger_button {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 5;
+    background: transparent;
+    border: none;
+    color: inherit;
   }
   .burger_button:hover {
     cursor: pointer;
@@ -1315,6 +1304,13 @@ main {
   .show-burger .burger_bar::after {
     transform: rotate(-45deg);
   }
+  .show-burger .header_gauche {
+    width: 40% !important;
+    visibility: visible;
+    left: 0;
+    z-index: 3;
+    padding-top: 0px;
+  }
   .gallery {
     height: 500px;
   }
@@ -1323,6 +1319,12 @@ main {
   }
   .gallery_cinq {
     font-size: calc(0.6em + 0.6vw);
+  }
+  .presentation_texte_top, .pro_texte_top {
+    padding-top: 5px;
+  }
+  .presentation_texte p, .pro_texte p {
+    font-size: calc(0.3em + 0.8vw);
   }
   .footer h4 {
     padding: 0px;

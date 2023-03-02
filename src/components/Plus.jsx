@@ -1,9 +1,4 @@
-/* Modules */
-import React from "react"
-
-/* Styles */
-import '../styles/pages/Produits.css'
-
+/* Code*/
 export default function Plus() {
     return (
         <div className="plus">

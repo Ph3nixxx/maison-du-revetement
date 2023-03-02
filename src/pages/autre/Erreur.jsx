@@ -1,5 +1,4 @@
 /* Modules */
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 /* Components */
@@ -27,4 +26,4 @@ export default function Error() {
         </div>
     </>
     )
-};
+}

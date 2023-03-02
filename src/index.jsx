@@ -20,6 +20,8 @@ import ScrollToTop from './components/ScrollToTop'
 
 /* Styles */
 import './styles/index.css'
+import './styles/pages/Produits.css'
+import './styles/autre/Autre.css'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(

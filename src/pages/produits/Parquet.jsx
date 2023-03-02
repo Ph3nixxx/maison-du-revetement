@@ -1,15 +1,7 @@
-/* Modules */
-import React from "react"
-
-/* Dépendences */
-import Produits from "../../components/Produits"
-import Plus from "../../components/Plus"
-
 /* Components */
 import Header from '../../components/Header'
-
-/* Styles */
-import '../../styles/pages/Produits.css'
+import Produits from "../../components/Produits"
+import Plus from "../../components/Plus"
 
 /* Images */
 import MassifImg from "../../assets/parquet-massif.jpg"
@@ -22,7 +14,7 @@ export default function Parquet() {
         <>
             <header className="header header_parquet">
                 <Header />
-                <Produits pdt={"PARQUET"} txt={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <Produits pdt={"PARQUET"} txt={"Opter pour un parquet c'est privilégier des matériaux authentiques, naturels, intemporels, porteurs de valeurs sûres. Image de noblesse et de l'histoire de France, le parquet est utilisé depuis des siècles. Réputé pour sa robustesse, il conserve son image traditionnel tout en s’adaptant aux tendances du moment."} />
             </header>
             <section className="produits">
                 <div className="produits_categories">

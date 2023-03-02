@@ -1,15 +1,7 @@
-/* Modules */
-import React from "react"
-
-/* Dépendences */
-import Produits from "../../components/Produits"
-import Plus from "../../components/Plus"
-
 /* Components */
 import Header from '../../components/Header'
-
-/* Styles */
-import '../../styles/pages/Produits.css'
+import Produits from "../../components/Produits"
+import Plus from "../../components/Plus"
 
 /* Images */
 import LavaboImg from "../../assets/sanitaire-lavabo.jpg"
@@ -22,7 +14,7 @@ export default function Sanitaire() {
         <>            
             <header className="header header_sanitaire">
                 <Header />
-                <Produits pdt={"SANITAIRE"} txt={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <Produits pdt={"SANITAIRE"} txt={"Pour compléter vos projets d'aménagement, quoi de mieux qu'habiller vos salles d'eau de pièces d'exception de robineterie, de douche ou encore de baignoire. Vous trouverez forcément des éléments sanitaire pour créer un atmosphère chaleureux et luxieux, mis en avant par vos revêtements."} />
             </header>
             <section className="produits">
                 <div className="produits_categories">

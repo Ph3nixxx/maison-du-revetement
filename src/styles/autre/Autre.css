@@ -1,105 +1,6 @@
 @charset "UTF-8";
 /* Variables */
 /* Mixins */
-/* Keyframes */
-@keyframes anim_un {
-  0% {
-    background-position: 0px -300px;
-  }
-  25% {
-    background-position: 0px -350px;
-  }
-  50% {
-    background-position: 0px -400px;
-  }
-  75% {
-    background-position: 0px -350px;
-  }
-  100% {
-    background-position: 0px -300px;
-  }
-}
-@keyframes anim_deux {
-  0% {
-    background-position: 0px -150px;
-  }
-  25% {
-    background-position: 0px -175px;
-  }
-  50% {
-    background-position: 0px -200px;
-  }
-  75% {
-    background-position: 0px -175px;
-  }
-  100% {
-    background-position: 0px -150px;
-  }
-}
-@keyframes anim_trois {
-  0% {
-    background-position: 0px 0px;
-  }
-  25% {
-    background-position: 0px -12.5px;
-  }
-  50% {
-    background-position: 0px -25px;
-  }
-  75% {
-    background-position: 0px -12.5px;
-  }
-  100% {
-    background-position: 0px 0px;
-  }
-}
-@keyframes anim_quatre {
-  0% {
-    background-position: 0px 0px;
-  }
-  25% {
-    background-position: -5px 0px;
-  }
-  50% {
-    background-position: -10px 0px;
-  }
-  75% {
-    background-position: -5px 0px;
-  }
-  100% {
-    background-position: 0px 0px;
-  }
-}
-@keyframes cat {
-  0% {
-    background: rgba(211, 211, 211, 0);
-  }
-  100% {
-    background: rgba(211, 211, 211, 0.9);
-  }
-}
-@keyframes presentation {
-  0% {
-    right: 100%;
-  }
-  25% {
-    right: 40%;
-  }
-  100% {
-    right: 0%;
-  }
-}
-@keyframes pro {
-  0% {
-    left: 100%;
-  }
-  25% {
-    left: 40%;
-  }
-  100% {
-    left: 0%;
-  }
-}
 /* Code */
 /* Livraison & Retour */
 .header_livraison {
@@ -256,10 +157,15 @@
   background-color: #F0F0F0;
   padding-bottom: 20px;
 }
+.error img {
+  height: auto;
+  width: 100%;
+}
 .error_title {
   font-size: calc(2em + 2vw);
 }
 .error_subtitle {
+  text-align: center;
   font-size: calc(1.2em + 1.2vw);
 }
 .error .boutonPro {
@@ -279,7 +185,7 @@
 
 /* Tablet */
 @media all and (max-width: 1199px) {
-  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales {
+  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales, .header_error {
     height: 300px !important;
     animation: anim_deux 10s linear infinite;
   }
@@ -302,7 +208,7 @@
 }
 /* Smartphone */
 @media all and (max-width: 767px) {
-  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales {
+  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales, .header_error {
     animation: anim_trois 10s linear infinite;
   }
   .livraison_conteneur {
@@ -314,7 +220,7 @@
   }
 }
 @media all and (max-width: 549px) {
-  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales {
+  .header_livraison, .header_simulateur, .header_cgv, .header_mentionsLegales, .header_error {
     animation: anim_quatre 10s linear infinite;
   }
 }/*# sourceMappingURL=Autre.css.map */

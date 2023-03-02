@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 /* Images */
 import Logo from "../assets/mdr_logo2.png";
-import Video from "../assets/video.mov";
+import Video from "../assets/video-principale2.MOV";
 
 /* Code */
 export default function HeaderHome() {
