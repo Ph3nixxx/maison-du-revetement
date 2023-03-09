@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.49a4cbcd.css",
+    "main.js": "/static/js/main.922c09b6.js",
+    "static/media/video-principale2.MOV": "/static/media/video-principale2.072b8da885e69c4d6d13.MOV",
+    "static/media/parquet-contrecolle.jpg": "/static/media/parquet-contrecolle.8381534266bdf8369977.jpg",
+    "static/media/pierres-naturelles.jpeg": "/static/media/pierres-naturelles.c2a39da99b9f2a8246b0.jpeg",
+    "static/media/parquet-pvc.jpg": "/static/media/parquet-pvc.82d89bc3565d99bc0f71.jpg",
+    "static/media/parquet-stratifie.jpg": "/static/media/parquet-stratifie.d8a296a5ded98b3e95a1.jpg",
+    "static/media/showroom2.jpeg": "/static/media/showroom2.4d91556f71008543ce33.jpeg",
+    "static/media/parquet-massif.jpg": "/static/media/parquet-massif.d0c2c0de493fa2c08d2c.jpg",
+    "static/media/sanitaire-baignoire.jpg": "/static/media/sanitaire-baignoire.dd2c67b07415dc6a164e.jpg",
+    "static/media/mdr_logo2.png": "/static/media/mdr_logo2.d9276a1c97898366581d.png",
+    "static/media/noir.jpeg": "/static/media/noir.66112835ece018a53c80.jpeg",
+    "static/media/noir3.jpg": "/static/media/noir3.fbfd5bdcacb93bc69128.jpg",
+    "static/media/faïence-murale.jpeg": "/static/media/faïence-murale.126914e8f7be8b98318b.jpeg",
+    "static/media/sanitaire-douche.jpg": "/static/media/sanitaire-douche.96dbde2debbeaafee711.jpg",
+    "static/media/nav6.jpg": "/static/media/nav6.811ed2bc5494c2fcce15.jpg",
+    "static/media/sanitaire-lavabo.jpg": "/static/media/sanitaire-lavabo.f4e6cab5da7703bf2ce8.jpg",
+    "static/media/consommables.jpg": "/static/media/consommables.06d04a3cad188093c076.jpg",
+    "static/media/sanitaire.jpeg": "/static/media/sanitaire.57decdf07226b1448e2e.jpeg",
+    "static/media/exterieur.jpeg": "/static/media/exterieur.e4880d99e9f99e932a7c.jpeg",
+    "static/media/showroom1.jpg": "/static/media/showroom1.64d1f90a9429977a43e1.jpg",
+    "static/media/carrelage-faience.jpg": "/static/media/carrelage-faience.f122179686b00e7a7001.jpg",
+    "static/media/mdr_logo.png": "/static/media/mdr_logo.a612b2b6155ad2047fd5.png",
+    "static/media/nav5.png": "/static/media/nav5.21e480ba629a93559269.png",
+    "static/media/parquet.jpg": "/static/media/parquet.dd063b3b5f1b836adda5.jpg",
+    "static/media/robineterie.jpg": "/static/media/robineterie.139b8b8a00f42122753b.jpg",
+    "static/media/carrelage-gres.jpg": "/static/media/carrelage-gres.6bc32974fac96615564f.jpg",
+    "static/media/carrelage.jpg": "/static/media/carrelage.2afd560096b4af65e7c4.jpg",
+    "static/media/meublesSDB.jpg": "/static/media/meublesSDB.f8fc7c4b708686848d12.jpg",
+    "static/media/404.svg": "/static/media/404.fc9ddee48547c71d5534244cfc2a911c.svg",
+    "static/media/moulures.jpg": "/static/media/moulures.b90aad1ce0625faa5592.jpg",
+    "index.html": "/index.html",
+    "main.49a4cbcd.css.map": "/static/css/main.49a4cbcd.css.map",
+    "main.922c09b6.js.map": "/static/js/main.922c09b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49a4cbcd.css",
+    "static/js/main.922c09b6.js"
+  ]
+}
