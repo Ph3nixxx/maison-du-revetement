@@ -29,7 +29,7 @@ export default function Footer() {
                     <h4>Services</h4>
                     <ul>
                         <li><a href="https://maisondurevetement.odoo.com/web/login" className="footer_produits_espace">Espace Client</a></li>
-                        <li><a href="https://maisondurevetement.odoo.com/cart" className="footer_produits_panier">Mon Panier</a></li>
+                        <li><a href="https://maisondurevetement.odoo.com/shop/cart" className="footer_produits_panier">Mon Panier</a></li>
                         <li><Link to="/livraison-et-retour" className="footer_produits_livraison">Livraison & Retour</Link></li>
                     </ul>
                     <ul className="rs">

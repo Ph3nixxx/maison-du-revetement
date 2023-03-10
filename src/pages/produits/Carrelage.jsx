@@ -45,7 +45,7 @@ export default function Carrelage() {
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-mosaiques-43">
                             <img src={ContrecolleImg} alt="Parquet Contrecollé"/> 
-                            <h2>Mosaïques</h2>
+                            <h2>Les Mosaïques</h2>
                         </a>
                     </div>
                 </div>

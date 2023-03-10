@@ -19,27 +19,27 @@ export default function Sanitaire() {
             <section className="produits">
                 <div className="produits_categories">
                     <div className="produits_categories_card">
-                        <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-2">
+                        <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-lavabo-78">
                             <img src={LavaboImg} alt="Parquet Massif"/>
                             <h2>Lavabo</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
-                        <a href="#">
+                        <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-104#">
                             <img src={BaignoireImg} alt="Parquet Contrecollé"/> 
                             <h2>Baignoire</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
-                        <a href="#">
+                        <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-douche-105">
                             <img src={DoucheImg} alt="Parquet Stratifié & PVC"/>
                             <h2>Douche</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
-                        <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-2">
+                        <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-accessoires-sanitaire-106">
                             <img src={LavaboImg} alt="Parquet Massif"/>
-                            <h2>Accessoires</h2>
+                            <h2>Accessoires Sanitaire</h2>
                         </a>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 /* Images */
 import Logo from "../assets/mdr_logo2.png";
-import Video from "../assets/video-principale2.MOV";
+import Video from "../assets/video-principale2.mp4";
 
 /* Code */
 export default function HeaderHome() {
@@ -27,7 +27,7 @@ export default function HeaderHome() {
 
     return (
         <header className={scroll ? "header headerHome_scroll" : "headerHome"}>
-            <video src={Video} type="video/mov" autoPlay muted loop ></video>  
+            <video src={Video} type="video/mp4" autoPlay muted loop ></video>  
             <nav className={`${scroll ? "header_nav_scroll" : "headerHome_nav"} ${showLinks ? "show-burger" : "hide-burger"}`}>
                 <button className="burger_button" onClick={handleShowLinks}>
                     <span className="burger_bar"></span>
@@ -70,21 +70,21 @@ export default function HeaderHome() {
                                     <ul>
                                         <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-formats-xxl-47">
                                             Les Formats XXL</a></li>
-                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-terrazzo-48">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-marbre-50">
                                             Imitation Marbre</a></li>
                                         <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-hexagonaux-49">
                                             Les Hexagonaux</a></li>
-                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-marbre-50">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-terrazzo-48">
                                             Imitation Terrazzo</a></li>
                                     </ul>
                                     <ul>
-                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-bois-51">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-betons-cires-53">
                                             Les Bétons Cirés</a></li>
-                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-carreaux-de-ciment-52">
-                                            Imitation Pierre</a></li>
-                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-les-betons-cires-53">
-                                            Imitation Bois</a></li>
                                         <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-pierre-54">
+                                            Imitation Pierre</a></li>
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-bois-51">
+                                            Imitation Bois</a></li>
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-imitation-carreaux-de-ciment-52">
                                             Imitation Carreaux de Ciment</a></li>
                                     </ul>
                                 </div>
@@ -127,17 +127,17 @@ export default function HeaderHome() {
                                     <ul>
                                         <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-terrazos-64">
                                             Les Terrazzos</a></li>
-                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-travertins-65">
-                                            Les Ardoises</a></li>
-                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-tomettes-66">
-                                            Les Zelliges</a></li>
                                         <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-ardoises-67">
+                                            Les Ardoises</a></li>
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-zelliges-69">
+                                            Les Zelliges</a></li>
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-carreaux-de-ciment-68">
                                             Les Carreaux de Ciment</a></li>
                                     </ul>
                                     <ul>
-                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-carreaux-de-ciment-68">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-travertins-65">
                                             Les Travertins</a></li>
-                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-zelliges-69">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-tomettes-66">
                                             Les Tomettes</a></li>
                                         <li><a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-les-marbres-70">
                                             Les Marbres</a></li>
@@ -258,80 +258,80 @@ export default function HeaderHome() {
                             </button>
                             <div className="categories_sanitaire">
                                 <div className="categories_deux">
-                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                    <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-lavabo-78">
                                         <h3>Lavabo</h3>
                                     </a>
                                     <ul>
-                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-lavabo-robinet-mitigeur-a-encastrer-107">
                                             Robinet mitigeur à encastrer</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-lavabo-robinet-mitigeur-sur-plan-108">
                                             Robinet mitigeur sur plan</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-lavabo-robinet-mitigeur-thermostatique-109">
                                             Robinet mitigeur thermostatique</a></li>
                                     </ul>
                                     <ul>
-                                        <li className="li_un"><a href="/produits/parquet">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-lavabo-robinet-melangeur-110">
                                             Robinet mélangeur</a></li>
                                     </ul>
                                 </div>
                                 <div className="categories_deux">
-                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                    <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-104">
                                         <h3>Baignoire</h3>
                                     </a>
                                     <ul>
-                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-robinet-monocommande-a-encastrer-111">
                                             Robinet monocommande à encastrer</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-robinet-monocommande-sur-gorge-112">
                                             Robinet monocommande sur gorge</a></li>
 
                                     </ul>
                                     <ul>
-                                        <li className="li_un"><a href="/produits/parquet">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-robinet-mitigeur-thermostatique-113">
                                             Robinet mitigeur thermostatique</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-robinet-mitigeur-pour-bidet-114">
                                             Robinet mitigeur pour bidet</a></li>
                                     </ul>
                                     <ul>
-                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-colonne-de-baignore-au-sol-115">
                                             Colonne de baignoire au sol</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-douchette-116">
                                             Douchette</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-baignore-robinet-melangeur-117">
                                             Robinet mélangeur</a></li>
                                     </ul>
                                 </div>
                                 <div className="categories_deux">
-                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                    <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-douche-105">
                                         <h3>Douche</h3>
                                     </a>
                                     <ul>
-                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-douche-robinet-mitigeur-monocommande-118">
                                             Robinet mitigeur monocommande</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-douche-robinet-mitigeur-thermostatique-119">
                                             Robinet mitigeur thermostatique</a></li>
 
                                     </ul>
                                     <ul>
-                                        <li className="li_un"><a href="/produits/parquet">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-douche-melangeur-de-douche-120">
                                             Mélangeur de douche</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-douche-ensemble-de-douche-121">
                                             Ensemble de douche</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-douche-tete-de-pluie-122">
                                             Tête de pluie</a></li>
                                     </ul>
                                 </div>
                                 <div className="categories_deux">
-                                    <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                    <a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-accessoires-sanitaire-106">
                                         <h3>Accessoires Sanitaire</h3>
                                     </a>
                                     <ul>
-                                        <li className="li_un"><a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/category/carrelage-gres-cerame-5">
+                                        <li className="li_un"><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-accessoires-sanitaire-vidage-123">
                                             Vidage</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-accessoires-sanitaire-flexible-124">
                                             Flexible</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-accessoires-sanitaire-barre-de-douche-125">
                                             Barre de douche</a></li>
-                                        <li><a href="/produits/parquet">
+                                        <li><a href="https://maisondurevetement.odoo.com/shop/category/sanitaire-accessoires-sanitaire-plaque-wc-126">
                                             Plaque WC</a></li>
                                     </ul>
                                 </div>
@@ -351,8 +351,8 @@ export default function HeaderHome() {
                         <h2><Link to="/simulateur-3D">Simul. 3D</Link></h2>
                     </div>
                     <div className="header_droite_icones">
-                        <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/shop/cart"><i className="fa-solid fa-cart-shopping"></i></a>
-                        <a href="https://maisondurevetement-15-0-staging-1-7033407.dev.odoo.com/web/login"><i className="fa-solid fa-user"></i></a>
+                        <a href="https://maisondurevetement.odoo.com/shop/cart"><i className="fa-solid fa-cart-shopping"></i></a>
+                        <a href="https://maisondurevetement.odoo.com/web/login"><i className="fa-solid fa-user"></i></a>
                         <a href="tel:+33156555526"><i className="fa-solid fa-phone"></i></a>
                     </div>
                 </div>
