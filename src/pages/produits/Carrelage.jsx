@@ -4,9 +4,11 @@ import Produits from "../../components/Produits"
 import Plus from "../../components/Plus"
 
 /* Images */
-import MassifImg from "../../assets/parquet-massif.jpg"
-import ContrecolleImg from "../../assets/parquet-contrecolle.jpg"
-import StratifieImg from "../../assets/parquet-stratifie.jpg"
+import SolMurs from "../../assets/carrelage-sol-murs.jpg"
+import Faience from "../../assets/carrelage-faience.jpg"
+import Exterieur from "../../assets/carrelage-exterieur.jpeg"
+import Pierres from "../../assets/carrelage-pierres.jpg"
+import Accessoires from "../../assets/carrelage-accessoires.jpg"
 
 /* Code */
 export default function Carrelage() {
@@ -20,31 +22,31 @@ export default function Carrelage() {
                 <div className="produits_categories">
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-39">
-                            <img src={MassifImg} alt="Parquet Massif"/>
+                            <img src={SolMurs} alt="Parquet Massif"/>
                             <h2>Sol & Murs</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-faiences-40">
-                            <img src={ContrecolleImg} alt="Parquet Contrecollé"/> 
+                            <img src={Faience} alt="Parquet Contrecollé"/> 
                             <h2>Les Faïences</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-exterieurs-41">
-                            <img src={StratifieImg} alt="Parquet Stratifié & PVC"/>
+                            <img src={Pierres} alt="Parquet Stratifié & PVC"/>
                             <h2>Les Extérieurs</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-pierres-naturelles-42">
-                            <img src={MassifImg} alt="Parquet Massif"/>
+                            <img src={Exterieur} alt="Parquet Massif"/>
                             <h2>Pierres Naturelles</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-les-mosaiques-43">
-                            <img src={ContrecolleImg} alt="Parquet Contrecollé"/> 
+                            <img src={Accessoires} alt="Parquet Contrecollé"/> 
                             <h2>Les Mosaïques</h2>
                         </a>
                     </div>

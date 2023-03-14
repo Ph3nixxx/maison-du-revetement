@@ -6,24 +6,24 @@ import { Link } from 'react-router-dom'
 import HeaderHome from '../components/HeaderHome'
 
 /* Images */
-import Nav6 from "../assets/nav6.jpg"
-import Parquet from "../assets/parquet.jpg"
+import CarrelageMain from "../assets/carrelage-main.jpg"
+import CarrelageSolMurs from "../assets/carrelage-sol-murs.jpg"
+import CarrelageFaience from "../assets/carrelage-faience.jpg"
+import CarrelagePierres from "../assets/carrelage-pierres.jpg"
+import CarrelageExterieur from "../assets/carrelage-exterieur.jpeg"
+import CarrelageAccessoires from "../assets/carrelage-accessoires.jpg"
+import ParquetMain from "../assets/parquet-main.jpg"
 import ParquetMassif from "../assets/parquet-massif.jpg"
 import ParquetContrecolle from "../assets/parquet-contrecolle.jpg"
 import ParquetStratifie from "../assets/parquet-stratifie.jpg"
 import ParquetPVC from "../assets/parquet-pvc.jpg"
-import Carrelage from "../assets/carrelage.jpg"
-import CarrelageGres from "../assets/carrelage-gres.jpg"
-import CarrelageFaience from "../assets/faïence-murale.jpeg"
-import CarrelagePierres from "../assets/pierres-naturelles.jpeg"
-import CarrelageExterieur from "../assets/exterieur.jpeg"
-import Sanitaire from "../assets/sanitaire.jpeg"
-import Robineterie from "../assets/robineterie.jpg"
-import Moulures from "../assets/moulures.jpg"
-import MeublesSDB from "../assets/meublesSDB.jpg"
-import Consommables from "../assets/consommables.jpg"
-import Nav5 from "../assets/nav5.png"
-import Showroom2 from "../assets/showroom2.jpeg"
+import ParquetAccessoires from "../assets/parquet-accessoires.jpg"
+import SanitaireMain from "../assets/sanitaire-main.jpg"
+import SanitaireLavabo from "../assets/sanitaire-lavabo.jpg"
+import SanitaireDouche from "../assets/sanitaire-douche.jpg"
+import SectionPro from "../assets/section-pro.png"
+import SectionPresentation from "../assets/section-presentation.jpg"
+import Showroom from "../assets/showroom2.jpeg"
 
 /* Code */
 export default function Home() {
@@ -40,13 +40,13 @@ export default function Home() {
                         <div className="gallery_un">
                             <div className="gallery_trois">
                                 <Link to="/produits/carrelage">
-                                    <img src={Carrelage} alt="Parquet Maison du Revêtement"/>
+                                    <img src={CarrelageMain} alt="Parquet Maison du Revêtement"/>
                                     <h3>Carrelage</h3>
                                 </Link>
                             </div>
                             <div className="gallery_trois">
                                 <Link to="/produits/parquet">
-                                    <img src={Parquet} alt="Carrelage Maison du Revêtement"/>
+                                    <img src={ParquetMain} alt="Carrelage Maison du Revêtement"/>
                                     <h3>Parquet</h3>
                                 </Link>
                             </div>
@@ -56,7 +56,7 @@ export default function Home() {
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
                                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-sol-murs-39">
-                                            <img src={CarrelageGres} alt="Massif Maison du Revêtement"/>
+                                            <img src={CarrelageSolMurs} alt="Massif Maison du Revêtement"/>
                                             <h3>Sol & Murs</h3>
                                         </a>
                                     </div>
@@ -114,33 +114,33 @@ export default function Home() {
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
                                         <a href="https://maisondurevetement.odoo.com/shop/category/carrelage-accessoires-carrelage-76">
-                                            <img src={Robineterie} alt="PVC Maison du Revêtement"/>
+                                            <img src={CarrelageAccessoires} alt="PVC Maison du Revêtement"/>
                                             <h3>Accessoires Carrelage</h3>
                                         </a>
                                     </div>                               
                                     <div className="gallery_cinq">
                                         <a href="#">
-                                            <img src={Moulures} alt="PVC Maison du Revêtement"/>
+                                            <img src={SanitaireLavabo} alt="PVC Maison du Revêtement"/>
                                             <h3>Lavabo</h3>
                                         </a>
                                     </div>
                                 </div>
                                 <div className="gallery_six">
                                     <Link to="/produits/sanitaire">
-                                        <img src={Sanitaire} alt="Sanitaire Maison du Revêtement"/>
+                                        <img src={SanitaireMain} alt="Sanitaire Maison du Revêtement"/>
                                         <h3>Sanitaire</h3>
                                     </Link>
                                 </div>
                                 <div className="gallery_quatre">
                                     <div className="gallery_cinq">
                                         <a href="https://maisondurevetement.odoo.com/shop/category/parquet-accessoires-parquet-77">
-                                            <img src={MeublesSDB} alt="PVC Maison du Revêtement"/>
+                                            <img src={ParquetAccessoires} alt="PVC Maison du Revêtement"/>
                                             <h3>Accessoires Parquet</h3>
                                         </a>
                                     </div>
                                     <div className="gallery_cinq">  
                                         <a href="#">
-                                            <img src={Consommables} alt="PVC Maison du Revêtement"/>
+                                            <img src={SanitaireDouche} alt="PVC Maison du Revêtement"/>
                                             <h3>Douche</h3>
                                         </a>
                                     </div>
@@ -162,12 +162,12 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="pro_photo">
-                        <img src={Nav5} alt="Cuisine carrelage"/>
+                        <img src={SectionPro} alt="Cuisine carrelage"/>
                     </div>
                 </section>
                 <section className="presentation">
                     <div className="presentation_photo">
-                        <img src={Nav6} alt="Cuisine carrelage"/>
+                        <img src={SectionPresentation} alt="Cuisine carrelage"/>
                     </div>
                     <div className="presentation_texte">
                         <h2>Qui sommes-nous ?</h2>
@@ -185,7 +185,7 @@ export default function Home() {
                         <p>Notre équipe d'experts vous attend dans notre showroom situé :</p>
                         <p className="showroom_adresse">23 Avenue du Chemin des Reniers<br />à Villeneuve-la-Garenne</p>
                     </div>
-                    <img src={Showroom2} alt="Showroom Maison du Revêtement"/>
+                    <img src={Showroom} alt="Showroom Maison du Revêtement"/>
                 </div>
             </section>
         </>

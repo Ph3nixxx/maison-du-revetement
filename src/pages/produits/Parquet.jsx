@@ -4,9 +4,9 @@ import Produits from "../../components/Produits"
 import Plus from "../../components/Plus"
 
 /* Images */
-import MassifImg from "../../assets/parquet-massif.jpg"
-import ContrecolleImg from "../../assets/parquet-contrecolle.jpg"
-import StratifieImg from "../../assets/parquet-stratifie.jpg"
+import Massif from "../../assets/parquet-massif.jpg"
+import Contrecolle from "../../assets/parquet-contrecolle.jpg"
+import Stratifie from "../../assets/parquet-stratifie.jpg"
 
 /* Code */
 export default function Parquet() {
@@ -20,19 +20,19 @@ export default function Parquet() {
                 <div className="produits_categories">
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/parquet-massif-44">
-                            <img src={MassifImg} alt="Parquet Massif"/>
+                            <img src={Massif} alt="Parquet Massif"/>
                             <h2>Massif</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/parquet-contrecolle-45">
-                            <img src={ContrecolleImg} alt="Parquet Contrecollé"/> 
+                            <img src={Contrecolle} alt="Parquet Contrecollé"/> 
                             <h2>Contrecollé</h2>
                         </a>
                     </div>
                     <div className="produits_categories_card">
                         <a href="https://maisondurevetement.odoo.com/shop/category/parquet-stratifie-pvc-46">
-                            <img src={StratifieImg} alt="Parquet Stratifié & PVC"/>
+                            <img src={Stratifie} alt="Parquet Stratifié & PVC"/>
                             <h2>Stratifié & PVC</h2>
                         </a>
                     </div>

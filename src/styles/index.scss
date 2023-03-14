@@ -407,7 +407,7 @@ button {
     }
 
     &_carrelage {
-        background-image: url("../assets/noir.jpeg");
+        background-image: url("../assets/header-carrelage.jpeg");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -415,7 +415,7 @@ button {
     }
 
     &_parquet {
-        background-image: url("../assets/parquet.jpg");
+        background-image: url("../assets/header-parquet.jpg");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -423,7 +423,7 @@ button {
     }
 
     &_sanitaire {
-        background-image: url("../assets/noir3.jpg");
+        background-image: url("../assets/header-sanitaire.jpg");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -953,7 +953,7 @@ main {
     position: relative; 
     justify-content: center;
     align-items: center;
-    background-image: url("../assets/showroom1.jpg");
+    background-image: url("../assets/showroom.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

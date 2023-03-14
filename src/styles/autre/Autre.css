@@ -4,7 +4,7 @@
 /* Code */
 /* Livraison & Retour */
 .header_livraison {
-  background-image: url("../../assets/parquet-pvc.jpg");
+  background-image: url("../../assets/carrelage-main.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,7 +60,7 @@
 
 /* CGV & Mentions Légales */
 .header_cgv, .header_mentionsLegales {
-  background-image: url("../../assets/carrelage-faience.jpg");
+  background-image: url("../../assets/parquet-contrecolle.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,7 +99,7 @@
 
 /* Simulateur */
 .header_simulateur {
-  background-image: url("../../assets/parquet-pvc.jpg");
+  background-image: url("../../assets/carrelage-main.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -142,7 +142,7 @@
 /* Erreur */
 .header_error {
   height: 200px !important;
-  background-image: url("../../assets/nav6.jpg");
+  background-image: url("../../assets/header-parquet.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;

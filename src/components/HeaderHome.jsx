@@ -2,9 +2,12 @@
 import React, { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 
+/* Dépendences */
+import Video from "./Video"
+
 /* Images */
-import Logo from "../assets/mdr_logo2.png";
-import Video from "../assets/video-principale2.mp4";
+import Logo from "../assets/mdr_logo2.png"
+import VideoMP4 from "../assets/videoTest.mp4"
 
 /* Code */
 export default function HeaderHome() {
@@ -27,7 +30,7 @@ export default function HeaderHome() {
 
     return (
         <header className={scroll ? "header headerHome_scroll" : "headerHome"}>
-            <video src={Video} type="video/mp4" autoPlay muted loop ></video>  
+            <Video src={VideoMP4} />
             <nav className={`${scroll ? "header_nav_scroll" : "headerHome_nav"} ${showLinks ? "show-burger" : "hide-burger"}`}>
                 <button className="burger_button" onClick={handleShowLinks}>
                     <span className="burger_bar"></span>
